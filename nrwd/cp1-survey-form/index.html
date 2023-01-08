@@ -12,171 +12,332 @@
   <p id="description">Fill out the following to let us know more about your project.</p>
   <form id="survey-form">
     <fieldset>
-      <legend>Company</legend>
-      <div>
-        <label id="company-name-label">Company Name:* <input id="company-name" type="text" required
-            placeholder="Company Name" /></label>
-      </div>
-      <div>
-        <label id="street-address-label">Street Address:* <input id="address" type="text" required
-            placeholder="Street Address" /></label>
-      </div>
-      <div>
-        <label id="city-label">City:* <input id="city" type="text" required placeholder="City" /></label>
-      </div>
-      <div>
-        <label id="state-label">State:*
+      <legend>About Your Business</legend>
+      <p>
+        <label for="company-name">Name:<br>
+          <input id="company-name" type="text" required placeholder="(Company Name)" />
+        </label>
+      </p>
+      <p>
+        <label id="street-address-label">Street Address:<br>
+          <input id="address" type="text" required placeholder="(Address)" />
+        </label>
+      </p>
+      <p>
+        <label id="city-label">City:<br>
+          <input id="city" type="text" required placeholder="(City)" />
+        </label>
+      </p>
+      <p>
+        <label id="state-label" for="dropdown">State:<br>
           <select id="dropdown" required>
-            <option>(Select your state)</option>
-            <option>AL - Alabama</option>
-            <option>AK - Alaska</option>
-            <option>AZ - Arizona</option>
-            <option>AR - Arkansas</option>
-            <option>CA - California</option>
-            <option>CO - Colorado</option>
-            <option>CT - Connecticut</option>
-            <option>DE - Delaware</option>
-            <option>FL - Florida</option>
-            <option>GA - Georgia</option>
-            <option>HI - Hawaii</option>
-            <option>ID - Idaho</option>
-            <option>IL - Illinois</option>
-            <option>IN - Indiana</option>
-            <option>IA - Iowa</option>
-            <option>KS - Kansas</option>
-            <option>KY - Kentucky</option>
-            <option>LA - Louisiana</option>
-            <option>ME - Maine</option>
-            <option>MD - Maryland</option>
-            <option>MA - Massachusetts</option>
-            <option>MI - Michigan</option>
-            <option>MN - Minnesota</option>
-            <option>MS - Mississippi</option>
-            <option>MO - Missouri</option>
-            <option>MT - Montana</option>
-            <option>NE - Nebraska</option>
-            <option>NV - Nevada</option>
-            <option>NH - New Hampshire</option>
-            <option>NJ - New Jersey</option>
-            <option>NM - New Mexico</option>
-            <option>NY - New York</option>
-            <option>NC - North Carolina</option>
-            <option>ND - North Dakota</option>
-            <option>OH - Ohio</option>
-            <option>OK - Oklahoma</option>
-            <option>OR - Oregon</option>
-            <option>PA - Pennsylvania</option>
-            <option>RI - Rhode</option>
-            <option>SC - South Carolina</option>
-            <option>SD - South Dakota</option>
-            <option>TN - Tennessee</option>
-            <option>TX - Texas</option>
-            <option>UT - Utah</option>
-            <option>VT - Vermont</option>
-            <option>VA - Virginia</option>
-            <option>WA - Washington</option>
-            <option>WV - West Virginia</option>
-            <option>WI - Wisconsin</option>
-            <option>WY - Wyoming</option>
+            <option>(State)</option>
+            <option value="AL">Alabama</option>
+            <option value="AK">Alaska</option>
+            <option value="AZ">Arizona</option>
+            <option value="AR">Arkansas</option>
+            <option value="CA">California</option>
+            <option value="CO">Colorado</option>
+            <option value="CT">Connecticut</option>
+            <option value="DE">Delaware</option>
+            <option value="FL">Florida</option>
+            <option value="GA">Georgia</option>
+            <option value="HI">Hawaii</option>
+            <option value="ID">Idaho</option>
+            <option value="IL">Illinois</option>
+            <option value="IN">Indiana</option>
+            <option value="IA">Iowa</option>
+            <option value="KS">Kansas</option>
+            <option value="KY">Kentucky</option>
+            <option value="LA">Louisiana</option>
+            <option value="ME">Maine</option>
+            <option value="MD">Maryland</option>
+            <option value="MA">Massachusetts</option>
+            <option value="MI">Michigan</option>
+            <option value="MN">Minnesota</option>
+            <option value="MS">Mississippi</option>
+            <option value="MO">Missouri</option>
+            <option value="MT">Montana</option>
+            <option value="NE">Nebraska</option>
+            <option value="NV">Nevada</option>
+            <option value="NH">New Hampshire</option>
+            <option value="NJ">New Jersey</option>
+            <option value="NM">New Mexico</option>
+            <option value="NY">New York</option>
+            <option value="NC">North Carolina</option>
+            <option value="ND">North Dakota</option>
+            <option value="OH">Ohio</option>
+            <option value="OK">Oklahoma</option>
+            <option value="OR">Oregon</option>
+            <option value="PA">Pennsylvania</option>
+            <option value="RI">Rhode</option>
+            <option value="SC">South Carolina</option>
+            <option value="SD">South Dakota</option>
+            <option value="TN">Tennessee</option>
+            <option value="TX">Texas</option>
+            <option value="UT">Utah</option>
+            <option value="VT">Vermont</option>
+            <option value="VA">Virginia</option>
+            <option value="WA">Washington</option>
+            <option value="WV">West Virginia</option>
+            <option value="WI">Wisconsin</option>
+            <option value="WY">Wyoming</option>
           </select>
         </label>
-      </div>
-      <div>
-        <label>Zip Code:* <input id="zip-code" type="number" placeholder="Zip Code" required /></label>
-      </div>
-      <div>
-        <label>Please describe what your company does: <br><textarea></textarea></label>
-      </div>
-      <div>
-        <label>Describe your company's value proposition:<br><textarea></textarea></label>
-      </div>
+      </p>
+      <p>
+        <label for="zipcode">
+          Zip Code:<br>
+          <input id="zipcode" type="number" placeholder="(Zip Code)" required />
+        </label>
+      </p>
+      <p>
+        <label for="business-type">Please describe what your company does: <br>
+          <textarea id="business-type" placeholder="(Business Description)" rows="4" cols="40"></textarea>
+        </label>
+      </p>
+      <p>
+        <label for="value-proposition">Describe your company's value proposition:<br>
+          <textarea id="value-proposition" placeholder="(Value Proposition)" rows="4" cols="40"></textarea>
+        </label>
+      </p>
     </fieldset>
     <fieldset>
       <legend>Primary Contact</legend>
-      <div>
-        <label id="name-label">Contact's Name:* <input id="name" type="text" required
-            placeholder="Enter a primary contact's name" /></label>
-      </div>
-      <div>
-        <label id="email-label">Email:* <input id="email" type="email" required
-            placeholder="Enter the contact's email address" /></label>
-      </div>
-      <div>
-        <label id="number-label">Phone:* <input id="number" type="tel" min="0" max="100" required
-            placeholder="Enter the contact's phone number" /></label>
-      </div>
-      <div>
-        <label id="number-label">Fax: <input id="fax" type="text" min="0" max="100"
-            placeholder="Enter the contact's fax number" /></label>
-      </div>
+      <p>
+        <label for="name">Contact's Name:<br>
+          <input id="name" type="text" required placeholder="(Name)" />
+        </label>
+      </p>
+      <p>
+        <label for="email">Email:<br>
+          <input id="email" type="email" required placeholder="(Email)" />
+        </label>
+      </p>
+      <p>
+        <label for="number">Phone:<br>
+          <input id="number" type="tel" min="0" max="100" required placeholder="(Phone)" />
+        </label>
+      </p>
+      <p>
+        <label for="fax">Fax:<br>
+          <input id="fax" type="text" min="0" max="100" placeholder="(Fax)" />
+        </label>
+      </p>
     </fieldset>
     <fieldset>
-      <legend>Your Project</legend>
-      <div>Has a domain name been registered for this business?&ensp;
-        <label>Yes: <input type="radio" value="yes" name="has-domain" /></label>
-        <label>No: <input type="radio" value="no" name="has-domain" /></label>
-      </div>
+      <legend>About Your Project</legend>
+      <h3>Domain</h3>
+      <p>Do you own a domain name for your business?<br>
+        <label for="domain_yes">
+          <input type="radio" value="yes" name="domain" id="domain_yes" />
+          &nbsp;Yes
+        </label>
+        <br>
+        <label for="domain_no">
+          <input type="radio" value="no" name="domain" id="domain_no" />
+          &nbsp;No
+        </label>
+      </p>
+      <p>
+        <label for="domain_name">
+          If yes, what is the domain name?<br>
+          <input id="domain" type="url" placeholder="(Domain Name)" />
+        </label>
+      </p>
+      <p>Do you need help purchasing a domain?<br>
+        <label for="domain_help_yes">
+          <input type="radio" value="yes" name="domain-help" id="domain_help_yes" />
+          &nbsp;Yes
+        </label>
+        <br>
+        <label for="domain_help_no">
+          <input type="radio" value="no" name="domain-help" id="domain_help_no" />
+          &nbsp;No
+        </label>
+      </p>
+      <hr>
       <div>
-        <label id="company-website-label">If yes, what is the domain name?&ensp;
-          <input id="company-website" type="url" placeholder="Website URL if one existing" />
+        <h3>Assets</h3>
+        <p>Are there existing assets that need to be incorporated?</p>
+        <ul>
+          <li>
+            <label for="assets_branding">
+              <input type="checkbox" value="existing-branding" id="assets_branding" />
+              &nbsp;Branding
+            </label>
+          </li>
+          <li>
+            <label for="assets_products">
+              <input type="checkbox" value="existing-products" id="assets_products" />
+              &nbsp;Products
+            </label>
+          </li>
+          <li>
+            <label for="assets_media">
+              <input type="checkbox" value="existing-media" id="assets_media" />
+              &nbsp;Media
+            </label>
+          </li>
+          <li>
+            <label for="assets_other">
+              <input type="checkbox" value="existing-other" id="assets_other" />
+              &nbsp;Other
+            </label>
+          </li>
+        </ul>
+        <label for="assets_other_desc">
+          If you checked &ldquo;Other,&rdquo; please explain:
+          <br>
+          <textarea rows="4" cols="40" placeholder="(Other)" id="assets_other_desc"></textarea>
         </label>
       </div>
-      <div>If no, do you need us to help purchase a domain?&ensp;
-        <label>Yes: <input type="radio" value="yes" name="domain-help" /></label>
-        <label>No: <input type="radio" value="no" name="domain-help" /></label>
+      <hr>
+      <h3>Constraints</h3>
+      <p>
+        <label for="deadline">What is the deadline for the project?<br>
+          <input type="date" name="deadline" id="deadline" />
+        </label>
+      </p>
+      <p>
+        <label for="budget">What is your budget for this project?<br>
+          <input type="text" id="budget" name="budget" placeholder="(Budget)" />
+        </label>
+      </p>
+      <hr>
+      <div>
+        <h3>Objective</h3>
+        <p>What is the purpose of this project? (You may check more than one.)</p>
+        <ul>
+          <li>
+            <label for="for_brand">
+              <input type="checkbox" id="for_brand" value="brand" />
+              &nbsp;Promote brand awareness
+            </label>
+          </li>
+          <li>
+            <label for="for_product">
+              <input type="checkbox" id="for_product" value="product" />
+              &nbsp;Promote products and/or services
+            </label>
+          </li>
+          <li>
+            <label for="for_ecommerce">
+              <input type="checkbox" id="for_ecommerce" value="ecommerce" />
+              &nbsp;Sell products and/or services
+            </label>
+          </li>
+          <li>
+            <label for="for_scheduler">
+              <input type="checkbox" id="for_scheduler" value="scheduler" />
+              &nbsp;Schedule bookings and/or appointments
+            </label>
+          </li>
+          <li>
+            <label for="for_engage">
+              <input type="checkbox" id="for_engage" value="engage" />
+              &nbsp;Facilitate customer/client engagement
+            </label>
+          </li>
+          <li>
+            <label for="for_support">
+              <input type="checkbox" id="for_support" value="support" />
+              &nbsp;Provide customer support
+            </label>
+          </li>
+          <li>
+            <label for="for_other">
+              <input type="checkbox" id="for_other" value="other" />
+              &nbsp;Other
+            </label>
+          </li>
+        </ul>
+        <label for="for_other_desc">
+          If you checked &ldquo;Other,&rdquo; please explain:<br>
+          <textarea id="for_other_desc" rows="4" cols="40" placeholder="(Other Purpose)"></textarea>
+        </label>
       </div>
       <hr>
       <div>
-        <div>Are there existing marketing assets to coordinate with?</div>
-        <div>
-          <label>Branding <input type="checkbox" value="existing-branding" /></label>
-          <label>Products <input type="checkbox" value="existing-products" /></label>
-          <label>Media <input type="checkbox" value="existing-media" /></label>
-          <label>Other <input type="checkbox" value="existing-media" /></label>
-        </div>
-        <div><label>If you checked &ldquo;Other,&rdquo; please explain:<br><textarea></textarea></label></div>
+        <h3>Demographics</h3>
+        <label for="age">Are you targeting a certain age?<br>
+          <select id="age">
+            <option>(Age)</option>
+            <option value="child">Child</option>
+            <option value="adolescent">Adolescent</option>
+            <option value="teen">Teenager</option>
+            <option value="twentysomething">Twentysomething</option>
+            <option value="thirtysomething">Thirtysomething</option>
+            <option value="fortysomething">Fortysomething</option>
+            <option value="fiftysomething">Fiftysomething</option>
+            <option value="senior">Senior</option>
+          </select>
+        </label>
       </div>
       <hr>
       <div>
-        <label>What is the deadline for the project?&ensp;<input type="date" name="deadline" id="deadline" /></label>
-      </div>
-      <div>
-        <label>What is your budget for this project?&ensp;<input type="text" id="budget" name="budget" /></label>
-      </div>
-      <hr>
-      <div>
-        <div>What purpose will this website serve? (Check all that apply)</div>
-        <label><input type="checkbox" id="brand" value="brand" />&ensp;Promote brand awareness</label><br>
-        <label><input type="checkbox" id="product" value="product" />&ensp;Promote products and/or services</label><br>
-        <label><input type="checkbox" id="ecommerce" value="ecommerce" />&ensp;Sell products and/or services</label><br>
-        <label><input type="checkbox" id="scheduler" value="scheduler" />&ensp;Schedule bookings and/or
-          appointments</label><br>
-        <label><input type="checkbox" id="engage" value="engage" />&ensp;Facilitate customer/client
-          engagement</label><br>
-        <label><input type="checkbox" id="support" value="support" />&ensp;Provide customer support</label><br>
-        <label><input type="checkbox" id="other" value="other" />&ensp;Other</label><br>
-      </div>
-      <div><label>If you checked &ldquo;Other,&rdquo; please explain:<br><textarea></textarea></label></div>
-      <hr>
-      <div>
-        <div>Tell us about your target audience?</div>
-        <div>
-          <label>What is the primary age group?<br>
-            <select id="dropdown" required>
-            </select>
-          </label>
-          <label>Kids <input type="checkbox" value="existing-branding" /></label>
-          <label>Teens <input type="checkbox" value="existing-branding" /></label>
-          <label>Young adults (20s)<input type="checkbox" value="existing-products" /></label>
-          <label>Adults (30s-50s)<input type="checkbox" value="existing-media" /></label>
-          <label>Other <input type="checkbox" value="existing-media" /></label>
-        </div>
+        <label for="gender">Will your site target a specific gender?<br>
+          <input type="text" name="gender" placeholder="(Gender)" id="gender" />
+        </label>
       </div>
       <hr>
       <div>
-        Project description: <br>
-        <label><textarea></textarea></label>
+        <label for="income">Are you targeting a specific income?<br>
+          <select id="income">
+            <option value="null">(Income)</option>
+            <option value="kids">Kids</option>
+            <option value="students">Students</option>
+            <option value="unemployed">Unemployed</option>
+            <option value="employed">Employed</option>
+            <option value="affluent">Affluent</option>
+          </select>
+        </label>
       </div>
+      <hr>
+      <div>
+        <label for="education">
+          Will this project target a specific education level?<br>
+          <select id="education">
+            <option>(Education)</option>
+            <option value="primary">Primary</option>
+            <option value="undergraduate">Undergraduate</option>
+            <option value="graduate">Graduate</option>
+          </select>
+        </label>
+      </div>
+      <hr>
+      <div>
+        <label for="geography">
+          Are you targeting a certain geographic area?<br>
+          <select id="geography">
+            <option>(Location)</option>
+            <option value="local">Local</option>
+            <option value="state">State/Province</option>
+            <option value="national">National</option>
+            <option value="international">International</option>
+          </select>
+        </label>
+      </div>
+      <hr>
+      <div>
+        <label for="tech_comfort">
+          Which best matches the target demographic's comfort level with online interactive features?<br>
+          <select id="tech_comfort">
+            <option>(Tech Comfort)</option>
+            <option value="uncomfortable">Uncomfortable</option>
+            <option value="comfortable">Comfortable</option>
+            <option value="very comfortable">Very Comfortable</option>
+          </select>
+        </label>
+      </div>
+      <hr>
+      <div>
+        <label for="occupation">
+          Does your demographic have a specific profession? Please describe<br>
+          <input type="text" name="occupation" value="occupation" placehoder="(Profession)">
+        </label>
+      </div>
+      <!--https://www.beewits.com/website-design-questionnaire-->
     </fieldset>
     <div>
       <input type="submit" value="Submit" id="submit" />
