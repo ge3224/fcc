@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Web Design Questionnaire</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <h1 id="title">Questionnaire for Web Design Clients</h1>
+  <p id="description">Fill out the following to let us know more about your project.</p>
+  <form id="survey-form">
+    <fieldset>
+      <legend>Company</legend>
+      <div>
+        <label id="company-name-label">Company Name:* <input id="company-name" type="text" required
+            placeholder="Company Name" /></label>
+      </div>
+      <div>
+        <label id="street-address-label">Street Address:* <input id="address" type="text" required
+            placeholder="Street Address" /></label>
+      </div>
+      <div>
+        <label id="city-label">City:* <input id="city" type="text" required placeholder="City" /></label>
+      </div>
+      <div>
+        <label id="state-label">State:*
+          <select id="dropdown" required>
+            <option>(Select your state)</option>
+            <option>AL - Alabama</option>
+            <option>AK - Alaska</option>
+            <option>AZ - Arizona</option>
+            <option>AR - Arkansas</option>
+            <option>CA - California</option>
+            <option>CO - Colorado</option>
+            <option>CT - Connecticut</option>
+            <option>DE - Delaware</option>
+            <option>FL - Florida</option>
+            <option>GA - Georgia</option>
+            <option>HI - Hawaii</option>
+            <option>ID - Idaho</option>
+            <option>IL - Illinois</option>
+            <option>IN - Indiana</option>
+            <option>IA - Iowa</option>
+            <option>KS - Kansas</option>
+            <option>KY - Kentucky</option>
+            <option>LA - Louisiana</option>
+            <option>ME - Maine</option>
+            <option>MD - Maryland</option>
+            <option>MA - Massachusetts</option>
+            <option>MI - Michigan</option>
+            <option>MN - Minnesota</option>
+            <option>MS - Mississippi</option>
+            <option>MO - Missouri</option>
+            <option>MT - Montana</option>
+            <option>NE - Nebraska</option>
+            <option>NV - Nevada</option>
+            <option>NH - New Hampshire</option>
+            <option>NJ - New Jersey</option>
+            <option>NM - New Mexico</option>
+            <option>NY - New York</option>
+            <option>NC - North Carolina</option>
+            <option>ND - North Dakota</option>
+            <option>OH - Ohio</option>
+            <option>OK - Oklahoma</option>
+            <option>OR - Oregon</option>
+            <option>PA - Pennsylvania</option>
+            <option>RI - Rhode</option>
+            <option>SC - South Carolina</option>
+            <option>SD - South Dakota</option>
+            <option>TN - Tennessee</option>
+            <option>TX - Texas</option>
+            <option>UT - Utah</option>
+            <option>VT - Vermont</option>
+            <option>VA - Virginia</option>
+            <option>WA - Washington</option>
+            <option>WV - West Virginia</option>
+            <option>WI - Wisconsin</option>
+            <option>WY - Wyoming</option>
+          </select>
+        </label>
+      </div>
+      <div>
+        <label>Zip Code:* <input id="zip-code" type="number" placeholder="Zip Code" required /></label>
+      </div>
+      <div>
+        <label>Please describe what your company does: <br><textarea></textarea></label>
+      </div>
+      <div>
+        <label>Describe your company's value proposition:<br><textarea></textarea></label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Primary Contact</legend>
+      <div>
+        <label id="name-label">Contact's Name:* <input id="name" type="text" required
+            placeholder="Enter a primary contact's name" /></label>
+      </div>
+      <div>
+        <label id="email-label">Email:* <input id="email" type="email" required
+            placeholder="Enter the contact's email address" /></label>
+      </div>
+      <div>
+        <label id="number-label">Phone:* <input id="number" type="tel" min="0" max="100" required
+            placeholder="Enter the contact's phone number" /></label>
+      </div>
+      <div>
+        <label id="number-label">Fax: <input id="fax" type="text" min="0" max="100"
+            placeholder="Enter the contact's fax number" /></label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Your Project</legend>
+      <div>Has a domain name been registered for this business?&ensp;
+        <label>Yes: <input type="radio" value="yes" name="has-domain" /></label>
+        <label>No: <input type="radio" value="no" name="has-domain" /></label>
+      </div>
+      <div>
+        <label id="company-website-label">If yes, what is the domain name?&ensp;
+          <input id="company-website" type="url" placeholder="Website URL if one existing" />
+        </label>
+      </div>
+      <div>If no, do you need us to help purchase a domain?&ensp;
+        <label>Yes: <input type="radio" value="yes" name="domain-help" /></label>
+        <label>No: <input type="radio" value="no" name="domain-help" /></label>
+      </div>
+      <hr>
+      <div>
+        <div>Are there existing marketing assets to coordinate with?</div>
+        <div>
+          <label>Branding <input type="checkbox" value="existing-branding" /></label>
+          <label>Products <input type="checkbox" value="existing-products" /></label>
+          <label>Media <input type="checkbox" value="existing-media" /></label>
+          <label>Other <input type="checkbox" value="existing-media" /></label>
+        </div>
+        <div><label>If you checked &ldquo;Other,&rdquo; please explain:<br><textarea></textarea></label></div>
+      </div>
+      <hr>
+      <div>
+        <label>What is the deadline for the project?&ensp;<input type="date" name="deadline" id="deadline" /></label>
+      </div>
+      <div>
+        <label>What is your budget for this project?&ensp;<input type="text" id="budget" name="budget" /></label>
+      </div>
+      <hr>
+      <div>
+        <div>What purpose will this website serve? (Check all that apply)</div>
+        <label><input type="checkbox" id="brand" value="brand" />&ensp;Promote brand awareness</label><br>
+        <label><input type="checkbox" id="product" value="product" />&ensp;Promote products and/or services</label><br>
+        <label><input type="checkbox" id="ecommerce" value="ecommerce" />&ensp;Sell products and/or services</label><br>
+        <label><input type="checkbox" id="scheduler" value="scheduler" />&ensp;Schedule bookings and/or
+          appointments</label><br>
+        <label><input type="checkbox" id="engage" value="engage" />&ensp;Facilitate customer/client
+          engagement</label><br>
+        <label><input type="checkbox" id="support" value="support" />&ensp;Provide customer support</label><br>
+        <label><input type="checkbox" id="other" value="other" />&ensp;Other</label><br>
+      </div>
+      <div><label>If you checked &ldquo;Other,&rdquo; please explain:<br><textarea></textarea></label></div>
+      <hr>
+      <div>
+        <div>Tell us about your target audience?</div>
+        <div>
+          <label>What is the primary age group?<br>
+            <select id="dropdown" required>
+            </select>
+          </label>
+          <label>Kids <input type="checkbox" value="existing-branding" /></label>
+          <label>Teens <input type="checkbox" value="existing-branding" /></label>
+          <label>Young adults (20s)<input type="checkbox" value="existing-products" /></label>
+          <label>Adults (30s-50s)<input type="checkbox" value="existing-media" /></label>
+          <label>Other <input type="checkbox" value="existing-media" /></label>
+        </div>
+      </div>
+      <hr>
+      <div>
+        Project description: <br>
+        <label><textarea></textarea></label>
+      </div>
+    </fieldset>
+    <div>
+      <input type="submit" value="Submit" id="submit" />
+    </div>
+  </form>
+</body>
+
+</html>
