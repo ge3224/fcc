@@ -2,7 +2,7 @@
 
 [Profile](https://www.freecodecamp.org/ge3224)
 
-### [(New) Responsive Web Design Certification](https://www.freecodecamp.org/learn/2022/responsive-web-design/)
+### [(New) Responsive Web Design Certification](./nrwd/README.md)
 
 ### JavaScript Algorithms and Data Structures Certification
 
