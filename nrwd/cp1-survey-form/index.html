@@ -127,35 +127,47 @@
     </fieldset>
     <fieldset>
       <legend>About Your Project</legend>
-      <h3>Domain</h3>
-      <p>Do you own a domain name for your business?<br>
-        <label for="domain_yes">
-          <input type="radio" value="yes" name="domain" id="domain_yes" />
-          &nbsp;Yes
-        </label>
-        <br>
-        <label for="domain_no">
-          <input type="radio" value="no" name="domain" id="domain_no" />
-          &nbsp;No
-        </label>
-      </p>
-      <p>
-        <label for="domain_name">
-          If yes, what is the domain name?<br>
-          <input id="domain" type="url" placeholder="(Domain Name)" />
-        </label>
-      </p>
-      <p>Do you need help purchasing a domain?<br>
-        <label for="domain_help_yes">
-          <input type="radio" value="yes" name="domain-help" id="domain_help_yes" />
-          &nbsp;Yes
-        </label>
-        <br>
-        <label for="domain_help_no">
-          <input type="radio" value="no" name="domain-help" id="domain_help_no" />
-          &nbsp;No
-        </label>
-      </p>
+      <div>
+        <h3>Domain & Hosting</h3>
+        <p>Do you own a domain name for your business?<br>
+          <label for="domain_yes">
+            <input type="radio" value="yes" name="domain" id="domain_yes" />
+            &nbsp;Yes
+          </label>
+          <br>
+          <label for="domain_no">
+            <input type="radio" value="no" name="domain" id="domain_no" />
+            &nbsp;No
+          </label>
+        </p>
+        <p>
+          <label for="domain_name">
+            If yes, what is the domain name?<br>
+            <input id="domain" type="url" placeholder="(Domain Name)" />
+          </label>
+        </p>
+        <p>Do you need help purchasing a domain?<br>
+          <label for="domain_help_yes">
+            <input type="radio" value="yes" name="domain-help" id="domain_help_yes" />
+            &nbsp;Yes
+          </label>
+          <br>
+          <label for="domain_help_no">
+            <input type="radio" value="no" name="domain-help" id="domain_help_no" />
+            &nbsp;No
+          </label>
+        </p>
+        <p>Do you need help setting hosting for your site?<br>
+          <label for="host_help_yes">
+            <input type="radio" name="host_help" value="no" id="host_help_yes">
+            &nbsp;Yes
+          </label><br>
+          <label for="host_help_no">
+            <input type="radio" name="host_help" value="no" id="host_help_no">
+            &nbsp;No
+          </label>
+        </p>
+      </div>
       <hr>
       <div>
         <h3>Assets</h3>
@@ -193,18 +205,20 @@
         </label>
       </div>
       <hr>
-      <h3>Constraints</h3>
-      <p>
-        <label for="deadline">What is the deadline for the project?<br>
-          <input type="date" name="deadline" id="deadline" />
-        </label>
-      </p>
-      <p>
-        <label for="budget">What is your budget for this project?<br>
-          <input type="text" id="budget" name="budget" placeholder="(Budget)" />
-        </label>
-      </p>
-      <hr>
+      <div>
+        <h3>Constraints</h3>
+        <p>
+          <label for="deadline">What is the deadline for the project?<br>
+            <input type="date" name="deadline" id="deadline" />
+          </label>
+        </p>
+        <p>
+          <label for="budget">What is your budget for this project?<br>
+            <input type="text" id="budget" name="budget" placeholder="(Budget)" />
+          </label>
+        </p>
+        <hr>
+      </div>
       <div>
         <h3>Objective</h3>
         <p>What is the purpose of this project? (You may check more than one.)</p>
@@ -260,84 +274,102 @@
       <hr>
       <div>
         <h3>Demographics</h3>
-        <label for="age">Are you targeting a certain age?<br>
-          <select id="age">
-            <option>(Age)</option>
-            <option value="child">Child</option>
-            <option value="adolescent">Adolescent</option>
-            <option value="teen">Teenager</option>
-            <option value="twentysomething">Twentysomething</option>
-            <option value="thirtysomething">Thirtysomething</option>
-            <option value="fortysomething">Fortysomething</option>
-            <option value="fiftysomething">Fiftysomething</option>
-            <option value="senior">Senior</option>
-          </select>
-        </label>
+        <p>
+          <label for="age">Are you targeting a certain age?<br>
+            <select id="age">
+              <option>(Age)</option>
+              <option value="child">Child</option>
+              <option value="adolescent">Adolescent</option>
+              <option value="teen">Teenager</option>
+              <option value="twentysomething">Twentysomething</option>
+              <option value="thirtysomething">Thirtysomething</option>
+              <option value="fortysomething">Fortysomething</option>
+              <option value="fiftysomething">Fiftysomething</option>
+              <option value="senior">Senior</option>
+            </select>
+          </label>
+        </p>
+        <p>
+          <label for="gender">Will your site target a specific gender?<br>
+            <select id="gender">
+              <option>(Gender)</option>
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+              <option value="other">Other</option>
+            </select>
+          </label>
+        </p>
+        <p>
+          <label for="income">Are you targeting a specific income?<br>
+            <select id="income">
+              <option value="null">(Income)</option>
+              <option value="kids">Kids</option>
+              <option value="students">Students</option>
+              <option value="unemployed">Unemployed</option>
+              <option value="employed">Employed</option>
+              <option value="affluent">Affluent</option>
+            </select>
+          </label>
+        </p>
+        <p>
+          <label for="education">
+            Will this project target a specific education level?<br>
+            <select id="education">
+              <option>(Education)</option>
+              <option value="primary">Primary</option>
+              <option value="undergraduate">Undergraduate</option>
+              <option value="graduate">Graduate</option>
+            </select>
+          </label>
+        </p>
+        <p>
+          <label for="geography">
+            Are you targeting a certain geographic area?<br>
+            <select id="geography">
+              <option>(Location)</option>
+              <option value="local">Local</option>
+              <option value="state">State/Province</option>
+              <option value="national">National</option>
+              <option value="international">International</option>
+            </select>
+          </label>
+        </p>
+        <p>
+          <label for="occupation">
+            Does your demographic have a specific profession? Please describe.<br>
+            <input type="text" name="occupation" placeholder="(Professional)" />
+          </label>
+        </p>
+        <p>
+          <label for="tech_comfort">
+            Which best matches the target demographic's comfort level with online interactive features?<br>
+            <select id="tech_comfort">
+              <option>(Tech Comfort)</option>
+              <option value="uncomfortable">Uncomfortable</option>
+              <option value="comfortable">Comfortable</option>
+              <option value="very comfortable">Very Comfortable</option>
+            </select>
+          </label>
+        </p>
+        <p>
+          <label for="more_demographics">
+            Are there other visitor demographics to target?<br>
+            <textarea rows="4" cols="40" id="more_demographics" placeholder="(Other Demographics)"></textarea>
+          </label>
+        </p>
       </div>
       <hr>
       <div>
-        <label for="gender">Will your site target a specific gender?<br>
-          <input type="text" name="gender" placeholder="(Gender)" id="gender" />
-        </label>
+        <h3>SEO</h3>
+        <p>
+          List keywords your demographic will use at search engines (comma-separated):<br>
+          <label for="client_keywords"><textarea id="client_keywords" rows="4" cols="40" placeholder="(Keywords List)"></textarea></label>
+        </p>
+        <p>
+          List your competitors keywords they are using on their websites (comma-separated):<br>
+          <label for="competitor_keywords"><textarea rows="4" cols="40" id="competitor_keywords" placeholder="(Keywords List)"></textarea></label>
+        </p>
       </div>
-      <hr>
-      <div>
-        <label for="income">Are you targeting a specific income?<br>
-          <select id="income">
-            <option value="null">(Income)</option>
-            <option value="kids">Kids</option>
-            <option value="students">Students</option>
-            <option value="unemployed">Unemployed</option>
-            <option value="employed">Employed</option>
-            <option value="affluent">Affluent</option>
-          </select>
-        </label>
-      </div>
-      <hr>
-      <div>
-        <label for="education">
-          Will this project target a specific education level?<br>
-          <select id="education">
-            <option>(Education)</option>
-            <option value="primary">Primary</option>
-            <option value="undergraduate">Undergraduate</option>
-            <option value="graduate">Graduate</option>
-          </select>
-        </label>
-      </div>
-      <hr>
-      <div>
-        <label for="geography">
-          Are you targeting a certain geographic area?<br>
-          <select id="geography">
-            <option>(Location)</option>
-            <option value="local">Local</option>
-            <option value="state">State/Province</option>
-            <option value="national">National</option>
-            <option value="international">International</option>
-          </select>
-        </label>
-      </div>
-      <hr>
-      <div>
-        <label for="tech_comfort">
-          Which best matches the target demographic's comfort level with online interactive features?<br>
-          <select id="tech_comfort">
-            <option>(Tech Comfort)</option>
-            <option value="uncomfortable">Uncomfortable</option>
-            <option value="comfortable">Comfortable</option>
-            <option value="very comfortable">Very Comfortable</option>
-          </select>
-        </label>
-      </div>
-      <hr>
-      <div>
-        <label for="occupation">
-          Does your demographic have a specific profession? Please describe<br>
-          <input type="text" name="occupation" value="occupation" placehoder="(Profession)">
-        </label>
-      </div>
-      <!--https://www.beewits.com/website-design-questionnaire-->
     </fieldset>
     <div>
       <input type="submit" value="Submit" id="submit" />
