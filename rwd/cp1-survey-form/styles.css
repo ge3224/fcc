@@ -60,7 +60,7 @@ input, textarea, select {
 .two-col {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid hsl(0, 0%, 80%);
+  border-bottom: 1px solid hsl(225, 15%, 75%);
   margin-bottom: 0.25em;
   padding-bottom: 0.25em;
 }
