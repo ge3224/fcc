@@ -131,13 +131,11 @@
         <h3>Domain & Hosting</h3>
         <p>Do you own a domain name for your business?<br>
           <label for="domain_yes">
-            <input type="radio" value="yes" name="domain" id="domain_yes" />
-            &nbsp;Yes
+            <input type="radio" value="yes" name="domain" id="domain_yes" />Yes
           </label>
           <br>
           <label for="domain_no">
-            <input type="radio" value="no" name="domain" id="domain_no" />
-            &nbsp;No
+            <input type="radio" value="no" name="domain" id="domain_no" />No
           </label>
         </p>
         <p>
@@ -148,29 +146,33 @@
         </p>
         <p>Do you need help purchasing a domain?<br>
           <label for="domain_help_yes">
-            <input type="radio" value="yes" name="domain-help" id="domain_help_yes" />
-            &nbsp;Yes
+            <input type="radio" value="yes" name="domain-help" id="domain_help_yes" />Yes
           </label>
           <br>
           <label for="domain_help_no">
-            <input type="radio" value="no" name="domain-help" id="domain_help_no" />
-            &nbsp;No
+            <input type="radio" value="no" name="domain-help" id="domain_help_no" />No
           </label>
         </p>
         <p>Do you need help setting up hosting?<br>
           <label for="host_help_yes">
-            <input type="radio" name="host_help" value="no" id="host_help_yes">
-            &nbsp;Yes
+            <input type="radio" name="host_help" value="no" id="host_help_yes">Yes
           </label><br>
           <label for="host_help_no">
-            <input type="radio" name="host_help" value="no" id="host_help_no">
-            &nbsp;No
+            <input type="radio" name="host_help" value="no" id="host_help_no">No
+          </label>
+        </p>
+        <p>Do you have print materials that we need to match?<br>
+          <label for="print_yes">
+            <input type="radio" name="print" value="yes" id="print_yes">Yes
+          </label><br>
+          <label for="print_no">
+            <input type="radio" name="print" value="print_no" id="print_no">No
           </label>
         </p>
       </div>
       <hr>
       <div>
-        <h3>Assets</h3>
+        <h3>Marketing Assets</h3>
         <p>Are there existing assets that need to be incorporated?</p>
         <ul>
           <li>
@@ -198,6 +200,15 @@
             </label>
           </li>
         </ul>
+        <p>
+          Does your company have established guidelines for the use of branding and imagery?<br>
+          <label for="guidelines_yes">
+            <input id="guidelines_yes" type="radio" name="guidelines" value="yes">Yes
+          </label><br>
+          <label for="guidelines_no">
+            <input type="radio" name="guidelines" value="no" id="guidelines_no">No
+          </label>
+        </p>
         <label for="assets_other_desc">
           If you checked &ldquo;Other,&rdquo; please explain:
           <br>
@@ -362,8 +373,7 @@
       <div>
         <h3>SEO</h3>
         <p>
-          List keywords in connection with your business that your demographic will use at search engines
-          (comma-separated):<br>
+          List keywords that your demographic will use at search engines (comma-separated):<br>
           <label for="client_keywords"><textarea id="client_keywords" rows="4" cols="40"
               placeholder="(Keywords List)"></textarea></label>
         </p>
@@ -397,35 +407,151 @@
             </label>
           </li>
           <li>
-            <label for="blog">
-              <input type="checkbox" name="blog" value="blog" id="blog">
-              &nbsp;A blog
-            </label>
-          </li>
-          <li>
             <label for="cms">
               <input type="checkbox" name="feature" value="cms" id="cms">
               &nbsp;Content Management System (CMS)
             </label>
           </li>
           <li>
-            <label for="forum">
-              <input type="checkbox" name="forum" value="forum" id="forum">
-              &nbsp;Online Forum
+            <label for="blog">
+              <input type="checkbox" name="blog" value="blog" id="blog">
+              &nbsp;A blog
             </label>
           </li>
           <li>
-            <label for="fileshare">
-              <input type="checkbox" name="fileshare" value="fileshare" id="fileshare">
-              &nbsp;Downloading and/or Uploading
+            <label for="forum">
+              <input type="checkbox" name="forum" value="forum" id="forum">
+              &nbsp;Online forum
+            </label>
+          </li>
+        </ul>
+        <p>Are there any specific components you'd like to have?</p>
+        <ul>
+          <li>
+            <label for="cmpt_gallery">
+              <input type="checkbox" name="cmpt_gallery" value="cmpt_gallery" id="cmpt_gallery">
+              &nbsp;Media gallery
+            </label>
+          </li>
+          <li>
+            <label for="cmpt_form">
+              <input type="checkbox" name="cmpt_form" value="cmpt_form" id="cmpt_form">
+              &nbsp;Request form
+            </label>
+          </li>
+          <li>
+            <label for="cmpt_download">
+              <input type="checkbox" name="cmpt_download" value="cmpt_download" id="cmpt_download">
+              &nbsp;File download
+            </label>
+          </li>
+          <li>
+            <label for="cmpt_upload">
+              <input type="checkbox" name="cmpt_upload" value="cmpt_upload" id="cmpt_upload">
+              &nbsp;File upload
+            </label>
+          </li>
+          <li>
+            <label for="cmpt_search">
+              <input type="checkbox" name="cmpt_search" value="cmpt_search" id="cmpt_search">
+              &nbsp;Site search
+            </label>
+          </li>
+          <li>
+            <label for="cmpt_login">
+              <input type="checkbox" name="cmpt_login" value="cmpt_login" id="cmpt_login">
+              &nbsp;Login & registration
+            </label>
+          </li>
+          <li>
+            <label for="cmpt_cart">
+              <input type="checkbox" name="cmpt_cart" value="cmpt_cart" id="cmpt_cart">
+              &nbsp;Shopping cart
+            </label>
+          </li>
+          <li>
+            <label for="cmpt_payment">
+              <input type="checkbox" name="cmpt_payment" value="cmpt_payment" id="cmpt_payment">
+              &nbsp;Only payment
             </label>
           </li>
         </ul>
         <p>
-          <label>If you checked &ldquo;Other,&rdquo; please explain:<br>
+          <label>Other features or components:<br>
             <textarea rows="4" cols="40" placeholder="(Other Features)"></textarea>
           </label>
         </p>
+      </div>
+      <hr>
+      <div>
+        <h3>Content</h3>
+        <p>Who will be providing the following?</p>
+        <ul>
+          <li>Stock Photography:
+            <label for="stock_photos_client">
+              <input type="radio" name="stock_photos" value="you" id="stock_photos_client">Client
+            </label>
+            <label for="stock_photos_designer">
+              <input type="radio" name="stock_photos" value="us" id="stock_photos_designer">Designer
+            </label>
+          </li>
+          <li>Company photography:
+            <label for="com_photos_client">
+              <input type="radio" name="com_photos" value="client" id="com_photos_client">Client
+            </label>
+            <label for="com_photos_designer">
+              <input type="radio" name="com_photos" value="designer" id="com_photos_designer">Designer
+            </label>
+          </li>
+          <li>Other artwork / illustration:
+            <label for="other_art_client">
+              <input type="radio" name="other_art" value="client" id="other_art_client">Client
+            </label>
+            <label for="com_photos_designer">
+              <input type="radio" name="other_art" value="designer" id="other_art_designer">Designer
+            </label>
+          </li>
+          <li>Copywriting:
+            <label for="copywriting_client">
+              <input type="radio" name="copywriting" value="client" id="copywriting_client">Client
+            </label>
+            <label for="copywriting_designer">
+              <input type="radio" name="copywriting" value="designer" id="copywriting_designer">Designer
+            </label>
+          </li>
+          <li>Font licenses:
+            <label for="font_licenses_client">
+              <input type="radio" name="font_licenses" value="client" id="font_licenses_client">Client
+            </label>
+            <label for="font_licenses_designer">
+              <input type="radio" name="font_licenses" value="designer" id="font_licenses_designer">Designer
+            </label>
+          </li>
+          <li>Meta tags / descriptions:
+            <label for="meta_tags_client">
+              <input type="radio" name="meta_tags" value="client" id="meta_tags_client">Client
+            </label>
+            <label for="meta_tags_designer">
+              <input type="radio" name="meta_tags" value="designer" id="meta_tags_designer">Designer
+            </label>
+          </li>
+          <li>Graphic design:
+            <label for="graphic_design_client">
+              <input type="radio" name="graphic_design" value="client" id="graphic_design_client">Client
+            </label>
+            <label for="graphic_design_designer">
+              <input type="radio" name="graphic_design" value="designer" id="graphic_design_designer">Designer
+            </label>
+          </li>
+          <li>Identity design:
+            <label for="identity_design_client">
+              <input type="radio" name="identity_design" value="client" id="identity_design_client">Client
+            </label>
+            <label for="identity_design_designer">
+              <input type="radio" name="identity_design" value="designer" id="identity_design_designer">Designer
+            </label>
+          </li>
+        </ul>
       </div>
     </fieldset>
     <div>
