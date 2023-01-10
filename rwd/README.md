@@ -2,22 +2,42 @@
 
 This curriculum focuses on HTML and CSS.
 
-## Project 1: [Survey Form](./cp1-survey-form/index.html)
+## Section 1
 
-## Project 2: [Tribute Page](./cp2-tribute-page/index.html)
+### Project 1: [Survey Form](./cp1-survey-form/index.html)
 
-Accessibility information in exercise:
+## Section 2
 
-- Semantic HTML elements, Step 6
-- `role` attribute, Step 15
-- `aria-labelledby`, Step 16
-- `placeholder` attribute, Step 22
-- screen reader only styling, Step 23
+Accessibility information in second section:
 
-## Project 3: [Technical Documentation Page](./cp3-technical-documentation-page/index.html)
+* Semantic HTML elements: exercise 4, step 6
+* `role` attribute: exercise 4, step 15
+* `aria-labelledby`: exercise 4, step 16
+* `placeholder` attribute: exercise 4, step 22
+* screen reader only styling: exercise 4, step 23
 
-## Project 4: [Product Landing Page](./cp4-product-landing-page/index.html)
+### Project 2: [Tribute Page](./cp2-tribute-page/index.html)
 
-## Project 5: [Personal Portfolio Webpage](./cp5-personal-portfolio-webpage/index.html)
+## Section 3:
+
+Hiding screen screen-reader specific elements:
+
+* `span[class~="sr-only"]`: exercise 1, step 30
+
+Basic normalization information in third section:
+
+* box-sizing: 
+    - exercise 1, step 28
+    - exercise 3, step 9
+
+### Project 3: [Technical Documentation Page](./cp3-technical-documentation-page/index.html)
+
+## Section 4
+
+### Project 4: [Product Landing Page](./cp4-product-landing-page/index.html)
+
+## Section 5
+
+### Project 5: [Personal Portfolio Webpage](./cp5-personal-portfolio-webpage/index.html)
 
 
