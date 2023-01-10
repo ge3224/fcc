@@ -2,12 +2,14 @@
 
 This curriculum focuses on HTML and CSS.
 
-## Building a Cat Photo App
+## Project 1: [Survey Form](./cp1-survey-form/index.html)
 
-## Building a Cafe Menu
+## Project 2: [Tribute Page](./cp2-tribute-page/index.html)
 
-## Building a Set of Colored Markers
+## Project 3: [Technical Documentation Page](./cp3-technical-documentation-page/index.html)
 
-## Survey Form
+## Project 4: [Product Landing Page](./cp4-product-landing-page/index.html)
+
+## Project 5: [Personal Portfolio Webpage](./cp5-personal-portfolio-webpage/index.html)
 
 
