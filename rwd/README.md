@@ -6,6 +6,14 @@ This curriculum focuses on HTML and CSS.
 
 ## Project 2: [Tribute Page](./cp2-tribute-page/index.html)
 
+Accessibility information in exercise:
+
+- Semantic HTML elements, Step 6
+- `role` attribute, Step 15
+- `aria-labelledby`, Step 16
+- `placeholder` attribute, Step 22
+- screen reader only styling, Step 23
+
 ## Project 3: [Technical Documentation Page](./cp3-technical-documentation-page/index.html)
 
 ## Project 4: [Product Landing Page](./cp4-product-landing-page/index.html)

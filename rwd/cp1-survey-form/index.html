@@ -11,8 +11,8 @@
   <h1 id="title">Questionnaire for Web Design Clients</h1>
   <p id="description">Fill out the following to let us know more about your project.</p>
   <form id="survey-form">
-    <fieldset id="business-fieldset">
-      <legend>About Your Business</legend>
+    <section role="region" aria-labelledby="com-info">
+      <h2 id="com-info">About Your Business</h2>
       <p>
         <label id="company-name-label" for="com-name">Name:<br>
           <input id="com-name" type="text" required placeholder="(Company Name)" />
@@ -101,9 +101,9 @@
           <textarea id="value-proposition" placeholder="(Value Proposition)" rows="4" cols="40"></textarea>
         </label>
       </p>
-    </fieldset>
-    <fieldset id="contact-fieldset">
-      <legend>Primary Contact</legend>
+    </section>
+    <section role="region" aria-labelledby="com-contact">
+      <h2 id="com-contact">Primary Contact</h2>
       <p>
         <label id="name-label" for="name">Contact's Name:<br>
           <input id="name" type="text" required placeholder="(Name)" />
@@ -124,11 +124,11 @@
           <input id="fax" type="text" min="0" max="100" placeholder="(Fax)" />
         </label>
       </p>
-    </fieldset>
-    <fieldset id="project-fieldset">
-      <legend>About Your Project</legend>
-      <div>
-        <h3>Domain & Hosting</h3>
+    </section>
+    <section role="region" aria-labelledby="project-info">
+      <h2 id="project-info">About Your Project</h2>
+      <fieldset id="domain-and-hosting">
+        <legend id="domain-and-hosting-legend">Domain & Hosting</legend>
         <p>Do you own a domain name for your business?<br>
           <label id="domain-yes-label" for="domain-yes">
             <input id="domain-yes" type="radio" value="yes" name="domain" />Yes
@@ -169,10 +169,9 @@
             <input id="print-no" type="radio" name="print" value="print-no" />No
           </label>
         </p>
-      </div>
-      <hr>
-      <div>
-        <h3>Marketing Assets</h3>
+      </fieldset>
+      <fieldset id="existing-assets">
+        <legend id="existing-assets-legend">Marketing Assets</legend>
         <p>Are there existing assets that need to be incorporated?</p>
         <ul>
           <li>
@@ -213,10 +212,9 @@
           If you checked &ldquo;Other,&rdquo; please explain:<br>
           <textarea id="assets-other-desc" rows="4" cols="40" placeholder="(Other)"></textarea>
         </label>
-      </div>
-      <hr>
-      <div>
-        <h3>Constraints</h3>
+      </fieldset>
+      <fieldset id="constraints">
+        <legend id="constraints-legend">Constraints</legend>
         <p>
           <label id="deadline-label" for="deadline">What is the deadline for the project?<br>
             <input id="deadline" type="date" name="deadline" />
@@ -227,10 +225,9 @@
             <input id="budget" type="text" name="budget" placeholder="(Budget)" />
           </label>
         </p>
-        <hr>
-      </div>
-      <div>
-        <h3>Objective</h3>
+      </fieldset>
+      <fieldset id="objectives">
+        <legend id="objectives-legend">Objective</legend>
         <p>What is the purpose of this project? (You may check more than one.)</p>
         <ul>
           <li>
@@ -280,10 +277,9 @@
           If you checked &ldquo;Other,&rdquo; please explain:<br>
           <textarea id="for-other-desc" rows="4" cols="40" placeholder="(Other Purpose)"></textarea>
         </label>
-      </div>
-      <hr>
-      <div>
-        <h3>Demographics</h3>
+      </fieldset>
+      <fieldset id="demographics">
+        <legend id="demographics-label">Demographics</legend>
         <p>
           <label id="age-label" for="age">Are you targeting a certain age?<br>
             <select id="age">
@@ -367,10 +363,9 @@
             <textarea id="more-demographics" rows="4" cols="40" placeholder="(Other Demographics)"></textarea>
           </label>
         </p>
-      </div>
-      <hr>
-      <div>
-        <h3>SEO</h3>
+      </fieldset>
+      <fieldset id="seo-info">
+        <legend id="seo-info-legend">SEO</legend>
         <p>
           List keywords that your demographic will use at search engines (comma-separated):<br>
           <label id="client-keywords-label" for="client-keywords">
@@ -386,45 +381,44 @@
             </textarea>
           </label>
         </p>
-      </div>
-      <hr>
-      <div>
-        <h3>Project Features</h3>
+      </fieldset>
+      <fieldset id="project-features">
+        <legend id="project-features-legend">Project Features</legend>
         <p>Which features are needed for your project?</p>
         <ul>
           <li>
-            <label id="redesign-label" for="redesign">
-              <input id="redesign" type="checkbox" name="redesign" value="redesign" />
+            <label id="feat-redesign-label" for="feat-redesign">
+              <input id="feat-redesign" type="checkbox" name="redesign" value="redesign" />
               &nbsp;Redesign of your current website
             </label>
           </li>
           <li>
-            <label id="theme-label" for="theme">
-              <input id="theme" type="checkbox" name="theme" value="theme" />
+            <label id="feat-theme-label" for="feat-theme">
+              <input id="feat-theme" type="checkbox" name="theme" value="theme" />
               &nbsp;A custom theme
             </label>
           </li>
           <li>
-            <label id="social-label" for="social">
-              <input id="social" type="checkbox" name="social" value="social" />
+            <label id="feat-social-label" for="feat-social">
+              <input id="feat-social" type="checkbox" name="social" value="social" />
               &nbsp;Social media integration
             </label>
           </li>
           <li>
-            <label id="cms-label" for="cms">
-              <input id="cms" type="checkbox" name="feature" value="cms" />
+            <label id="feat-cms-label" for="feat-cms">
+              <input id="feat-cms" type="checkbox" name="feature" value="cms" />
               &nbsp;Content Management System (CMS)
             </label>
           </li>
           <li>
-            <label id="blog-label" for="blog">
-              <input id="blog" type="checkbox" name="blog" value="blog" />
+            <label id="feat-blog-label" for="feat-blog">
+              <input id="feat-blog" type="checkbox" name="blog" value="blog" />
               &nbsp;A blog
             </label>
           </li>
           <li>
-            <label id="forum-label" for="forum">
-              <input id="forum" type="checkbox" name="forum" value="forum" />
+            <label id="feat-forum-label" for="feat-forum">
+              <input id="feat-forum" type="checkbox" name="forum" value="forum" />
               &nbsp;Online forum
             </label>
           </li>
@@ -485,10 +479,9 @@
             <textarea id="other-feat" rows="4" cols="40" placeholder="(Other Features)"></textarea>
           </label>
         </p>
-      </div>
-      <hr>
-      <div>
-        <h3>Content</h3>
+      </fieldset>
+      <fieldset id="project-content">
+        <legend id="project-content-legend">Content</legend>
         <p>Who will be providing the following?</p>
         <ul>
           <li>Stock Photography:
@@ -556,8 +549,8 @@
             </label>
           </li>
         </ul>
-      </div>
-    </fieldset>
+      </fieldset>
+    </section>
     <div>
       <input id="submit" type="submit" value="Submit" />
     </div>
