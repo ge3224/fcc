@@ -8,553 +8,585 @@
 </head>
 
 <body>
-  <h1 id="title">Questionnaire for Web Design Clients</h1>
-  <p id="description">Fill out the following to let us know more about your project.</p>
-  <form id="survey-form">
-    <section role="region" aria-labelledby="com-info">
-      <h2 id="com-info">About Your Business</h2>
-      <p>
-        <label id="company-name-label" for="com-name">Name:<br>
-          <input id="com-name" type="text" required placeholder="(Company Name)" />
-        </label>
-      </p>
-      <p>
-        <label id="com-address-label" for="com-address">Street Address:<br>
-          <input id="com-address" type="text" required placeholder="(Address)" />
-        </label>
-      </p>
-      <p>
-        <label id="com-city-label" for="com-city">City:<br>
-          <input id="com-city" type="text" required placeholder="(City)" />
-        </label>
-      </p>
-      <p>
-        <label id="com-state-label" for="dropdown">State:<br>
-          <select id="dropdown" required>
-            <option>(State)</option>
-            <option value="AL">Alabama</option>
-            <option value="AK">Alaska</option>
-            <option value="AZ">Arizona</option>
-            <option value="AR">Arkansas</option>
-            <option value="CA">California</option>
-            <option value="CO">Colorado</option>
-            <option value="CT">Connecticut</option>
-            <option value="DE">Delaware</option>
-            <option value="FL">Florida</option>
-            <option value="GA">Georgia</option>
-            <option value="HI">Hawaii</option>
-            <option value="ID">Idaho</option>
-            <option value="IL">Illinois</option>
-            <option value="IN">Indiana</option>
-            <option value="IA">Iowa</option>
-            <option value="KS">Kansas</option>
-            <option value="KY">Kentucky</option>
-            <option value="LA">Louisiana</option>
-            <option value="ME">Maine</option>
-            <option value="MD">Maryland</option>
-            <option value="MA">Massachusetts</option>
-            <option value="MI">Michigan</option>
-            <option value="MN">Minnesota</option>
-            <option value="MS">Mississippi</option>
-            <option value="MO">Missouri</option>
-            <option value="MT">Montana</option>
-            <option value="NE">Nebraska</option>
-            <option value="NV">Nevada</option>
-            <option value="NH">New Hampshire</option>
-            <option value="NJ">New Jersey</option>
-            <option value="NM">New Mexico</option>
-            <option value="NY">New York</option>
-            <option value="NC">North Carolina</option>
-            <option value="ND">North Dakota</option>
-            <option value="OH">Ohio</option>
-            <option value="OK">Oklahoma</option>
-            <option value="OR">Oregon</option>
-            <option value="PA">Pennsylvania</option>
-            <option value="RI">Rhode</option>
-            <option value="SC">South Carolina</option>
-            <option value="SD">South Dakota</option>
-            <option value="TN">Tennessee</option>
-            <option value="TX">Texas</option>
-            <option value="UT">Utah</option>
-            <option value="VT">Vermont</option>
-            <option value="VA">Virginia</option>
-            <option value="WA">Washington</option>
-            <option value="WV">West Virginia</option>
-            <option value="WI">Wisconsin</option>
-            <option value="WY">Wyoming</option>
-          </select>
-        </label>
-      </p>
-      <p>
-        <label id="number-label" for="number">
-          Zip Code:<br>
-          <input id="number" type="number" min="0" max="16" placeholder="(Zip Code)" required />
-        </label>
-      </p>
-      <p>
-        <label id="business-type-label" for="business-type">Please describe what your company does: <br>
-          <textarea id="business-type" placeholder="(Business Description)" rows="4" cols="40"></textarea>
-        </label>
-      </p>
-      <p>
-        <label id="value-proposition-label" for="value-proposition">Describe your company's value proposition:<br>
-          <textarea id="value-proposition" placeholder="(Value Proposition)" rows="4" cols="40"></textarea>
-        </label>
-      </p>
-    </section>
-    <section role="region" aria-labelledby="com-contact">
-      <h2 id="com-contact">Primary Contact</h2>
-      <p>
-        <label id="name-label" for="name">Contact's Name:<br>
-          <input id="name" type="text" required placeholder="(Name)" />
-        </label>
-      </p>
-      <p>
-        <label id="email-label" for="email">Email:<br>
-          <input id="email" type="email" required placeholder="(Email)" />
-        </label>
-      </p>
-      <p>
-        <label id="phone-label" for="phone">Phone:<br>
-          <input id="phone" type="tel" required placeholder="(Phone)" />
-        </label>
-      </p>
-      <p>
-        <label id="fax-label" for="fax">Fax:<br>
-          <input id="fax" type="text" min="0" max="100" placeholder="(Fax)" />
-        </label>
-      </p>
-    </section>
-    <section role="region" aria-labelledby="project-info">
-      <h2 id="project-info">About Your Project</h2>
-      <fieldset id="domain-and-hosting">
-        <legend id="domain-and-hosting-legend">Domain & Hosting</legend>
-        <p>Do you own a domain name for your business?<br>
-          <label id="domain-yes-label" for="domain-yes">
-            <input id="domain-yes" type="radio" value="yes" name="domain" />Yes
-          </label>
-          <br>
-          <label id="domain-no-label" for="domain-no">
-            <input id="domain-no" type="radio" value="no" name="domain" />No
+  <div class="container">
+    <h1 id="title">Questionnaire for Web Design Clients</h1>
+    <p id="description">Fill out the following to let us know more about your project.</p>
+    <form id="survey-form">
+      <section role="region" aria-labelledby="com-info">
+        <h2 id="com-info">About Your Business</h2>
+        <p>
+          <label id="company-name-label" for="com-name">Name:<br>
+            <input id="com-name" type="text" required placeholder="(Company Name)" />
           </label>
         </p>
         <p>
-          <label id="domain-name-label" for="domain-name">
-            If yes, what is the domain name?<br>
-            <input id="domain" type="url" placeholder="(Domain Name)" />
-          </label>
-        </p>
-        <p>Do you need help purchasing a domain?<br>
-          <label id="domain-help-yes-label" for="domain-help-yes">
-            <input id="domain-help-yes" type="radio" value="yes" name="domain-help" />Yes
-          </label>
-          <br>
-          <label id="domain-help-no-label" for="domain-help-no">
-            <input id="domain-help-no" type="radio" value="no" name="domain-help" />No
-          </label>
-        </p>
-        <p>Do you need help setting up hosting?<br>
-          <label id="host-help-yes-label" for="host-help-yes">
-            <input id="host-help-yes" type="radio" name="host-help" value="no" />Yes
-          </label><br>
-          <label id="host-help-no-label" for="host-help-no">
-            <input id="host-help-no" type="radio" name="host-help" value="no" />No
-          </label>
-        </p>
-        <p>Do you have print materials that we need to match?<br>
-          <label id="print-yes-label" for="print-yes">
-            <input id="print-yes" type="radio" name="print" value="yes" />Yes
-          </label><br>
-          <label id="print-no-label" for="print-no">
-            <input id="print-no" type="radio" name="print" value="print-no" />No
-          </label>
-        </p>
-      </fieldset>
-      <fieldset id="existing-assets">
-        <legend id="existing-assets-legend">Marketing Assets</legend>
-        <p>Are there existing assets that need to be incorporated?</p>
-        <ul>
-          <li>
-            <label id="assets-branding-label" for="assets-branding">
-              <input id="assets-branding" type="checkbox" value="existing-branding" />
-              &nbsp;Branding
-            </label>
-          </li>
-          <li>
-            <label id="assets-products-label" for="assets-products">
-              <input id="assets-products" type="checkbox" value="existing-products" />
-              &nbsp;Products
-            </label>
-          </li>
-          <li>
-            <label id="assets-media-label" for="assets-media">
-              <input id="assets-media" type="checkbox" value="existing-media" />
-              &nbsp;Media
-            </label>
-          </li>
-          <li>
-            <label id="assets-other-label" for="assets-other">
-              <input id="assets-other" type="checkbox" value="existing-other" />
-              &nbsp;Other
-            </label>
-          </li>
-        </ul>
-        <p>
-          Does your company have established guidelines for the use of branding and imagery?<br>
-          <label id="guidelines-yes-label" for="guidelines-yes">
-            <input id="guidelines-yes" type="radio" name="guidelines" value="yes">Yes
-          </label><br>
-          <label id="guidelines-no-label" for="guidelines-no">
-            <input id="guidelines-no" type="radio" name="guidelines" value="no" />No
-          </label>
-        </p>
-        <label id="assets-other-desc-label" for="assets-other-desc">
-          If you checked &ldquo;Other,&rdquo; please explain:<br>
-          <textarea id="assets-other-desc" rows="4" cols="40" placeholder="(Other)"></textarea>
-        </label>
-      </fieldset>
-      <fieldset id="constraints">
-        <legend id="constraints-legend">Constraints</legend>
-        <p>
-          <label id="deadline-label" for="deadline">What is the deadline for the project?<br>
-            <input id="deadline" type="date" name="deadline" />
+          <label id="com-address-label" for="com-address">Street Address:<br>
+            <input id="com-address" type="text" required placeholder="(Address)" />
           </label>
         </p>
         <p>
-          <label id="budget-label" for="budget">What is your budget for this project?<br>
-            <input id="budget" type="text" name="budget" placeholder="(Budget)" />
+          <label id="com-city-label" for="com-city">City:<br>
+            <input id="com-city" type="text" required placeholder="(City)" />
           </label>
         </p>
-      </fieldset>
-      <fieldset id="objectives">
-        <legend id="objectives-legend">Objective</legend>
-        <p>What is the purpose of this project? (You may check more than one.)</p>
-        <ul>
-          <li>
-            <label id="for-brand-label" for="for-brand">
-              <input id="for-brand" type="checkbox" value="brand" />
-              &nbsp;Promote brand awareness
-            </label>
-          </li>
-          <li>
-            <label id="for-product-label" for="for-product">
-              <input id="for-product" type="checkbox" value="product" />
-              &nbsp;Promote products and/or services
-            </label>
-          </li>
-          <li>
-            <label id="for-ecommerce-label" for="for-ecommerce">
-              <input id="for-ecommerce" type="checkbox" value="ecommerce" />
-              &nbsp;Sell products and/or services
-            </label>
-          </li>
-          <li>
-            <label id="for-scheduler-label" for="for-scheduler">
-              <input id="for-scheduler" type="checkbox" value="scheduler" />
-              &nbsp;Schedule bookings and/or appointments
-            </label>
-          </li>
-          <li>
-            <label id="for-engage-label" for="for-engage">
-              <input id="for-engage" type="checkbox" value="engage" />
-              &nbsp;Facilitate customer/client engagement
-            </label>
-          </li>
-          <li>
-            <label id="for-support-label" for="for-support">
-              <input id="for-support" type="checkbox" value="support" />
-              &nbsp;Provide customer support
-            </label>
-          </li>
-          <li>
-            <label id="for-other-label" for="for-other">
-              <input id="for-other" type="checkbox" value="other" />
-              &nbsp;Other
-            </label>
-          </li>
-        </ul>
-        <label id="for-other-desc-label" for="for-other-desc">
-          If you checked &ldquo;Other,&rdquo; please explain:<br>
-          <textarea id="for-other-desc" rows="4" cols="40" placeholder="(Other Purpose)"></textarea>
-        </label>
-      </fieldset>
-      <fieldset id="demographics">
-        <legend id="demographics-label">Demographics</legend>
         <p>
-          <label id="age-label" for="age">Are you targeting a certain age?<br>
-            <select id="age">
-              <option>(Age)</option>
-              <option value="child">Child</option>
-              <option value="adolescent">Adolescent</option>
-              <option value="teen">Teenager</option>
-              <option value="twentysomething">Twentysomething</option>
-              <option value="thirtysomething">Thirtysomething</option>
-              <option value="fortysomething">Fortysomething</option>
-              <option value="fiftysomething">Fiftysomething</option>
-              <option value="senior">Senior</option>
+          <label id="com-state-label" for="dropdown">State:<br>
+            <select id="dropdown" required>
+              <option>(State)</option>
+              <option value="AL">Alabama</option>
+              <option value="AK">Alaska</option>
+              <option value="AZ">Arizona</option>
+              <option value="AR">Arkansas</option>
+              <option value="CA">California</option>
+              <option value="CO">Colorado</option>
+              <option value="CT">Connecticut</option>
+              <option value="DE">Delaware</option>
+              <option value="FL">Florida</option>
+              <option value="GA">Georgia</option>
+              <option value="HI">Hawaii</option>
+              <option value="ID">Idaho</option>
+              <option value="IL">Illinois</option>
+              <option value="IN">Indiana</option>
+              <option value="IA">Iowa</option>
+              <option value="KS">Kansas</option>
+              <option value="KY">Kentucky</option>
+              <option value="LA">Louisiana</option>
+              <option value="ME">Maine</option>
+              <option value="MD">Maryland</option>
+              <option value="MA">Massachusetts</option>
+              <option value="MI">Michigan</option>
+              <option value="MN">Minnesota</option>
+              <option value="MS">Mississippi</option>
+              <option value="MO">Missouri</option>
+              <option value="MT">Montana</option>
+              <option value="NE">Nebraska</option>
+              <option value="NV">Nevada</option>
+              <option value="NH">New Hampshire</option>
+              <option value="NJ">New Jersey</option>
+              <option value="NM">New Mexico</option>
+              <option value="NY">New York</option>
+              <option value="NC">North Carolina</option>
+              <option value="ND">North Dakota</option>
+              <option value="OH">Ohio</option>
+              <option value="OK">Oklahoma</option>
+              <option value="OR">Oregon</option>
+              <option value="PA">Pennsylvania</option>
+              <option value="RI">Rhode</option>
+              <option value="SC">South Carolina</option>
+              <option value="SD">South Dakota</option>
+              <option value="TN">Tennessee</option>
+              <option value="TX">Texas</option>
+              <option value="UT">Utah</option>
+              <option value="VT">Vermont</option>
+              <option value="VA">Virginia</option>
+              <option value="WA">Washington</option>
+              <option value="WV">West Virginia</option>
+              <option value="WI">Wisconsin</option>
+              <option value="WY">Wyoming</option>
             </select>
           </label>
         </p>
         <p>
-          <label id="gender-label" for="gender">Will your site target a specific gender?<br>
-            <select id="gender">
-              <option>(Gender)</option>
-              <option value="female">Female</option>
-              <option value="male">Male</option>
-              <option value="other">Other</option>
-            </select>
+          <label id="number-label" for="number">
+            Zip Code:<br>
+            <input id="number" type="number" min="0" max="16" required />
           </label>
         </p>
         <p>
-          <label id="income-label" for="income">Are you targeting a specific income?<br>
-            <select id="income">
-              <option value="null">(Income)</option>
-              <option value="kids">Kids</option>
-              <option value="students">Students</option>
-              <option value="unemployed">Unemployed</option>
-              <option value="employed">Employed</option>
-              <option value="affluent">Affluent</option>
-            </select>
+          <label id="business-type-label" for="business-type">Please describe what your company does: <br>
+            <textarea id="business-type" placeholder="(Business Description)" rows="4" cols="40"></textarea>
           </label>
         </p>
         <p>
-          <label id="education-label" for="education">
-            Will this project target a specific education level?<br>
-            <select id="education">
-              <option>(Education)</option>
-              <option value="primary">Primary</option>
-              <option value="undergraduate">Undergraduate</option>
-              <option value="graduate">Graduate</option>
-            </select>
+          <label id="value-proposition-label" for="value-proposition">Describe your company&rsquo;s value
+            proposition:<br>
+            <textarea id="value-proposition" placeholder="(Value Proposition)" rows="4" cols="40"></textarea>
+          </label>
+        </p>
+      </section>
+      <section role="region" aria-labelledby="com-contact">
+        <h2 id="com-contact">Primary Contact</h2>
+        <p>
+          <label id="name-label" for="name">Contact&rsquo;s Name:<br>
+            <input id="name" type="text" required placeholder="(Name)" />
           </label>
         </p>
         <p>
-          <label id="geography-label" for="geography">
-            Are you targeting a certain geographic area?<br>
-            <select id="geography">
-              <option>(Location)</option>
-              <option value="local">Local</option>
-              <option value="state">State/Province</option>
-              <option value="national">National</option>
-              <option value="international">International</option>
-            </select>
+          <label id="email-label" for="email">Email:<br>
+            <input id="email" type="email" required placeholder="(Email)" />
           </label>
         </p>
         <p>
-          <label id="occupation-label" for="occupation">
-            Does your demographic have a specific profession? Please describe.<br>
-            <input type="text" name="occupation" placeholder="(Professional)" />
+          <label id="phone-label" for="phone">Phone:<br>
+            <input id="phone" type="tel" required placeholder="(Phone)" />
           </label>
         </p>
         <p>
-          <label id="tech-comfort-label" for="tech-comfort">
-            Which best matches the target demographic's comfort level with online interactive features?<br>
-            <select id="tech-comfort">
-              <option>(Tech Comfort)</option>
-              <option value="uncomfortable">Uncomfortable</option>
-              <option value="comfortable">Comfortable</option>
-              <option value="very comfortable">Very Comfortable</option>
-            </select>
+          <label id="fax-label" for="fax">Fax:<br>
+            <input id="fax" type="text" min="0" max="100" placeholder="(Fax)" />
           </label>
         </p>
-        <p>
-          <label id="more-demographics-label" for="more-demographics">
-            Are there other visitor demographics to target?<br>
-            <textarea id="more-demographics" rows="4" cols="40" placeholder="(Other Demographics)"></textarea>
+      </section>
+      <section role="region" aria-labelledby="project-info">
+        <h2 id="project-info">About Your Project</h2>
+        <fieldset id="domain-and-hosting">
+          <legend id="domain-and-hosting-legend">Domain & Hosting</legend>
+          <p>Do you own a domain name for your business?</p>
+          <p>
+            <label id="domain-yes-label" for="domain-yes">
+              <input id="domain-yes" type="radio" value="yes" name="domain" />Yes
+            </label>
+            <br>
+            <label id="domain-no-label" for="domain-no">
+              <input id="domain-no" type="radio" value="no" name="domain" />No
+            </label>
+          </p>
+          <p>
+            <label id="domain-name-label" for="domain-name">
+              If yes, what is the domain name?<br>
+              <input id="domain" type="url" placeholder="(Domain Name)" />
+            </label>
+          </p>
+          <p>Do you need help purchasing a domain?</p>
+          <p>
+            <label id="domain-help-yes-label" for="domain-help-yes">
+              <input id="domain-help-yes" type="radio" value="yes" name="domain-help" />Yes
+            </label>
+            <br>
+            <label id="domain-help-no-label" for="domain-help-no">
+              <input id="domain-help-no" type="radio" value="no" name="domain-help" />No
+            </label>
+          </p>
+          <p>Do you need help setting up hosting?</p>
+          <p>
+            <label id="host-help-yes-label" for="host-help-yes">
+              <input id="host-help-yes" type="radio" name="host-help" value="no" />Yes
+            </label><br>
+            <label id="host-help-no-label" for="host-help-no">
+              <input id="host-help-no" type="radio" name="host-help" value="no" />No
+            </label>
+          </p>
+          <p>Do you have print materials that we need to match?</p>
+          <p>
+            <label id="print-yes-label" for="print-yes">
+              <input id="print-yes" type="radio" name="print" value="yes" />Yes
+            </label><br>
+            <label id="print-no-label" for="print-no">
+              <input id="print-no" type="radio" name="print" value="print-no" />No
+            </label>
+          </p>
+        </fieldset>
+        <fieldset id="existing-assets">
+          <legend id="existing-assets-legend">Marketing Assets</legend>
+          <p>Are there existing assets that need to be incorporated?</p>
+          <ul>
+            <li>
+              <label id="assets-branding-label" for="assets-branding">
+                <input id="assets-branding" type="checkbox" value="existing-branding" />
+                &nbsp;Branding
+              </label>
+            </li>
+            <li>
+              <label id="assets-products-label" for="assets-products">
+                <input id="assets-products" type="checkbox" value="existing-products" />
+                &nbsp;Products
+              </label>
+            </li>
+            <li>
+              <label id="assets-media-label" for="assets-media">
+                <input id="assets-media" type="checkbox" value="existing-media" />
+                &nbsp;Media
+              </label>
+            </li>
+            <li>
+              <label id="assets-other-label" for="assets-other">
+                <input id="assets-other" type="checkbox" value="existing-other" />
+                &nbsp;Other
+              </label>
+            </li>
+          </ul>
+          <p>
+            Does your company have established guidelines for the use of branding and imagery?</p>
+          <p>
+            <label id="guidelines-yes-label" for="guidelines-yes">
+              <input id="guidelines-yes" type="radio" name="guidelines" value="yes">Yes
+            </label><br>
+            <label id="guidelines-no-label" for="guidelines-no">
+              <input id="guidelines-no" type="radio" name="guidelines" value="no" />No
+            </label>
+          </p>
+          <label id="assets-other-desc-label" for="assets-other-desc">
+            If you checked &ldquo;Other,&rdquo; please explain:<br>
+            <textarea id="assets-other-desc" rows="4" cols="40" placeholder="(Other)"></textarea>
           </label>
-        </p>
-      </fieldset>
-      <fieldset id="seo-info">
-        <legend id="seo-info-legend">SEO</legend>
-        <p>
-          List keywords that your demographic will use at search engines (comma-separated):<br>
-          <label id="client-keywords-label" for="client-keywords">
-            <textarea id="client-keywords" rows="4" cols="40" placeholder="(Keywords List)">
-            </textarea>
+        </fieldset>
+        <fieldset id="constraints">
+          <legend id="constraints-legend">Constraints</legend>
+          <p>
+            <label id="deadline-label" for="deadline">What is the deadline for the project?<br>
+              <input id="deadline" type="date" name="deadline" />
+            </label>
+          </p>
+          <p>
+            <label id="budget-label" for="budget">What is your budget for this project?<br>
+              <input id="budget" type="text" name="budget" placeholder="(Budget)" />
+            </label>
+          </p>
+        </fieldset>
+        <fieldset id="objectives">
+          <legend id="objectives-legend">Objective</legend>
+          <p>What is the purpose of this project? (You may check more than one.)</p>
+          <ul>
+            <li>
+              <label id="for-brand-label" for="for-brand">
+                <input id="for-brand" type="checkbox" value="brand" />
+                &nbsp;Promote brand awareness
+              </label>
+            </li>
+            <li>
+              <label id="for-product-label" for="for-product">
+                <input id="for-product" type="checkbox" value="product" />
+                &nbsp;Promote products and/or services
+              </label>
+            </li>
+            <li>
+              <label id="for-ecommerce-label" for="for-ecommerce">
+                <input id="for-ecommerce" type="checkbox" value="ecommerce" />
+                &nbsp;Sell products and/or services
+              </label>
+            </li>
+            <li>
+              <label id="for-scheduler-label" for="for-scheduler">
+                <input id="for-scheduler" type="checkbox" value="scheduler" />
+                &nbsp;Schedule bookings and/or appointments
+              </label>
+            </li>
+            <li>
+              <label id="for-engage-label" for="for-engage">
+                <input id="for-engage" type="checkbox" value="engage" />
+                &nbsp;Facilitate customer/client engagement
+              </label>
+            </li>
+            <li>
+              <label id="for-support-label" for="for-support">
+                <input id="for-support" type="checkbox" value="support" />
+                &nbsp;Provide customer support
+              </label>
+            </li>
+            <li>
+              <label id="for-other-label" for="for-other">
+                <input id="for-other" type="checkbox" value="other" />
+                &nbsp;Other
+              </label>
+            </li>
+          </ul>
+          <label id="for-other-desc-label" for="for-other-desc">
+            If you checked &ldquo;Other,&rdquo; please explain:<br>
+            <textarea id="for-other-desc" rows="4" cols="40" placeholder="(Other Purpose)"></textarea>
           </label>
-        </p>
-        <p>
-          What keywords are competitors including? (comma-separated):<br>
-          <label id="competitor-keywords-label" for="competitor-keywords">
-            <textarea id="competitor-keywords" rows="4" cols="40" id="competitor-keywords"
-              placeholder="(Keywords List)">
-            </textarea>
-          </label>
-        </p>
-      </fieldset>
-      <fieldset id="project-features">
-        <legend id="project-features-legend">Project Features</legend>
-        <p>Which features are needed for your project?</p>
-        <ul>
-          <li>
-            <label id="feat-redesign-label" for="feat-redesign">
-              <input id="feat-redesign" type="checkbox" name="redesign" value="redesign" />
-              &nbsp;Redesign of your current website
+        </fieldset>
+        <fieldset id="demographics">
+          <legend id="demographics-label">Demographics</legend>
+          <p>
+            <label id="age-label" for="age">Are you targeting a certain age?<br>
+              <select id="age">
+                <option>(Age)</option>
+                <option value="child">Child</option>
+                <option value="adolescent">Adolescent</option>
+                <option value="teen">Teenager</option>
+                <option value="twentysomething">Twentysomething</option>
+                <option value="thirtysomething">Thirtysomething</option>
+                <option value="fortysomething">Fortysomething</option>
+                <option value="fiftysomething">Fiftysomething</option>
+                <option value="senior">Senior</option>
+              </select>
             </label>
-          </li>
-          <li>
-            <label id="feat-theme-label" for="feat-theme">
-              <input id="feat-theme" type="checkbox" name="theme" value="theme" />
-              &nbsp;A custom theme
+          </p>
+          <p>
+            <label id="gender-label" for="gender">Will your site target a specific gender?<br>
+              <select id="gender">
+                <option>(Gender)</option>
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+                <option value="other">Other</option>
+              </select>
             </label>
-          </li>
-          <li>
-            <label id="feat-social-label" for="feat-social">
-              <input id="feat-social" type="checkbox" name="social" value="social" />
-              &nbsp;Social media integration
+          </p>
+          <p>
+            <label id="income-label" for="income">Are you targeting a specific income?<br>
+              <select id="income">
+                <option value="null">(Income)</option>
+                <option value="kids">Kids</option>
+                <option value="students">Students</option>
+                <option value="unemployed">Unemployed</option>
+                <option value="employed">Employed</option>
+                <option value="affluent">Affluent</option>
+              </select>
             </label>
-          </li>
-          <li>
-            <label id="feat-cms-label" for="feat-cms">
-              <input id="feat-cms" type="checkbox" name="feature" value="cms" />
-              &nbsp;Content Management System (CMS)
+          </p>
+          <p>
+            <label id="education-label" for="education">
+              Will this project target a specific education level?<br>
+              <select id="education">
+                <option>(Education)</option>
+                <option value="primary">Primary</option>
+                <option value="undergraduate">Undergraduate</option>
+                <option value="graduate">Graduate</option>
+              </select>
             </label>
-          </li>
-          <li>
-            <label id="feat-blog-label" for="feat-blog">
-              <input id="feat-blog" type="checkbox" name="blog" value="blog" />
-              &nbsp;A blog
+          </p>
+          <p>
+            <label id="geography-label" for="geography">
+              Are you targeting a certain geographic area?<br>
+              <select id="geography">
+                <option>(Location)</option>
+                <option value="local">Local</option>
+                <option value="state">State/Province</option>
+                <option value="national">National</option>
+                <option value="international">International</option>
+              </select>
             </label>
-          </li>
-          <li>
-            <label id="feat-forum-label" for="feat-forum">
-              <input id="feat-forum" type="checkbox" name="forum" value="forum" />
-              &nbsp;Online forum
+          </p>
+          <p>
+            <label id="occupation-label" for="occupation">
+              Does your demographic have a specific profession? Please describe.<br>
+              <input type="text" name="occupation" placeholder="(Professional)" />
             </label>
-          </li>
-        </ul>
-        <p>Are there any specific components you'd like to have?</p>
-        <ul>
-          <li>
-            <label id="cmpt-gallery-label" for="cmpt-gallery">
-              <input id="cmpt-gallery" type="checkbox" name="cmpt-gallery" value="cmpt-gallery" />
-              &nbsp;Media gallery
+          </p>
+          <p>
+            <label id="tech-comfort-label" for="tech-comfort">
+              Which best matches the target demographic&rsquo;s comfort level with online interactive features?<br>
+              <select id="tech-comfort">
+                <option>(Tech Comfort)</option>
+                <option value="uncomfortable">Uncomfortable</option>
+                <option value="comfortable">Comfortable</option>
+                <option value="very comfortable">Very Comfortable</option>
+              </select>
             </label>
-          </li>
-          <li>
-            <label id="cmpt-form-label" for="cmpt-form">
-              <input id="cmpt-form" type="checkbox" name="cmpt-form" value="cmpt-form" />
-              &nbsp;Request form
+          </p>
+          <p>
+            <label id="more-demographics-label" for="more-demographics">
+              Are there other visitor demographics to target?<br>
+              <textarea id="more-demographics" rows="4" cols="40" placeholder="(Other Demographics)"></textarea>
             </label>
-          </li>
-          <li>
-            <label id="cmpt-download-label" for="cmpt-download">
-              <input id="cmpt-download" type="checkbox" name="cmpt-download" value="cmpt-download" />
-              &nbsp;File download
+          </p>
+        </fieldset>
+        <fieldset id="seo-info">
+          <legend id="seo-info-legend">SEO</legend>
+          <p>
+            List keywords that your demographic will use at search engines (comma-separated):<br>
+            <label id="client-keywords-label" for="client-keywords">
+              <textarea id="client-keywords" rows="4" cols="40" placeholder="(Keywords List)">
+              </textarea>
             </label>
-          </li>
-          <li>
-            <label id="cmpt-upload-label" for="cmpt-upload">
-              <input id="cmpt-upload" type="checkbox" name="cmpt-upload" value="cmpt-upload" />
-              &nbsp;File upload
+          </p>
+          <p>
+            What keywords are competitors including? (comma-separated):<br>
+            <label id="competitor-keywords-label" for="competitor-keywords">
+              <textarea id="competitor-keywords" rows="4" cols="40" id="competitor-keywords"
+                placeholder="(Keywords List)">
+              </textarea>
             </label>
-          </li>
-          <li>
-            <label id="cmpt-search-label" for="cmpt-search">
-              <input id="cmpt-search" type="checkbox" name="cmpt-search" value="cmpt-search" />
-              &nbsp;Site search
+          </p>
+        </fieldset>
+        <fieldset id="project-features">
+          <legend id="project-features-legend">Project Features</legend>
+          <p>Which features are needed for your project?</p>
+          <ul>
+            <li>
+              <label id="feat-redesign-label" for="feat-redesign">
+                <input id="feat-redesign" type="checkbox" name="redesign" value="redesign" />
+                &nbsp;Redesign of your current website
+              </label>
+            </li>
+            <li>
+              <label id="feat-theme-label" for="feat-theme">
+                <input id="feat-theme" type="checkbox" name="theme" value="theme" />
+                &nbsp;A custom theme
+              </label>
+            </li>
+            <li>
+              <label id="feat-social-label" for="feat-social">
+                <input id="feat-social" type="checkbox" name="social" value="social" />
+                &nbsp;Social media integration
+              </label>
+            </li>
+            <li>
+              <label id="feat-cms-label" for="feat-cms">
+                <input id="feat-cms" type="checkbox" name="feature" value="cms" />
+                &nbsp;Content Management System (CMS)
+              </label>
+            </li>
+            <li>
+              <label id="feat-blog-label" for="feat-blog">
+                <input id="feat-blog" type="checkbox" name="blog" value="blog" />
+                &nbsp;A blog
+              </label>
+            </li>
+            <li>
+              <label id="feat-forum-label" for="feat-forum">
+                <input id="feat-forum" type="checkbox" name="forum" value="forum" />
+                &nbsp;Online forum
+              </label>
+            </li>
+          </ul>
+          <p>Are there any specific components you'd like to have?</p>
+          <ul>
+            <li>
+              <label id="cmpt-gallery-label" for="cmpt-gallery">
+                <input id="cmpt-gallery" type="checkbox" name="cmpt-gallery" value="cmpt-gallery" />
+                &nbsp;Media gallery
+              </label>
+            </li>
+            <li>
+              <label id="cmpt-form-label" for="cmpt-form">
+                <input id="cmpt-form" type="checkbox" name="cmpt-form" value="cmpt-form" />
+                &nbsp;Request form
+              </label>
+            </li>
+            <li>
+              <label id="cmpt-download-label" for="cmpt-download">
+                <input id="cmpt-download" type="checkbox" name="cmpt-download" value="cmpt-download" />
+                &nbsp;File download
+              </label>
+            </li>
+            <li>
+              <label id="cmpt-upload-label" for="cmpt-upload">
+                <input id="cmpt-upload" type="checkbox" name="cmpt-upload" value="cmpt-upload" />
+                &nbsp;File upload
+              </label>
+            </li>
+            <li>
+              <label id="cmpt-search-label" for="cmpt-search">
+                <input id="cmpt-search" type="checkbox" name="cmpt-search" value="cmpt-search" />
+                &nbsp;Site search
+              </label>
+            </li>
+            <li>
+              <label id="cmpt-login-label" for="cmpt-login">
+                <input id="cmpt-login" type="checkbox" name="cmpt-login" value="cmpt-login" />
+                &nbsp;Login & registration
+              </label>
+            </li>
+            <li>
+              <label id="cmpt-cart-label" for="cmpt-cart">
+                <input id="cmpt-cart" type="checkbox" name="cmpt-cart" value="cmpt-cart" />
+                &nbsp;Shopping cart
+              </label>
+            </li>
+            <li>
+              <label id="cmpt-payment-label" for="cmpt-payment">
+                <input id="cmpt-payment" type="checkbox" name="cmpt-payment" value="cmpt-payment" />
+                &nbsp;Only payment
+              </label>
+            </li>
+          </ul>
+          <p>
+            <label id="other-feat-label" for="other-feat">Other features or components:<br>
+              <textarea id="other-feat" rows="4" cols="40" placeholder="(Other Features)"></textarea>
             </label>
-          </li>
-          <li>
-            <label id="cmpt-login-label" for="cmpt-login">
-              <input id="cmpt-login" type="checkbox" name="cmpt-login" value="cmpt-login" />
-              &nbsp;Login & registration
-            </label>
-          </li>
-          <li>
-            <label id="cmpt-cart-label" for="cmpt-cart">
-              <input id="cmpt-cart" type="checkbox" name="cmpt-cart" value="cmpt-cart" />
-              &nbsp;Shopping cart
-            </label>
-          </li>
-          <li>
-            <label id="cmpt-payment-label" for="cmpt-payment">
-              <input id="cmpt-payment" type="checkbox" name="cmpt-payment" value="cmpt-payment" />
-              &nbsp;Only payment
-            </label>
-          </li>
-        </ul>
-        <p>
-          <label id="other-feat-label" for="other-feat">Other features or components:<br>
-            <textarea id="other-feat" rows="4" cols="40" placeholder="(Other Features)"></textarea>
-          </label>
-        </p>
-      </fieldset>
-      <fieldset id="project-content">
-        <legend id="project-content-legend">Content</legend>
-        <p>Who will be providing the following?</p>
-        <ul>
-          <li>Stock Photography:
-            <label id="stock-photos-client-label" for="stock-photos-client">
-              <input id="stock-photos-client" type="radio" name="stock-photos" value="you" />Client
-            </label>
-            <label id="stock-photos-designer-label" for="stock-photos-designer">
-              <input id="stock-photos-designer" type="radio" name="stock-photos" value="us" />Designer
-            </label>
-          </li>
-          <li>Company photography:
-            <label id="com-photos-client-label" for="com-photos-client">
-              <input id="com-photos-client" type="radio" name="com-photos" value="client" />Client
-            </label>
-            <label id="com-photos-designer-label" for="com-photos-designer">
-              <input id="com-photos-designer" type="radio" name="com-photos" value="designer" />Designer
-            </label>
-          </li>
-          <li>Other artwork / illustration:
-            <label id="other-art-client-label" for="other-art-client">
-              <input id="other-art-client" type="radio" name="other-art" value="client" />Client
-            </label>
-            <label id="com-photos-designer-label" for="com-photos-designer">
-              <input id="other-art-designer" type="radio" name="other-art" value="designer" />Designer
-            </label>
-          </li>
-          <li>Copywriting:
-            <label id="copywriting-client-label" for="copywriting-client">
-              <input id="copywriting-client" type="radio" name="copywriting" value="client" />Client
-            </label>
-            <label id="copywriting-designer-label" for="copywriting-designer">
-              <input id="copywriting-designer" type="radio" name="copywriting" value="designer" />Designer
-            </label>
-          </li>
-          <li>Font licenses:
-            <label id="font-licenses-client-label" for="font-licenses-client">
-              <input id="font-licenses-client" type="radio" name="font-licenses" value="client" />Client
-            </label>
-            <label id="font-licenses-designer-label" for="font-licenses-designer">
-              <input id="font-licenses-designer" type="radio" name="font-licenses" value="designer" />Designer
-            </label>
-          </li>
-          <li>Meta tags / descriptions:
-            <label id="meta-tags-client-label" for="meta-tags-client">
-              <input id="meta-tags-client" type="radio" name="meta-tags" value="client" />Client
-            </label>
-            <label id="meta-tags-designer-label" for="meta-tags-designer">
-              <input id="meta-tags-designer" type="radio" name="meta-tags" value="designer" />Designer
-            </label>
-          </li>
-          <li>Graphic design:
-            <label id="graphic-design-client-label" for="graphic-design-client">
-              <input id="graphic-design-client" type="radio" name="graphic-design" value="client" />Client
-            </label>
-            <label id="graphic-design-designer-label" for="graphic-design-designer">
-              <input id="graphic-design-designer" type="radio" name="graphic-design" value="designer" />Designer
-            </label>
-          </li>
-          <li>Identity design:
-            <label id="identity-design-client-label" for="identity-design-client">
-              <input id="identity-design-client" type="radio" name="identity-design" value="client" />Client
-            </label>
-            <label id="identity-design-designer-label" for="identity-design-designer">
-              <input id="identity-design-designer" type="radio" name="identity-design" value="designer" />Designer
-            </label>
-          </li>
-        </ul>
-      </fieldset>
-    </section>
-    <div>
-      <input id="submit" type="submit" value="Submit" />
-    </div>
-  </form>
+          </p>
+        </fieldset>
+        <fieldset id="project-content">
+          <legend id="project-content-legend">Content</legend>
+          <p>Who will be providing the following?</p>
+          <ul>
+            <li class="two-col">
+              <span>Stock Photography:</span>
+              <span>
+                <label id="stock-photos-client-label" for="stock-photos-client">
+                  <input id="stock-photos-client" type="radio" name="stock-photos" value="you" />Client
+                </label>
+                <label id="stock-photos-designer-label" for="stock-photos-designer">
+                  <input id="stock-photos-designer" type="radio" name="stock-photos" value="us" />Designer
+                </label>
+              </span>
+            </li>
+            <li class="two-col">
+              <span>Company photography:</span>
+              <span>
+                <label id="com-photos-client-label" for="com-photos-client">
+                  <input id="com-photos-client" type="radio" name="com-photos" value="client" />Client
+                </label>
+                <label id="com-photos-designer-label" for="com-photos-designer">
+                  <input id="com-photos-designer" type="radio" name="com-photos" value="designer" />Designer
+                </label>
+              </span>
+            </li>
+            <li class="two-col">
+              <span>Other artwork / illustration:</span>
+              <span>
+                <label id="other-art-client-label" for="other-art-client">
+                  <input id="other-art-client" type="radio" name="other-art" value="client" />Client
+                </label>
+                <label id="com-photos-designer-label" for="com-photos-designer">
+                  <input id="other-art-designer" type="radio" name="other-art" value="designer" />Designer
+                </label>
+              </span>
+            </li>
+            <li class="two-col">
+              <span>Copywriting:</span>
+              <span>
+                <label id="copywriting-client-label" for="copywriting-client">
+                  <input id="copywriting-client" type="radio" name="copywriting" value="client" />Client
+                </label>
+                <label id="copywriting-designer-label" for="copywriting-designer">
+                  <input id="copywriting-designer" type="radio" name="copywriting" value="designer" />Designer
+                </label>
+              </span>
+            </li>
+            <li class="two-col">
+              <span>Font licenses:</span>
+              <span>
+                <label id="font-licenses-client-label" for="font-licenses-client">
+                  <input id="font-licenses-client" type="radio" name="font-licenses" value="client" />Client
+                </label>
+                <label id="font-licenses-designer-label" for="font-licenses-designer">
+                  <input id="font-licenses-designer" type="radio" name="font-licenses" value="designer" />Designer
+                </label>
+              </span>
+            </li>
+            <li class="two-col">
+              <span>Meta tags / descriptions:</span>
+              <span>
+                <label id="meta-tags-client-label" for="meta-tags-client">
+                  <input id="meta-tags-client" type="radio" name="meta-tags" value="client" />Client
+                </label>
+                <label id="meta-tags-designer-label" for="meta-tags-designer">
+                  <input id="meta-tags-designer" type="radio" name="meta-tags" value="designer" />Designer
+                </label>
+              </span>
+            </li>
+            <li class="two-col">
+              <span>Graphic design:</span>
+              <span>
+                <label id="graphic-design-client-label" for="graphic-design-client">
+                  <input id="graphic-design-client" type="radio" name="graphic-design" value="client" />Client
+                </label>
+                <label id="graphic-design-designer-label" for="graphic-design-designer">
+                  <input id="graphic-design-designer" type="radio" name="graphic-design" value="designer" />Designer
+                </label>
+              </span>
+            </li>
+            <li class="two-col">
+              <span>Identity design:</span>
+              <span>
+                <label id="identity-design-client-label" for="identity-design-client">
+                  <input id="identity-design-client" type="radio" name="identity-design" value="client" />Client
+                </label>
+                <label id="identity-design-designer-label" for="identity-design-designer">
+                  <input id="identity-design-designer" type="radio" name="identity-design" value="designer" />Designer
+                </label>
+              </span>
+            </li>
+          </ul>
+        </fieldset>
+      </section>
+      <div>
+        <input id="submit" type="submit" value="Submit" />
+      </div>
+    </form>
+  </div>
 </body>
 
 </html>

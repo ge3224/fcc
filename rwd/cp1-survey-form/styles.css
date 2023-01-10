@@ -5,3 +5,62 @@ html {
 *, *::before, *::after {
   box-sizing: inherit;
 }
+
+body {
+  margin: 0;
+  background: linear-gradient(hsl(225, 25%, 83%), hsl(225, 25%, 85%));
+  color: hsl(225, 15%, 35%);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  color: hsl(225, 25%, 20%);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  width: 100%;
+  max-width: 448px;
+}
+
+fieldset {
+  margin: 1em 0 ;
+  border: 3px solid hsl(225, 25%, 85%);
+}
+
+fieldset ~ fieldset {
+  margin-top: 0;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 0.25em;
+  color: hsl(225, 25%, 20%);
+}
+
+input, textarea, select {
+  padding: 0.25em;
+  margin-top: 0.25em;
+  border: 1px solid hsl(225, 15%, 75%);
+  background-color: hsl(0, 0%, 100%);
+}
+
+.container {
+  max-width: 1152px;
+  margin: 0 auto;
+  background-color: hsl(225, 25%, 95%);
+  background: linear-gradient(hsl(225, 25%, 95%), hsl(225, 25%, 93%));
+  padding: 1.5em 1em 1em;
+}
+
+.two-col {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid hsl(0, 0%, 80%);
+  margin-bottom: 0.25em;
+  padding-bottom: 0.25em;
+}
