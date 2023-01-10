@@ -49,6 +49,17 @@ input, textarea, select {
   background-color: hsl(0, 0%, 100%);
 }
 
+input[type="submit"] {
+  background-color: hsl(275, 48%, 20%);
+  border: 1px solid hsl(225, 25%, 0%);
+  box-shadow: 2px 2px 0 0 hsla(225, 15%, 20%, 25%);
+  border-radius: 2px;
+  font-weight: bold;
+  font-size: 0.875rem;
+  color: hsl(225, 0%, 98%);
+  padding: 1em 2em;
+}
+
 .container {
   max-width: 1152px;
   margin: 0 auto;
