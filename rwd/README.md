@@ -8,13 +8,12 @@ This curriculum focuses on HTML and CSS.
 
 ## Section 2
 
-Accessibility information in second section:
+Accessibility references:
 
-* Semantic HTML elements: exercise 4, step 6
-* `role` attribute: exercise 4, step 15
-* `aria-labelledby`: exercise 4, step 16
-* `placeholder` attribute: exercise 4, step 22
-* screen reader only styling: exercise 4, step 23
+* [Semantic HTML elements](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-accessibility-by-building-a-quiz/step-6)
+* [`role` attribute](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-accessibility-by-building-a-quiz/step-15)
+* [`aria-labelledby`](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-accessibility-by-building-a-quiz/step-16)
+* [`placeholder`](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-accessibility-by-building-a-quiz/step-22)
 
 ### Project 2: [Tribute Page](./cp2-tribute-page/index.html)
 
@@ -22,13 +21,13 @@ Accessibility information in second section:
 
 Hiding screen screen-reader specific elements:
 
-* `span[class~="sr-only"]`: exercise 1, step 30
+* [screen reader only styling](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-accessibility-by-building-a-quiz/step-23)
+* [`span[class~="sr-only"]`](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-more-about-css-pseudo-selectors-by-building-a-balance-sheet/step-30)
 
 Basic normalization information in third section:
 
-* box-sizing: 
-    - exercise 1, step 28
-    - exercise 3, step 9
+[`box-sizing` - `html`](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-more-about-css-pseudo-selectors-by-building-a-balance-sheet/step-28)
+[`box-sizing` - pseudo-elements](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-responsive-web-design-by-building-a-piano/step-10)
 
 ### Project 3: [Technical Documentation Page](./cp3-technical-documentation-page/index.html)
 
