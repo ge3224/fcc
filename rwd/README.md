@@ -26,8 +26,8 @@ Hiding screen screen-reader specific elements:
 
 Basic normalization information in third section:
 
-[`box-sizing` - `html`](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-more-about-css-pseudo-selectors-by-building-a-balance-sheet/step-28)
-[`box-sizing` - pseudo-elements](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-responsive-web-design-by-building-a-piano/step-10)
+* [`box-sizing` - `html`](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-more-about-css-pseudo-selectors-by-building-a-balance-sheet/step-28)
+* [`box-sizing` - pseudo-elements](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-responsive-web-design-by-building-a-piano/step-10)
 
 ### Project 3: [Technical Documentation Page](./cp3-technical-documentation-page/index.html)
 
