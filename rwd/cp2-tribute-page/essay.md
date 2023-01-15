@@ -1,32 +1,71 @@
 ![An illustration by Noel Sickles for The Saturday Evening Post, September 1960](https://live.staticflickr.com/43/80277554_b091bab2a7_h.jpg)
 
-# Noel Sickles — Cartoonist, Illustrator, and Artist
+# Noel Sickles
 
-The most widely known moments of Noel Sickles career began in 1933 when the twentysomething started doing ghost work on Scorchy Smith, an adventure comic strip created by John Terry for the Associated Press. 
+It was a routine task, ghost work for a comic strip offered by the Associated
+Press Feature Service to member newspapers in 1933, to be completed on time in
+the name and style of the strip's author. AP's new twentysomething hire, Noel
+Sickles, was to get it done—before deadline, daily.
 
-Sickels had arrived in New York City just a few months before receiving the assignment for Scorchy. He moved from Ohio after receiving word about a job opening at AP from his friend Milton Caniff.
+The strip, an aviation adventure called Scorchy Smith,
+demanded another artist now that its creator John Terry was sick with
+tuberculosis and couldn't work.
 
-The need for ghost work subsequently arose when John Terry became gravely ill. He died early the following year. Sickles continued drawing Scorchy Smith under the name of the deceased until April 2, 1934. 
+Sickels arrived at AP in New York City a short time earlier, after receiving
+word about the job from his friend and fellow artist Milton Caniff.
 
-Then, Sickles began signing his work for the strip. Readers also started seeing a transformation in how the comic was written and drawn. His changes were well received. Scorchy Smith quickly became one of the most popular strips AP had to offer, picked up by hundreds more affiliate newspapers.
+Terry unfortunately died early the following year. Sickles continued drawing
+Scorchy Smith under the name of the deceased until April 2, 1934. 
 
-Biographers often describe Sickles’ art for Scorchy as impressionistic and cinematic.
+Then, Sickles began signing his work for the strip. Readers also started seeing
+a transformation in how the comic was written and drawn. His changes were well
+received. Scorchy Smith quickly became one of the most popular strips AP had to
+offer, picked up by hundreds more affiliate newspapers.
 
-In fact, I first learned of Sickles in Steven Katz’s much-loved text on film directing, Shot by Shot. In the book Katz wrote, “His work is filled with graphic solutions and innovations that are a storehouse of ideas for storyboard artists.”
+Biographers often describe Sickles’ art for Scorchy as impressionistic and
+cinematic.
 
-Cartoonist Alexander Toth hailed Sickles in an interview for Comic Book Artist. “What he did with figures and lighting and storytelling, the movie techniques he brought into his strip!” exclaimed Toth. "Black-and-white photography, being 95 percent of movies in those days, excited him, and he adapted it into his work on Scorchy Smith, using one graytone in his black-and-white art to indicate patterns, light sources showing their effects, in snow scenes, night scenes...remarkable stuff.”
+In fact, I first learned of Sickles in Steven Katz’s much-loved text on film
+directing, Shot by Shot. In the book Katz wrote, “His work is filled with
+graphic solutions and innovations that are a storehouse of ideas for storyboard
+artists.”
 
-Sickles’ produced all of his work for Scorchy Smith between 1933 and 1936. This period represents a fraction of his body of work, which would span the next four decades. 
+Cartoonist Alexander Toth hailed Sickles in an interview for Comic Book Artist.
+“What he did with figures and lighting and storytelling, the movie techniques
+he brought into his strip!” exclaimed Toth. "Black-and-white photography, being
+95 percent of movies in those days, excited him, and he adapted it into his
+work on Scorchy Smith, using one graytone in his black-and-white art to
+indicate patterns, light sources showing their effects, in snow scenes, night
+scenes...remarkable stuff.”
 
-His departure from AP was primarily the result of a disagreement over pay. There was another factor involved, according to Dean Mullaney, editor of Scorchy Smith and the Art of Noel Sickles. 
+Sickles’ produced all of his work for Scorchy Smith between 1933 and 1936. This
+period represents a fraction of his body of work, which would span the next
+four decades. 
 
-In an online interview Mullaney said, “It should be pointed out, too, that Sickles was becoming bored with the constant deadlines of producing a daily strip. He was such a perfectionist, he would often get to the last panel, decide he didn’t like it, and throw out the entire strip, instead of doing a new third panel as a pasteover. He was also looking for new challenges.”
+His departure from AP was primarily the result of a disagreement over pay.
+There was, however, another factor involved, according to Dean Mullaney, editor
+of Scorchy Smith and the Art of Noel Sickles. 
 
-In the years to follow, Sickles’ art graced pages of the foremost illustrated magazines, including The Saturday Evening Post, Reader’s Digest, Life, and National Geographic. His work is found over a large cross-section of published by the government and various advertising agencies.
+In an online interview Mullaney said, “It should be pointed out, too, that
+Sickles was becoming bored with the constant deadlines of producing a daily
+strip. He was such a perfectionist, he would often get to the last panel,
+decide he didn’t like it, and throw out the entire strip, instead of doing a
+new third panel as a pasteover. He was also looking for new challenges.”
 
-Artist Harry Devlin in his biography of Sickles for the Society of Illustrators wrote, “The quality of the work was superb. Never content with his output, Noel destroyed many illustrations that would have elated art editors and left most of his contemporaries thoroughly envious.”
+In the years to follow, Sickles’ art graced pages of the foremost illustrated
+magazines, including The Saturday Evening Post, Reader’s Digest, Life, and
+National Geographic. His work is found over a large cross-section of published
+by the government and various advertising agencies.
 
-When Sickles passed away in 1982, his lifelong friend Milton Caniff wrote, “This restless genius was the greatest natural cartoonist I ever knew. Now he is dead! All that talent still unused and every cartoonist feels cheated of what might yet have come from his magic hand.”
+Artist Harry Devlin in his biography of Sickles for the Society of Illustrators
+wrote, “The quality of the work was superb. Never content with his output, Noel
+destroyed many illustrations that would have elated art editors and left most
+of his contemporaries thoroughly envious.”
+
+When Sickles passed away in 1982, his lifelong friend Milton Caniff wrote,
+“This restless genius was the greatest natural cartoonist I ever knew. Now he
+is dead! All that talent still unused and every cartoonist feels cheated of
+what might yet have come from his magic hand.”
 
 ---
 
