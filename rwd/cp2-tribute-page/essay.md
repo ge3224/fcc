@@ -1,29 +1,41 @@
-![An illustration by Noel Sickles for The Saturday Evening Post, September 1960](https://live.staticflickr.com/43/80277554_b091bab2a7_h.jpg)
-
 # Noel Sickles
 
-It was routine ghost work for a comic strip offered by the Associated
-Press Feature Service to member newspapers in 1933, to be completed on time in
-the name and style of the strip's author. AP's new twentysomething hire, Noel
-Sickles, was to get it done—before deadline, daily.
+It started with ghost work on a comic strip for the Associated Press Feature
+Service in 1933, work to be completed daily, under deadline, in the name and
+style of someone else.
 
-The strip, an aviation adventure called Scorchy Smith,
-demanded another artist now that its creator John Terry was sick with
-tuberculosis and couldn't work.
+A new hire, a twentysomething, would do the work—Noel Sickles. He would labor
+invisibly. His assignment was for an aviation adventure strip called Scorchy
+Smith.
 
-Sickels arrived at AP in New York City a short time earlier, after receiving
-word about the job from his friend and fellow artist Milton Caniff.
+In less than year, Sickles role would change. He would be widely known for his
+work on Scorchy Smith, and he would forever change the world of illustrated
+art.
 
-Terry unfortunately died early the following year. Sickles continued drawing
-Scorchy Smith under the name of the deceased until April 2, 1934. 
+Sickels arrived in New York City earlier that year when his friend Milt Caniff
+sent word about a job. He joined Caniff at AP, leaving behind the economic
+uncertainty he faced back in Ohio during the Great Depression.
 
-Then, Sickles began signing his work for the strip. Readers also started seeing
-a transformation in how the comic was written and drawn. His changes were well
-received. Scorchy Smith quickly became one of the most popular strips AP had to
-offer, picked up by hundreds more affiliate newspapers.
+The ghost assignment for Sickles arose when John Terry, another staff artist,
+fell sick from tuberculosis. Terry created Scorchy Smith for AP in 1930. There
+was hope of Terry recovering, but that hope went unfulfilled. Terry died
+February 27, 1934.
 
-Biographers often describe Sickles’ art for Scorchy as impressionistic and
-cinematic.
+Behind the scenes, Sickles kept Scorchy Smith in publication for months, even
+after the loss of John Terry. But then, his role changed. He would no longer be
+a ghost. 
+
+On April 2, 1934, the public saw Sickles' signature printed in Scorchy Smith
+for the first time. They also saw new storytelling and drawing techniques.
+
+The innovations Sickles unveiled in Scorchy caught the attention of other
+artists almost immediatly. His work also enjoyed an excellent reception from
+the public. Scorchy Smith quickly became one of the most popular strips AP had
+to offer, picked up by hundreds more of the syndicate's member newspapers.
+
+"Sickles brought cinematic storytelling to Scorchy Smith," wrote Tom Mason,
+co-founder of Malibu Comics. "He varied angles, played around with light and
+shadow, and his characters look like they’re moving instead of posing." 
 
 In fact, I first learned of Sickles in Steven Katz’s much-loved text on film
 directing, Shot by Shot. In the book Katz wrote, “His work is filled with
@@ -56,6 +68,8 @@ In the years to follow, Sickles’ art graced pages of the foremost illustrated
 magazines, including The Saturday Evening Post, Reader’s Digest, Life, and
 National Geographic. His work is found over a large cross-section of published
 by the government and various advertising agencies.
+
+![An illustration by Noel Sickles for The Saturday Evening Post, September 1960](https://live.staticflickr.com/43/80277554_b091bab2a7_h.jpg)
 
 Artist Harry Devlin in his biography of Sickles for the Society of Illustrators
 wrote, “The quality of the work was superb. Never content with his output, Noel
@@ -101,3 +115,4 @@ what might yet have come from his magic hand.”
 - [Retracing Sickles in Chillicothe](https://matttauber.blogspot.com/2009/03/noel-sickles-chillicothe.html)
 - [Ohio State University - Mr. Coffee Nerves](https://library.osu.edu/site/cartoons/2012/08/03/found-in-the-collection-mr-coffee-nerves/)
 - [Mullany on Sickles](https://www.dailycartoonist.com/index.php/2009/01/13/mullaney-talks-about-noel-sickles-milton-caniff/)
+- [AP location in 1933](https://apimagesblog.com/blog/2018/12/11/80th-anniversary-of-aps-move-to-rockefeller-center)
