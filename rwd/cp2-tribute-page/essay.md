@@ -2,7 +2,7 @@
 
 # Noel Sickles
 
-It was a routine task, ghost work for a comic strip offered by the Associated
+It was routine ghost work for a comic strip offered by the Associated
 Press Feature Service to member newspapers in 1933, to be completed on time in
 the name and style of the strip's author. AP's new twentysomething hire, Noel
 Sickles, was to get it done—before deadline, daily.
