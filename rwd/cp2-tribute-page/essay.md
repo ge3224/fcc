@@ -18,21 +18,15 @@ For the first time on April 2, 1934, the public saw Sickles’ signature printed
 
 “Sickles brought cinematic storytelling to *Scorchy Smith*,” said Tom Mason, co-founder of *Malibu Comics*. “He varied angles, played around with light and shadow, and his characters look like they’re moving instead of posing.”
 
-![](https://www.2dgalleries.com/planches/2015/44/scorchy-smith-1936-3jo5.jpg)
-
 According to Dean Mullaney, editor of *Scorchy Smith and the Art of Noel Sickles*, the changes he made in the serial had an excellent response from the public.
 
 “When Sickles took over the strip, 100 newspapers subscribed to *Scorchy Smith*; after three years, circulation increased to more than 250 papers,” Mullaney said in an online interview.
 
 For the next two-and-a-half years, Sickles produced his editions of *Scorchy Smith*, crafting a body of work that is now legendary. Other artists from various industries continue to study his work. His approach, dubbed chiaroscuro, can be found in works by generations of commercial artists.
 
-![](https://cafans.b-cdn.net/images/Category_498/subcat_171190/nhRG83IU_130218120736lola.jpg)
-
 Steven Katz, author of *Film Directing: Shot By Shot—Visualizing from Concept to Screen*, wrote about Sickles, “His work is filled with graphic solutions and innovations that are a storehouse of ideas for storyboard artists.”
 
 On October 24, 1936, Noel Sickels resigned from *Scorchy* after AP rebuffed his request for salary renegotiation. There were other factors, according to Mullaney. 
-
-![](https://cafans.b-cdn.net/images/Category_2953/subcat_224911/thumbs/yl1aXThU_0804221438091gpadd.jpg)
 
 “It should be pointed out, too, that Sickles was becoming bored with the constant deadlines of producing a daily strip,” Mullaney wrote. “He was such a perfectionist, he would often get to the last panel, decide he didn’t like it, and throw out the entire strip, instead of doing a new third panel as a paste-over. He was also looking for new challenges.”
 
@@ -40,11 +34,19 @@ Sickles went on to enjoy a successful career in magazine illustration and advert
 
 “Full recognition came to Noel following the war years,” Devlin wrote. “At one point the Saturday Evening Post offered him a carte blanche arrangement in which he could choose from any manuscript he might find appealing. Now his work appeared in all the major illustrated magazines and in many of the books published by Readers’ Digest.” 
 
-![](https://live.staticflickr.com/38/80277418_86b76031ba_h.jpg)
-
 Sickles remained prolific for the next four decades. When Sickles passed away in 1982, his panels for *Scorchy Smith* represented a fraction of a lifelong collection of inspiring works. 
 
 Caniff wrote about his friend, “This restless genius was the greatest natural cartoonist I ever knew. Now he is dead! All that talent still unused, and every cartoonist feels cheated of what might yet have come from his magic hand.”
+
+---
+
+![](https://www.2dgalleries.com/planches/2015/44/scorchy-smith-1936-3jo5.jpg)
+
+![](https://cafans.b-cdn.net/images/Category_498/subcat_171190/nhRG83IU_130218120736lola.jpg)
+
+![](https://cafans.b-cdn.net/images/Category_2953/subcat_224911/thumbs/yl1aXThU_0804221438091gpadd.jpg)
+
+![](https://live.staticflickr.com/38/80277418_86b76031ba_h.jpg)
 
 ![](https://live.staticflickr.com/43/80277554_08714603a8_b.jpg)
 
