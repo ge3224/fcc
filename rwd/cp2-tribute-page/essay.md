@@ -8,7 +8,7 @@ In 1933, the Associated Press Feature Service had a new hire, a twentysomethingâ
 
 By springtime the following year, Sicklesâ€™ obscure role would lead to notoriety and a body of work that would forever change the world of illustrated art.
 
-Sickles was no rookie when he arrived in New York City that year. He was already an established cartoonist who left his native Ohio because of the Great Depression, which made opportunities scarce in his area. His friend Milton Caniff sent word about a job at AP. The two artists had shared a studio in Ohio, but for the same economic reasons, Caniff left for AP the previous year.
+Sickles was no rookie when he arrived in New York City that year. He was already an established cartoonist who left his native Ohio because of the Great Depression. His friend Milton Caniff sent word about a job at AP. The two artists shared a studio in Ohio before work became scarce. Caniff left for AP the previous year.
 
 Not long after Sickles joined the AP staff, the need for ghost work on *Scorchy Smith* arose when John Terry fell sick from tuberculosis. Terry, brother of *Terrytoons* co-founder Paul Terry, created *Scorchy Smith* for AP in 1930. There was hope that Terry might recover and resume his work, but that hope was never realized. Terry died on February 27, 1934.
 
