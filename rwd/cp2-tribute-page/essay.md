@@ -10,7 +10,7 @@ By springtime the following year, Sickles’ obscure role would lead to notoriet
 
 Sickles was no rookie when he arrived in New York City that year. He was already an established cartoonist who left his native Ohio because of the Great Depression. His friend Milton Caniff sent word about a job at AP. The two artists shared a studio in Ohio before work became scarce. Caniff left for AP the previous year.
 
-Not long after Sickles joined the AP staff, the need for ghost work on *Scorchy Smith* arose when John Terry fell sick from tuberculosis. Terry, brother of *Terrytoons* co-founder Paul Terry, created *Scorchy Smith* for AP in 1930. There was hope that Terry might recover and resume his work, but that hope was never realized. Terry died on February 27, 1934.
+Not long after Sickles AP's staff, the need for a ghost artist arose when John Terry fell sick from tuberculosis. Terry, brother of *Terrytoons* co-founder Paul Terry, created *Scorchy Smith* for AP in 1930. There was hope that Terry might recover and resume his work, but that hope was never realized. Terry died on February 27, 1934.
 
 Behind the scenes, Sickles kept *Scorchy Smith* in print for months while Terry convalesced. This continued even after Terry’s death. But then, there came a change in Sickles’ assignment. He would no longer be a ghost artist.
 
@@ -32,7 +32,7 @@ Steven Katz, author of *Film Directing: Shot By Shot—Visualizing from Concept 
 
 On October 24, 1936, Noel Sickels resigned from *Scorchy* after AP rebuffed his request for salary renegotiation. There were other factors, according to Mullaney. 
 
-“It should be pointed out, too, that Sickles was becoming bored with the constant deadlines of producing a daily strip,” Mullaney wrote. “He was such a perfectionist, he would often get to the last panel, decide he didn’t like it, and throw out the entire strip, instead of doing a new third panel as a paste-over. He was also looking for new challenges.”
+“It should be pointed out, too, that Sickles was becoming bored with the constant deadlines of producing a daily strip,” Mullaney said. “He was such a perfectionist, he would often get to the last panel, decide he didn’t like it, and throw out the entire strip, instead of doing a new third panel as a paste-over. He was also looking for new challenges.”
 
 Sickles went on to enjoy a successful career in magazine illustration and advertising. Artist Harry Devlin first met Sickles in 1940. In Devlin’s biography of Sickles for the Society of Illustrators, he describes Sickles’ success outside of cartooning.
 
