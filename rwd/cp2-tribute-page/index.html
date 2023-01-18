@@ -4,21 +4,159 @@
 <head>
   <meta charset="utf-8" />
   <title>Tribute Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
   <main id="main">
-    <h1 id="title">Dr. Norman Borlaug</h1>
-    <figure id="img-div">
-      <img id="image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute-page-main-image.jpg">
-      <figcaption id="img-caption">Dr. Norman Borlaug, third from the left, trains biologists in Mexico on how to
-        increase wheat yields - part of his life-long war on hunger.
-      </figcaption>
+    <figure>
+      <img class="hero-img-narrow"
+        src="https://github.com/ge3224/fcc/blob/main/rwd/cp2-tribute-page/images/sickles-hemingway-1952-Sept-1-vertical.jpg?raw=true"
+        alt="Illustrations for The Old Man and the Sea by Noel Sickles (vertical format)" />
+      <img class="hero-img-wide"
+        src="https://github.com/ge3224/fcc/blob/main/rwd/cp2-tribute-page/images/sickles-hemingway-1952-Sept-1.jpg?raw=true"
+        alt="Illustrations for The Old Man and the Sea by Noel Sickles (horizontal format)" />
+      <figcaption class="container">Illustrations by Noel Sickles for the first ever publication of Earnest
+        Hemingway&rsquo;s <em>The Old Man and the Sea</em>, Life Magazine, September 1, 1952.</figcaption>
     </figure>
-    <div id="tribute-info">If you have time, you should read more about this incredible human being on his <a
-        id="tribute-link" href="https://en.wikipedia.org/wiki/Norman_Borlaug" target="_blank">Wikipedia entry</a>.</div>
+    <div class="container">
+      <h1 id="title">Noel Sickles&mdash;Pioneer of Cinematic Illustration</h1>
+      <p class="lede"><span class="caps">It started</span> with a ghost job, anonymous work on a comic strip to be
+        completed daily, under a deadline, in the name and style of another artist.</p>
+      <p class="lede">In 1933, the Associated Press Feature Service had a new hire, a twentysomething&mdash;Noel
+        Sickles. He received
+        the ghost assignment for <em>Scorchy Smith</em>. He would labor invisibly on this aviation adventure strip in
+        place of its creator, John Terry.</p>
+      <p class="lede">By springtime the following year, Sickles&rsquo; obscure role would lead to notoriety and a body
+        of work that
+        would forever change the world of illustrated art.</p>
+      <p>Sickles was no rookie when he arrived in New York City that year. He was already an established cartoonist who
+        left his native Ohio because of the Great Depression. His friend <a
+          href="https://cartoons.osu.edu/digital_exhibits/miltoncaniff/" target="_blank">Milton Caniff</a> sent word
+        about a job at AP. The two artists shared a studio in Ohio before work became scarce. Caniff left for AP the
+        previous year.</p>
+      <p>Not long after Sickles AP's staff, the need for a ghost artist arose when John Terry fell sick from
+        tuberculosis. Terry, brother of <em>Terrytoons</em> co-founder <a
+          href="https://en.wikipedia.org/wiki/Paul_Terry_(cartoonist)" target="_blank">Paul Terry</a>, created
+        <em>Scorchy Smith</em> for AP in 1930. There was hope that Terry might recover and resume his work, but that
+        hope was never realized. Terry died on February 27, 1934.
+      </p>
+      <p>Behind the scenes, Sickles kept <em>Scorchy Smith</em> in print for months while Terry convalesced. This
+        continued even after Terry&rsquo;s death. But then, there came a change in Sickles&rsquo; assignment. He would
+        no longer be a ghost artist.</p>
+      <p>For the first time on April 2, 1934, the public saw Sickles&rsquo; signature printed on <em>Scorchy Smith</em>.
+        They also began to witness new storytelling and drawing techniques. A new era for the strip had begun.</p>
+      <figure>
+        <img class="fig-portait"
+          src="https://github.com/ge3224/fcc/blob/main/rwd/cp2-tribute-page/images/newspaper-clipping-photo-noel-sickles.jpg?raw=true"
+          alt="A photograph of a young Noel Sickles, from an unknown newspaper.">
+        <figcaption>Noel Sickles at his drawing board.</figcaption>
+      </figure>
+      <p>&ldquo;Sickles brought cinematic storytelling to Scorchy Smith,&rdquo; said Tom Mason, co-founder of <em><a
+            href="https://en.wikipedia.org/wiki/Malibu_Comics" target="_blank">Malibu Comics</a></em>. &ldquo;He varied
+        angles, played around with light and shadow, and his characters look like they&rsquo;re moving instead of
+        posing.&rdquo;</p>
+      <p>According to Dean Mullaney, editor of <em>Scorchy Smith and the Art of Noel Sickles</em>, the changes he made
+        in the serial had an excellent response from the public.</p>
+      <p>&ldquo;When Sickles took over the strip, 100 newspapers subscribed to Scorchy Smith; after three years,
+        circulation increased to more than 250 papers,&rdquo; Mullaney said in an <a
+          href="http://www.gearlive.com/comics/article/q308-qa-dean-mullaney-on-noel-sickles-milton-caniff-and-eclipse-comics/"
+          target="_blank">online interview</a>.</p>
+      <figure>
+        <div class="frame-x-scroll">
+          <img class="img-x-scroll"
+            src="https://github.com/ge3224/fcc/blob/main/rwd/cp2-tribute-page/images/scorchy-smith-5-28-1936.jpg?raw=true"
+            alt="Scorchy Smith, 1936 May 28">
+        </div>
+        <figcaption>Scorchy Smith for AP Features, May 28, 1936.</figcaption>
+      </figure>
+      <p>For the next two-and-a-half years, Sickles produced his editions of <em>Scorchy Smith</em>, crafting a body of
+        work that
+        is now legendary. Other artists from various industries continue to study his work. His approach, dubbed
+        chiaroscuro, can be found in works by generations of commercial artists.</p>
+      <p>Steven Katz, author of <em>Film Directing: Shot By Shot&mdash;Visualizing from Concept to Screen</em>, wrote
+        about
+        Sickles, &ldquo;His work is filled with graphic solutions and innovations that are a storehouse of ideas for
+        storyboard artists.&rdquo;</p>
+      <p>On October 24, 1936, Noel Sickels resigned from Scorchy after AP rebuffed his request for salary renegotiation.
+        There were other factors, according to Mullaney.</p>
+      <p>&ldquo;It should be pointed out, too, that Sickles was becoming bored with the constant deadlines of producing
+        a
+        daily strip,&rdquo; Mullaney said. &ldquo;He was such a perfectionist, he would often get to the last panel,
+        decide he
+        didn&rsquo;t like it, and throw out the entire strip, instead of doing a new third panel as a paste-over. He was
+        also
+        looking for new challenges.&rdquo;</p>
+      <p>Sickles went on to enjoy a successful career in magazine illustration and advertising. Artist Harry Devlin
+        first met Sickles in 1940. In Devlin&rsquo;s <a
+          href="https://societyillustrators.org/award-winners/noel-sickles/" target="_blank">biography of Sickles
+          for the Society of Illustrators</a>, he describes Sickles&rsquo; success outside of cartooning.</p>
+      <p>&ldquo;Full recognition came to Noel following the war years,&rdquo; Devlin wrote. &ldquo;At one point the
+        Saturday Evening Post
+        offered him a carte blanche arrangement in which he could choose from any manuscript he might find appealing.
+        Now his work appeared in all the major illustrated magazines and in many of the books published by
+        Readers&rsquo;
+        Digest.&rdquo;</p>
+      <figure id="img-div">
+        <img id="image"
+          src="https://github.com/ge3224/fcc/blob/main/rwd/cp2-tribute-page/images/saturday-evening-post-9-10-1960.jpg?raw=true"
+          alt="An illustration by Sickles for The Saturday Evening Post, 1960 Sept 10">
+        <figcaption id="img-caption">An illustration for Stewart Toland&rsquo;s <em>Ride a Golden Horse</em>, The
+          Saturday Evening Post,
+          September 10, 1960.</figcaption>
+      </figure>
+      <p>Sickles remained prolific for the next four decades. When Sickles passed away in 1982, his panels for
+        <em>Scorchy Smith</em> represented a fraction of a lifelong collection of inspiring works.
+      </p>
+      <p>Caniff wrote about his friend, &ldquo;This restless genius was the greatest natural cartoonist I ever knew. Now
+        he is
+        dead! All that talent still unused, and every cartoonist feels cheated of what might yet have come from his
+        magic hand.&rdquo;</p>
+      <div id="tribute-info">
+        <p>Check out Leaf Peng&rsquo;s <a id="tribute-link"
+            href="https://www.flickr.com/photos/leifpeng/albums/1715866/with/80277554/" target="_blank">album of
+            illustrations by Noel Sickles</a>.</p>
+      </div>
+      <div class="ref">
+        <h4>References</h4>
+        <ul>
+          <li>Canwell, B. (2008). <em>Scorchy Smith And The Art Of Noel Sickles</em>. IDW Publishing.</li>
+          <li>Devlin, H. (n.d.). <em>Noel Sickles</em>. Societyillustrators.org. Retrieved January 17, 2023, from <a
+              href="https://societyillustrators.org/award-winners/noel-sickles/"
+              target="_blank">https://societyillustrators.org/award-winners/noel-sickles/</a></li>
+          <li>Katz, S. D. (1991). <em>Film Directing: Shot By Shot&mdash;Visualizing from Concept to Screen</em> (1st
+            ed., p. 53). Michael Wiese Productions.</li>
+          <li>Mason, T. (2009, January 11). <em>Q&A: Dean Mullaney on Noel Sickles, Milton Caniff and Eclipse
+              Comics</em>. Gear Live&mdash;Comix 411. Retrieved January 27, 2023, from <a
+              href="http://www.gearlive.com/comics/article/q308-qa-dean-mullaney-on-noel-sickles-milton-caniff-and-eclipse-comics/"
+              target="_blank">http://www.gearlive.com/comics/article/q308-qa-dean-mullaney-on-noel-sickles-milton-caniff-and-eclipse-comics/</a>
+          </li>
+          <li>Peng, L. (2008, August 19). <em>Noel Sickles: Early Years</em>. Today's Inspiration. Retrieved January 17,
+            2023, from <a href="https://todaysinspiration.blogspot.com/2008/08/noel-sickles-early-years.html"
+              target="_blank">https://todaysinspiration.blogspot.com/2008/08/noel-sickles-early-years.html</a></li>
+          <li>Stolzer, R. (2022, March 24). <em>Noel Sickles&rsquo; &ldquo;Bud&rsquo;s Meaco Comics&rdquo;!</em>
+            Inkslingers.ink. Retrieved January 17, 2023, from <a
+              href="https://inkslingers.ink/2022/03/24/noel-sickles-buds-meaco-comics/"
+              target="_blank">https://inkslingers.ink/2022/03/24/noel-sickles-buds-meaco-comics/</a></li>
+          <li>Sickles, N. (1952). The Old Man and the Sea [Photograph]. Life Magazine.</li>
+          <li>Unknown. Noel Sickles At His Drawing Board [Photograph]. <a
+              href="https://comicbookhistorians.com/milton-caniff-the-inspiration-of-comics-by-alex-grand/"
+              target="_blank">https://comicbookhistorians.com/milton-caniff-the-inspiration-of-comics-by-alex-grand/</a>
+          </li>
+          <li>Sickles, N. (1936). Scorchy Smith&mdash;An Idea Pops [Photograph]. AP Features. <a
+              href="https://www.comicartfans.com/gallerypiece.asp?Piece=1808065"
+              target="_blank">https://www.comicartfans.com/gallerypiece.asp?Piece=1808065</a></li>
+          <li>Sickles, N. (1960). Ride a Golden Horse [Photograph]. The Saturday Evening Post. <a
+              href="https://www.flickr.com/photos/leifpeng/80277554/in/album-1715866/"
+              target="_blank">https://www.flickr.com/photos/leifpeng/80277554/in/album-1715866/</a></li>
+        </ul>
+      </div>
+    </div>
   </main>
+
 </body>
 
 </html>
