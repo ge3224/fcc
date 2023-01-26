@@ -1,4 +1,4 @@
-# Lesson References For the First Exercise in freeCodeCamp's Responsive Web Design Course
+# Lesson Index For the First Exercise in freeCodeCamp's Responsive Web Design Course
 
 The following references in freeCodeCamp's Responsive Web Design course explain basic aspects of HTML (Hypertext Markup Language) and CSS (Cascading Style Sheets).
 

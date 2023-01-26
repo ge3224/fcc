@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Technical Documentation page</title>
+  <title>Lesson References For the First Exercise in freeCodeCamp's Responsive Web Design Course</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css" />
@@ -12,47 +12,104 @@
   <nav id="navbar">
     <header>Nav Header</header>
     <ul>
-      <li><a class="nav-link" href="#Section_Header_1">Section Header 1</a></li>
-      <li><a class="nav-link" href="#Section_Header_2">Section Header 2</a></li>
+      <li><a class="nav-link" href="#Basics">Basics</a></li>
+      <li><a class="nav-link" href="#HTML5">HTML5</a></li>
       <li><a class="nav-link" href="#Section_Header_3">Section Header 3</a></li>
       <li><a class="nav-link" href="#Section_Header_4">Section Header 4</a></li>
       <li><a class="nav-link" href="#Section_Header_5">Section Header 5</a></li>
     </ul>
   </nav>
   <main id="main-doc">
-    <section class="main-section" id="Section_Header_1">
-      <header>Section Header 1</header>
-      <p>Par 1</p>
-      <p>Par 2</p>
-      <p>Par 3</p>
-      <p>Par 4</p>
-      <code>alert("pwned");</code>
-      <p>Par 5</p>
-      <code>alert("pwned");</code>
-      <p>Par 6</p>
-      <code>alert("pwned");</code>
-      <p>Par 7</p>
-      <p>Par 8</p>
-      <code>alert("pwned");</code>
-      <p>Par 9</p>
-      <code>alert("pwned");</code>
-      <p>Par 10</p>
+    <h1>HTML & CSS References</h1>
+    <p>The following references in freeCodeCamp's Responsive Web Design course explain basic aspects of HTML
+      (Hypertext Markup Language) and CSS (Cascading Style Sheets).</p>
+    <section class="main-section" id="Basics">
+      <header>Basics</header>
+      <h2>Getting Started</h2>
+      <p>HTML tags <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/" target="_blank">give a
+          webpage its structure</a>. You can use HTML tags to add photos, buttons, and other elements to your webpage.
+      </p>
+      <p>HTML elements have opening <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-1"
+          target="_blank">tags</a> like <code>&lt;h1&gt;</code> and closing tags like <code>&lt;/h1&gt;</code>.</p>
+      <p>The text for an element goes between its opening and closing tags.</p>
+      <p>Here's an example:</p>
+      <code>&lt;h1&gt;My Title&lt;/h1&gt;</code>
+      <h3>Headings</h3>
+      <p>The <code>h1</code> through <code>h6</code> heading elements are used to <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-2"
+          target="_blank">signify the importance of content</a> below them. The lower the number, the higher the
+        importance, so <code>h2</code> elements have less importance than <code>h1</code> elements. Only use one
+        <code>h1</code> element per page and place lower importance headings below higher importance headings.
+      </p>
+      <code>
+        &lt;h1&gt;Page Title&lt;/h1&gt;<br>
+        &lt;h2&gt;The Next Level of Importance&lt;/h2&gt;<br>
+        &lt;h3&gt;...Third&lt;/h3&gt;<br>
+        &lt;h4&gt;...Fourth&lt;/h4&gt;<br>
+        &lt;h5&gt;...Fifth&lt;/h5&gt;<br>
+        &lt;h6&gt;...Sixth&lt;/h6&gt;<br>
+      </code>
+      <h3>Paragraphs</h3>
+      <p>The <code>p</code> element is used to <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-3"
+          target="_blank">create a paragraph of text</a> on websites.</p>
+      <code>&lt;p&gt;This is a paragraph&lt;/p&gt;</code>
+      <h3>Paragraphs</h3>
+      <p>Commenting allows you to <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-4"
+          target="_blank">leave messages without affecting the browser display</a>. It also allows you to make code
+        inactive. A comment in HTML starts with <code>&lt;!--</code>, contains any number of lines of text, and ends
+        with <code>--&gt;</code>.</p>
+      <p>For example, examine the following comment, which contains the text "TODO: Remove h1":</p>
+      <code>
+        &lt;!-- TODO: Remove h1 --&gt;<br>
+      </code>
+      <p>The following example shows how the elements we've discussed so far work together.</p>
+      <code>
+        &lt;h1&gt;Title&lt;/h1&gt;<br>
+        &lt;p&gt;An introductory paragraph of text&lt;/p&gt;<br>
+        &lt;h2&gt;Section Title&lt;/h2&gt;<br>
+        &lt;p&gt;A new paragraph of text&lt;/p&gt;<br>
+        &lt;!-- Continue learning --&gt;<br>
+      </code>
+      <p>In review:</p>
       <ol>
-        <li>list item</li>
-        <li>list item</li>
-        <li>list item</li>
-        <li>list item</li>
-        <li>list item</li>
+        <li><code>&lt;tag&gt;Text&lt;/tag&gt;</code> - opening and closing tags</li>
+        <li><code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>, and <code>h6</code> -
+          heading tags</li>
+        <li>Lower heading numbers signify greater importance.</li>
+        <li><code>p</code> - a paragraph tag</li>
+        <li><code>&lt;!-- Comment --&gt;</code></li>
       </ol>
     </section>
-    <section class="main-section" id="Section_Header_2">
-      <header>Section Header 2</header>
-      <p>Par 1</p>
-      <p>Par 2</p>
-      <code>alert("pwned");</code>
-      <p>Par 3</p>
-      <p>Par 4</p>
-      <p>Par 5</p>
+    <section class="main-section" id="HTML5">
+      <header>HTML5</header>
+      <p>HTML5 has some <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-5"
+          target="_blank">elements that identify different content areas</a>. These elements make your HTML easier to
+        read and help with Search Engine Optimization (SEO) and accessibility.</p>
+      <p>Identify the main section of a page by adding a <code>&lt;main&gt;</code> opening tag before the first element
+        of the page's content and a <code>&lt;/main&gt;</code> closing tag after the final content element.</p>
+      <code>
+        &lt;main&gt;<br>
+        &nbsp;&nbsp;&lt;!-- content elements --&gt;<br>
+        &nbsp;&nbsp;&lt;h1&gt;Title&lt;/h1&gt;<br>
+        &nbsp;&nbsp;&lt;p&gt;Paragraph&lt;/p&gt;<br>
+        &lt;/main&gt;
+      </code>
+      <p>In this way the content is inside the <code>main</code> element. This is called <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-6"
+          target="_blank">nesting</a>. Nested elements should be placed two spaces further to the right of the element
+        they are nested in. This spacing is called <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-6"
+          target="_blank">indentation</a> and it is used to make HTML easier to read.</p>
+      <p>Some other common content elements include images and links.</p>
+      <p>You can <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-7"
+          target="_blank">add images to your website</a> by using the <code>img</code> element. <code>img</code>
+        elements have an opening tag without a closing tag. A tag for an element without a closing tag is known as a
+        self-closing tag.</p>
       <code>alert("pwned");</code>
       <p>Par 6</p>
       <code>alert("pwned");</code>
