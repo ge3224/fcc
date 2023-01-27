@@ -13,7 +13,7 @@
     <header>Nav Header</header>
     <ul>
       <li><a class="nav-link" href="#Basics">Basics</a></li>
-      <li><a class="nav-link" href="#HTML5">HTML5</a></li>
+      <li><a class="nav-link" href="#Organizing_Content">Organizing Content</a></li>
       <li><a class="nav-link" href="#Section_Header_3">Section Header 3</a></li>
       <li><a class="nav-link" href="#Section_Header_4">Section Header 4</a></li>
       <li><a class="nav-link" href="#Section_Header_5">Section Header 5</a></li>
@@ -83,14 +83,18 @@
         <li><code>&lt;!-- Comment --&gt;</code></li>
       </ol>
     </section>
-    <section class="main-section" id="HTML5">
-      <header>HTML5</header>
+    <section class="main-section" id="Organizing_Content">
+      <header>Organizing Content</header>
+      <h2>HTML5</h2>
       <p>HTML5 has some <a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-5"
           target="_blank">elements that identify different content areas</a>. These elements make your HTML easier to
         read and help with Search Engine Optimization (SEO) and accessibility.</p>
-      <p>Identify the main section of a page by adding a <code>&lt;main&gt;</code> opening tag before the first element
-        of the page's content and a <code>&lt;/main&gt;</code> closing tag after the final content element.</p>
+      <h3>The <code>main</code> Element</h3>
+      <p>One of the new content elements introduced in HTML5 is <code>main</code>. Identify the main section of a page
+        by adding a <code>&lt;main&gt;</code> opening tag before the first element of the page's content and a
+        <code>&lt;/main&gt;</code> closing tag after the final content element.
+      </p>
       <code>
         &lt;main&gt;<br>
         &nbsp;&nbsp;&lt;!-- content elements --&gt;<br>
@@ -98,33 +102,82 @@
         &nbsp;&nbsp;&lt;p&gt;Paragraph&lt;/p&gt;<br>
         &lt;/main&gt;
       </code>
-      <p>In this way the content is inside the <code>main</code> element. This is called <a
+      <p>In the snippet above, the content is inside the <code>main</code> element. This is called <a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-6"
           target="_blank">nesting</a>. Nested elements should be placed two spaces further to the right of the element
         they are nested in. This spacing is called <a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-6"
           target="_blank">indentation</a> and it is used to make HTML easier to read.</p>
-      <p>Some other common content elements include images and links.</p>
+      <h3>The <code>section</code> Element</h3>
+      <p>Separate segments of content by surrounding each in a <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-16"
+          target="_blank"><code>section</code> element</a>.</p>
+      <p>When you add a lower rank heading element to the page, it's implied that you're starting a <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-19"
+          target="_blank">new subsection</a>.</p>
+      <p>Let's take a look at some other common content elements: images and hyperlinks.</p>
+      <h3>Images</h3>
       <p>You can <a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-7"
           target="_blank">add images to your website</a> by using the <code>img</code> element. <code>img</code>
         elements have an opening tag without a closing tag. A tag for an element without a closing tag is known as a
         self-closing tag.</p>
-      <code>alert("pwned");</code>
-      <p>Par 6</p>
-      <code>alert("pwned");</code>
-      <p>Par 7</p>
-      <p>Par 8</p>
-      <code>alert("pwned");</code>
-      <p>Par 9</p>
-      <code>alert("pwned");</code>
-      <p>Par 10</p>
+      <code>
+        &lt;img&gt;<br>
+        &lt;!-- Or --&gt;<br>
+        &lt;img /&gt;
+      </code>
+      <p><a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-8"
+          target="_blank">HTML attributes</a> are special words used inside the opening tag of an element to control the
+        element's behavior. The <code>src</code> attribute in an <code>img</code> element specifies the image's URL
+        (where the image is located).</p>
+      <p>An example of an <code>img</code> element using an src attribute:</p>
+      <code>&lt;img src="https://www.example.com/the-image.jpg"&gt;</code>.
+      <p>All <code>img</code> elements should have an <code>alt</code> attribute. The alt attribute's text is used <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-9"
+          target="_blank">for screen readers to improve accessibility and is displayed if the image fails to load</a>.
+      </p>
+      <p>For example, the following example has an <code>alt</code> attribute with the text "A cat".</p>
+      <code>&lt;img src="cat.jpg" alt="A cat"&gt;</code>
+      <h3>The <code>figure</code> Element</h3>
+      <p>Another new element introduced in HTML5 is the <code>figure</code> element. The <code>figure</code> element
+        represents <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-23"
+          target="_blank">self-contained content and will allow you to associate an image with a caption</a>.</p>
+      <p>A <code>figcaption</code> element is used to <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-24"
+          target="_blank">add a caption</a> to describe the image contained within the figure element. For example,
+        <code>&lt;figcaption&gt;A cute cat&lt;/figcaption&gt;</code> adds the caption A cute cat.</p>
+      <h3>Links</h3>
+      <p>You can link to another page with the <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-10"
+          target="_blank">anchor <code>a</code> element</a>. For example, the next snippet would link to
+        freecodecamp.org.</p>
+      <code>&lt;a href='https://freecodecamp.org'&gt;&lt;/a&gt;</code>
+      <p>A <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-11"
+          target="_blank">link's text</a> must be placed between the opening and closing tags of an anchor
+        <code>a</code> element. For example, <code>&lt;a href="https://www.freecodecamp.org"&gt;click here to go to
+          freeCodeCamp.org&lt;/a&gt;</code> is a link with the text click here to go to freeCodeCamp.org.
+      </p>
+      <p>You can surround words <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-12"
+          target="_blank">inside</a> in another element with anchor tags and turn them into a link. You can also turn an
+        <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-15"
+          target="_blank">image into a link</a> by surrounding it with anchor tags.
+      </p>
+      <p>Add a <code>target</code> attribute with the value "_blank" to the <code>a</code> element's opening tag, so
+        that the link <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-14"
+          target="_blank">opens in a new tab</a>.</p>
+      <p>Review:</p>
       <ul>
-        <li>list item</li>
-        <li>list item</li>
-        <li>list item</li>
-        <li>list item</li>
-        <li>list item</li>
+        <li>&lt;main&gt;<br>&nbsp;&nbsp;&lt;!-- content --&gt;<br>&lt/main&gt;</li>
+        <li>&lt;section&gt;<br>&nbsp;&nbsp;&lt;!-- content section --&gt;<br>&lt/section&gt;</li>
+        <li>&lt;img src="image.jpg" alt="an image description" /&gt;</li>
+        <li>&lt;figure&gt;<br>&nbsp;&nbsp;&lt;img src="image.jpg" alt="description" /&gt;<br>&nbsp;&nbsp;&lt;figcaption&gt;caption&lt;/figcaption&gt;<br>&lt;/figure&gt;</li>
+        <li>&lt;a href="https://www.example.com" target="_blank"&gt;Link&lt;/a&gt;</li>
       </ul>
     </section>
     <section class="main-section" id="Section_Header_3">
