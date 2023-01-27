@@ -14,7 +14,7 @@
     <ul>
       <li><a class="nav-link" href="#Basics">Basics</a></li>
       <li><a class="nav-link" href="#Organizing_Content">Organizing Content</a></li>
-      <li><a class="nav-link" href="#Section_Header_3">Section Header 3</a></li>
+      <li><a class="nav-link" href="#More_Common_Tags">More Common Tags</a></li>
       <li><a class="nav-link" href="#Section_Header_4">Section Header 4</a></li>
       <li><a class="nav-link" href="#Section_Header_5">Section Header 5</a></li>
     </ul>
@@ -148,7 +148,8 @@
       <p>A <code>figcaption</code> element is used to <a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-24"
           target="_blank">add a caption</a> to describe the image contained within the figure element. For example,
-        <code>&lt;figcaption&gt;A cute cat&lt;/figcaption&gt;</code> adds the caption A cute cat.</p>
+        <code>&lt;figcaption&gt;A cute cat&lt;/figcaption&gt;</code> adds the caption A cute cat.
+      </p>
       <h3>Links</h3>
       <p>You can link to another page with the <a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-10"
@@ -176,33 +177,135 @@
         <li>&lt;main&gt;<br>&nbsp;&nbsp;&lt;!-- content --&gt;<br>&lt/main&gt;</li>
         <li>&lt;section&gt;<br>&nbsp;&nbsp;&lt;!-- content section --&gt;<br>&lt/section&gt;</li>
         <li>&lt;img src="image.jpg" alt="an image description" /&gt;</li>
-        <li>&lt;figure&gt;<br>&nbsp;&nbsp;&lt;img src="image.jpg" alt="description" /&gt;<br>&nbsp;&nbsp;&lt;figcaption&gt;caption&lt;/figcaption&gt;<br>&lt;/figure&gt;</li>
+        <li>&lt;figure&gt;<br>&nbsp;&nbsp;&lt;img src="image.jpg" alt="description"
+          /&gt;<br>&nbsp;&nbsp;&lt;figcaption&gt;caption&lt;/figcaption&gt;<br>&lt;/figure&gt;</li>
         <li>&lt;a href="https://www.example.com" target="_blank"&gt;Link&lt;/a&gt;</li>
       </ul>
     </section>
-    <section class="main-section" id="Section_Header_3">
-      <header>Section Header 3</header>
-      <p>Par 1</p>
-      <p>Par 2</p>
-      <code>alert("pwned");</code>
-      <p>Par 3</p>
-      <p>Par 4</p>
-      <p>Par 5</p>
-      <code>alert("pwned");</code>
-      <p>Par 6</p>
-      <code>alert("pwned");</code>
-      <p>Par 7</p>
-      <p>Par 8</p>
-      <code>alert("pwned");</code>
-      <p>Par 9</p>
-      <code>alert("pwned");</code>
-      <p>Par 10</p>
+    <section class="main-section" id="More_Common_Tags">
+      <header>More Common Tags</header>
+      <h3>Text Emphasis (Italicize)</h3>
+      <p><a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-25"
+          target="_blank">Emphasize a word</a> in an element, such as <code>figcaption</code>, by wrapping it in an
+        emphasis <code>em</code> element.</p>
+      <h3>Text Importance (Embold)</h3>
+      <p>The <code>strong</code> element is used to <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-32"
+          target="_blank">indicate that some text is of strong importance or urgent</a>.</p>
+      <code>
+        &lt;p&gt;This is a paragraph of text with a &lt;em&gt;emphasized word&lt;/em&gt; and an &lt;strong&gt;emboldened
+        word&lt;/strong&gt;&lt;/p&gt;
+      </code>
+      <h3>Lists</h3>
+      <p><a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-20"
+          target="_blank">Unordered lists, such as bulleted lists</a>, are surrounded by <code>ul</code> elements.</p>
+      <p><a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/Usestep-21"
+          target="_blank">Each individual list item</a> is surrouned by <code>li</code> elements to create items in a
+        list. Here is an example of list items in an unordered list:</p>
+      <code>
+        &lt;ul&gt;<br>
+        &nbsp;&nbsp;&lt;li&gt;milk&lt;/li&gt;<br>
+        &nbsp;&nbsp;&lt;li&gt;cheese&lt;/li&gt;<br>
+        &lt;/ul&gt;<br>
+      </code>
+      <p>The code for an <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-27"
+          target="_blank">ordered list</a> (<code>ol</code>) is similar to an unordered list, but list items in an
+        ordered
+        list are numbered when displayed.</p>
+      <code>
+        &lt;ol&gt;<br>
+        &nbsp;&nbsp;&lt;li&gt;bread&lt;/li&gt;<br>
+        &nbsp;&nbsp;&lt;li&gt;jam&lt;/li&gt;<br>
+        &lt;/ol&gt;<br>
+      </code>
+      <h3>HTML Document</h3>
+      <p>All pages should begin with the following document declaration: <code>&lt;!DOCTYPE html&gt;</code>. This
+        special string is known as a declaration and <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-68"
+          target="_blank">ensures the browser tries to meet industry-wide specifications</a>.</p>
+      <p>Immediately below the document declaration, each page should start with an opening <code>&lt;html&gt;</code>
+        tag.</p>
+      <p>The last line of the document should have a closing <code>&lt;/html&gt;</code> tag.</p>
+      <p>Within the opening <code>&lt;html&gt;</code> tag, the <code>lang</code> attribute should be included to <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-67"
+          target="_blank">specify the language of the page</a>. For example, a value of "en" could be used to indicate
+        English.</p>
+      <p>All page content elements that should be rendered to the page go inside the page's <code>body</code> element.
+      </p>
+      <code>
+        &lt;!DOCTYPE html&gt;<br>
+        &lt;html lang="en"&gt;<br>
+        &nbsp;&nbsp;&lt;body&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;!--Content goes here--&gt;<br>
+        &nbsp;&nbsp;&lt;/body&gt;<br>
+        &lt;/html&gt;<br>
+      </code>
+      <h3>Meta Data</h3>
+      <p>All content elements that should be rendered to the page go inside the <code>body</code> element. However,
+        <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-65"
+          target="_blank">other important information</a> goes inside the <code>head</code> element.
+      </p>
+      <p>The <code>title</code> element <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-66"
+          target="_blank">determines what browsers show in the title bar or tab for the page</a>.</p>
+      <p>You can <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-69"
+          target="_blank">set browser behavior</a> by adding self-closing <code>meta</code> elements in the head. Here's
+        an example:</p>
+      <code>
+        &lt;!DOCTYPE html&gt;<br>
+        &lt;html lang="en"&gt;<br>
+        &nbsp;&nbsp;&lt;head&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Page Title Here&lt;/title&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="utf-8"&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+        &nbsp;&nbsp;&lt;/head&gt;<br>
+        &nbsp;&nbsp;&lt;body&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;!--Content to be displayed--&gt;<br>
+        &nbsp;&nbsp;&lt;/body&gt;<br>
+        &lt;/html&gt;<br>
+      </code>
+      <p>Review:</p>
       <ul>
-        <li>list item</li>
-        <li>list item</li>
-        <li>list item</li>
-        <li>list item</li>
-        <li>list item</li>
+        <li><code>&lt;em&gt;Emphasize text&lt;/em&gt;.</code></li>
+        <li><code>&lt;strong&gt;Make text important&lt;/strong&gt;.</code></li>
+        <li>
+          <code>
+            &lt;ul&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;List&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Items&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Without numbers&lt;/li&gt;<br>
+            &lt;/ul&gt;<br>
+          </code>
+        </li>
+        <li>
+          <code>
+            &lt;ol&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;List&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Items&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;With numbers&lt;/li&gt;<br>
+            &lt;/ol&gt;<br>
+          </code>
+        </li>
+        <li>
+          <code>
+            &lt;!DOCTYPE html&gt;<br>
+            &lt;html lang="en"&gt;<br>
+            &nbsp;&nbsp;&lt;head&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Setup Your Document&lt;/title&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="utf-8"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+            &nbsp;&nbsp;&lt;/head&gt;<br>
+            &nbsp;&nbsp;&lt;body&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;!--Content to be displayed--&gt;<br>
+            &nbsp;&nbsp;&lt;/body&gt;<br>
+            &lt;/html&gt;<br>
+          </code>
+        </li>
       </ul>
     </section>
     <section class="main-section" id="Section_Header_4">
