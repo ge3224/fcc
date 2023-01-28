@@ -2,26 +2,29 @@
 <html lang="en">
 
 <head>
-  <title>Lesson References For the First Exercise in freeCodeCamp's Responsive Web Design Course</title>
+  <title>Lesson References For the First Exercise in freeCodeCamp&rsquo;s Responsive Web Design Course</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
   <nav id="navbar">
-    <header>Nav Header</header>
+    <header>HTML Primer</header>
     <ul>
       <li><a class="nav-link" href="#Basics">Basics</a></li>
       <li><a class="nav-link" href="#Organizing_Content">Organizing Content</a></li>
       <li><a class="nav-link" href="#More_Common_Tags">More Common Tags</a></li>
       <li><a class="nav-link" href="#Forms">Forms</a></li>
-      <li><a class="nav-link" href="#Section_Header_5">Section Header 5</a></li>
+      <li><a class="nav-link" href="#More_On_Forms">More On Forms</a></li>
     </ul>
   </nav>
   <main id="main-doc">
     <h1>HTML & CSS References</h1>
-    <p>The following references in freeCodeCamp's Responsive Web Design course explain basic aspects of HTML
+    <p>The following references in freeCodeCamp&rsquo;s Responsive Web Design course explain basic aspects of HTML
       (Hypertext Markup Language) and CSS (Cascading Style Sheets).</p>
     <section class="main-section" id="Basics">
       <header>Basics</header>
@@ -33,8 +36,10 @@
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-1"
           target="_blank">tags</a> like <code>&lt;h1&gt;</code> and closing tags like <code>&lt;/h1&gt;</code>.</p>
       <p>The text for an element goes between its opening and closing tags.</p>
-      <p>Here's an example:</p>
-      <code>&lt;h1&gt;My Title&lt;/h1&gt;</code>
+      <p>Here&rsquo;s an example:</p>
+      <pre>
+        <code>&lt;h1&gt;My Title&lt;/h1&gt;</code>
+      </pre>
       <h3>Headings</h3>
       <p>The <code>h1</code> through <code>h6</code> heading elements are used to <a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-2"
@@ -42,37 +47,45 @@
         importance, so <code>h2</code> elements have less importance than <code>h1</code> elements. Only use one
         <code>h1</code> element per page and place lower importance headings below higher importance headings.
       </p>
-      <code>
-        &lt;h1&gt;Page Title&lt;/h1&gt;<br>
-        &lt;h2&gt;The Next Level of Importance&lt;/h2&gt;<br>
-        &lt;h3&gt;...Third&lt;/h3&gt;<br>
-        &lt;h4&gt;...Fourth&lt;/h4&gt;<br>
-        &lt;h5&gt;...Fifth&lt;/h5&gt;<br>
-        &lt;h6&gt;...Sixth&lt;/h6&gt;<br>
-      </code>
+      <pre>
+        <code>
+          &lt;h1&gt;Page Title&lt;/h1&gt;<br>
+          &lt;h2&gt;The Next Level of Importance&lt;/h2&gt;<br>
+          &lt;h3&gt;...Third&lt;/h3&gt;<br>
+          &lt;h4&gt;...Fourth&lt;/h4&gt;<br>
+          &lt;h5&gt;...Fifth&lt;/h5&gt;<br>
+          &lt;h6&gt;...Sixth&lt;/h6&gt;<br>
+        </code>
+      </pre>
       <h3>Paragraphs</h3>
       <p>The <code>p</code> element is used to <a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-3"
           target="_blank">create a paragraph of text</a> on websites.</p>
-      <code>&lt;p&gt;This is a paragraph&lt;/p&gt;</code>
+      <pre>
+        <code>&lt;p&gt;This is a paragraph&lt;/p&gt;</code>
+      </pre>
       <h3>Paragraphs</h3>
       <p>Commenting allows you to <a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-4"
           target="_blank">leave messages without affecting the browser display</a>. It also allows you to make code
         inactive. A comment in HTML starts with <code>&lt;!--</code>, contains any number of lines of text, and ends
         with <code>--&gt;</code>.</p>
-      <p>For example, examine the following comment, which contains the text "TODO: Remove h1":</p>
-      <code>
-        &lt;!-- TODO: Remove h1 --&gt;<br>
-      </code>
-      <p>The following example shows how the elements we've discussed so far work together.</p>
-      <code>
-        &lt;h1&gt;Title&lt;/h1&gt;<br>
-        &lt;p&gt;An introductory paragraph of text&lt;/p&gt;<br>
-        &lt;h2&gt;Section Title&lt;/h2&gt;<br>
-        &lt;p&gt;A new paragraph of text&lt;/p&gt;<br>
-        &lt;!-- Continue learning --&gt;<br>
-      </code>
+      <p>For example, examine the following comment, which contains the text &ldquo;TODO: Remove h1&rdquo;:</p>
+      <pre>
+        <code>
+          &lt;!-- TODO: Remove h1 --&gt;<br>
+        </code>
+      </pre>
+      <p>The following example shows how the elements we&rsquo;ve discussed so far work together.</p>
+      <pre>
+        <code>
+          &lt;h1&gt;Title&lt;/h1&gt;<br>
+          &lt;p&gt;An introductory paragraph of text&lt;/p&gt;<br>
+          &lt;h2&gt;Section Title&lt;/h2&gt;<br>
+          &lt;p&gt;A new paragraph of text&lt;/p&gt;<br>
+          &lt;!-- Continue learning --&gt;<br>
+        </code>
+      </pre>
       <p>In review:</p>
       <ol>
         <li><code>&lt;tag&gt;Text&lt;/tag&gt;</code> - opening and closing tags</li>
@@ -92,16 +105,18 @@
         read and help with Search Engine Optimization (SEO) and accessibility.</p>
       <h3>The <code>main</code> Element</h3>
       <p>One of the new content elements introduced in HTML5 is <code>main</code>. Identify the main section of a page
-        by adding a <code>&lt;main&gt;</code> opening tag before the first element of the page's content and a
+        by adding a <code>&lt;main&gt;</code> opening tag before the first element of the page&rsquo;s content and a
         <code>&lt;/main&gt;</code> closing tag after the final content element.
       </p>
-      <code>
-        &lt;main&gt;<br>
-        &nbsp;&nbsp;&lt;!-- content elements --&gt;<br>
-        &nbsp;&nbsp;&lt;h1&gt;Title&lt;/h1&gt;<br>
-        &nbsp;&nbsp;&lt;p&gt;Paragraph&lt;/p&gt;<br>
-        &lt;/main&gt;
-      </code>
+      <pre>
+        <code>
+          &lt;main&gt;<br>
+          &nbsp;&nbsp;&lt;!-- content elements --&gt;<br>
+          &nbsp;&nbsp;&lt;h1&gt;Title&lt;/h1&gt;<br>
+          &nbsp;&nbsp;&lt;p&gt;Paragraph&lt;/p&gt;<br>
+          &lt;/main&gt;
+        </code>
+      </pre>
       <p>In the snippet above, the content is inside the <code>main</code> element. This is called <a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-6"
           target="_blank">nesting</a>. Nested elements should be placed two spaces further to the right of the element
@@ -112,34 +127,41 @@
       <p>Separate segments of content by surrounding each in a <a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-16"
           target="_blank"><code>section</code> element</a>.</p>
-      <p>When you add a lower rank heading element to the page, it's implied that you're starting a <a
+      <p>When you add a lower rank heading element to the page, it&rsquo;s implied that you&rsquo;re starting a <a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-19"
           target="_blank">new subsection</a>.</p>
-      <p>Let's take a look at some other common content elements: images and hyperlinks.</p>
+      <p>Let&rsquo;s take a look at some other common content elements: images and hyperlinks.</p>
       <h3>Images</h3>
       <p>You can <a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-7"
           target="_blank">add images to your website</a> by using the <code>img</code> element. <code>img</code>
         elements have an opening tag without a closing tag. A tag for an element without a closing tag is known as a
         self-closing tag.</p>
-      <code>
-        &lt;img&gt;<br>
-        &lt;!-- Or --&gt;<br>
-        &lt;img /&gt;
-      </code>
+      <pre>
+        <code>
+          &lt;img&gt;<br>
+          &lt;!-- Or --&gt;<br>
+          &lt;img /&gt;
+        </code>
+      </pre>
       <p><a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-8"
-          target="_blank">HTML attributes</a> are special words used inside the opening tag of an element to control the
-        element's behavior. The <code>src</code> attribute in an <code>img</code> element specifies the image's URL
+          target="_blank">HTML attributes</a> are special words used inside the opening tag of an element to control
+        the
+        element&rsquo;s behavior. The <code>src</code> attribute in an <code>img</code> element specifies the image&rsquo;s URL
         (where the image is located).</p>
       <p>An example of an <code>img</code> element using an src attribute:</p>
-      <code>&lt;img src="https://www.example.com/the-image.jpg"&gt;</code>.
-      <p>All <code>img</code> elements should have an <code>alt</code> attribute. The alt attribute's text is used <a
+      <pre>
+        <code>&lt;img src="https://www.example.com/the-image.jpg"&gt;</code>.
+      </pre>
+      <p>All <code>img</code> elements should have an <code>alt</code> attribute. The alt attribute&rsquo;s text is used <a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-9"
           target="_blank">for screen readers to improve accessibility and is displayed if the image fails to load</a>.
       </p>
-      <p>For example, the following example has an <code>alt</code> attribute with the text "A cat".</p>
-      <code>&lt;img src="cat.jpg" alt="A cat"&gt;</code>
+      <p>For example, the following example has an <code>alt</code> attribute with the text &ldquo;A cat&rdquo;.</p>
+      <pre>
+        <code>&lt;img src="cat.jpg" alt="A cat"&gt;</code>
+      </pre>
       <h3>The <code>figure</code> Element</h3>
       <p>Another new element introduced in HTML5 is the <code>figure</code> element. The <code>figure</code> element
         represents <a
@@ -155,20 +177,23 @@
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-10"
           target="_blank">anchor <code>a</code> element</a>. For example, the next snippet would link to
         freecodecamp.org.</p>
-      <code>&lt;a href='https://freecodecamp.org'&gt;&lt;/a&gt;</code>
+      <pre>
+        <code>&lt;a href="https://freecodecamp.org"&gt;&lt;/a&gt;</code>
+      </pre>
       <p>A <a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-11"
-          target="_blank">link's text</a> must be placed between the opening and closing tags of an anchor
+          target="_blank">link&rsquo;s text</a> must be placed between the opening and closing tags of an anchor
         <code>a</code> element. For example, <code>&lt;a href="https://www.freecodecamp.org"&gt;click here to go to
           freeCodeCamp.org&lt;/a&gt;</code> is a link with the text click here to go to freeCodeCamp.org.
       </p>
       <p>You can surround words <a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-12"
-          target="_blank">inside</a> in another element with anchor tags and turn them into a link. You can also turn an
+          target="_blank">inside</a> in another element with anchor tags and turn them into a link. You can also turn
+        an
         <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-15"
           target="_blank">image into a link</a> by surrounding it with anchor tags.
       </p>
-      <p>Add a <code>target</code> attribute with the value "_blank" to the <code>a</code> element's opening tag, so
+      <p>Add a <code>target</code> attribute with the value &ldquo;_blank&rdquo; to the <code>a</code> element&rsquo;s opening tag, so
         that the link <a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-14"
           target="_blank">opens in a new tab</a>.</p>
@@ -193,10 +218,13 @@
       <p>The <code>strong</code> element is used to <a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-32"
           target="_blank">indicate that some text is of strong importance or urgent</a>.</p>
-      <code>
-        &lt;p&gt;This is a paragraph of text with a &lt;em&gt;emphasized word&lt;/em&gt; and an &lt;strong&gt;emboldened
-        word&lt;/strong&gt;&lt;/p&gt;
-      </code>
+      <pre>
+        <code>
+          &lt;p&gt;This is a paragraph of text with a &lt;em&gt;emphasized word&lt;/em&gt; and an
+          &lt;strong&gt;emboldened
+          word&lt;/strong&gt;&lt;/p&gt;
+        </code>
+      </pre>
       <h3>Lists</h3>
       <p><a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-20"
@@ -205,23 +233,27 @@
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/Usestep-21"
           target="_blank">Each individual list item</a> is surrouned by <code>li</code> elements to create items in a
         list. Here is an example of list items in an unordered list:</p>
-      <code>
-        &lt;ul&gt;<br>
-        &nbsp;&nbsp;&lt;li&gt;milk&lt;/li&gt;<br>
-        &nbsp;&nbsp;&lt;li&gt;cheese&lt;/li&gt;<br>
-        &lt;/ul&gt;<br>
-      </code>
+      <pre>
+        <code>
+          &lt;ul&gt;<br>
+          &nbsp;&nbsp;&lt;li&gt;milk&lt;/li&gt;<br>
+          &nbsp;&nbsp;&lt;li&gt;cheese&lt;/li&gt;<br>
+          &lt;/ul&gt;<br>
+        </code>
+      </pre>
       <p>The code for an <a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-27"
           target="_blank">ordered list</a> (<code>ol</code>) is similar to an unordered list, but list items in an
         ordered
         list are numbered when displayed.</p>
-      <code>
-        &lt;ol&gt;<br>
-        &nbsp;&nbsp;&lt;li&gt;bread&lt;/li&gt;<br>
-        &nbsp;&nbsp;&lt;li&gt;jam&lt;/li&gt;<br>
-        &lt;/ol&gt;<br>
-      </code>
+      <pre>
+        <code>
+          &lt;ol&gt;<br>
+          &nbsp;&nbsp;&lt;li&gt;bread&lt;/li&gt;<br>
+          &nbsp;&nbsp;&lt;li&gt;jam&lt;/li&gt;<br>
+          &lt;/ol&gt;<br>
+        </code>
+      </pre>
       <h3>HTML Document</h3>
       <p>All pages should begin with the following document declaration: <code>&lt;!DOCTYPE html&gt;</code>. This
         special string is known as a declaration and <a
@@ -232,18 +264,20 @@
       <p>The last line of the document should have a closing <code>&lt;/html&gt;</code> tag.</p>
       <p>Within the opening <code>&lt;html&gt;</code> tag, the <code>lang</code> attribute should be included to <a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-67"
-          target="_blank">specify the language of the page</a>. For example, a value of "en" could be used to indicate
+          target="_blank">specify the language of the page</a>. For example, a value of &ldquo;en&rdquo; could be used to indicate
         English.</p>
-      <p>All page content elements that should be rendered to the page go inside the page's <code>body</code> element.
+      <p>All page content elements that should be rendered to the page go inside the page&rsquo;s <code>body</code> element.
       </p>
-      <code>
-        &lt;!DOCTYPE html&gt;<br>
-        &lt;html lang="en"&gt;<br>
-        &nbsp;&nbsp;&lt;body&gt;<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;!--Content goes here--&gt;<br>
-        &nbsp;&nbsp;&lt;/body&gt;<br>
-        &lt;/html&gt;<br>
-      </code>
+      <pre>
+        <code>
+          &lt;!DOCTYPE html&gt;<br>
+          &lt;html lang="en"&gt;<br>
+          &nbsp;&nbsp;&lt;body&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;!--Content goes here--&gt;<br>
+          &nbsp;&nbsp;&lt;/body&gt;<br>
+          &lt;/html&gt;<br>
+        </code>
+      </pre>
       <h3>Meta Data</h3>
       <p>All content elements that should be rendered to the page go inside the <code>body</code> element. However,
         <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-65"
@@ -254,21 +288,24 @@
           target="_blank">determines what browsers show in the title bar or tab for the page</a>.</p>
       <p>You can <a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-69"
-          target="_blank">set browser behavior</a> by adding self-closing <code>meta</code> elements in the head. Here's
+          target="_blank">set browser behavior</a> by adding self-closing <code>meta</code> elements in the head.
+        Here&rsquo;s
         an example:</p>
-      <code>
-        &lt;!DOCTYPE html&gt;<br>
-        &lt;html lang="en"&gt;<br>
-        &nbsp;&nbsp;&lt;head&gt;<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Page Title Here&lt;/title&gt;<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="utf-8"&gt;<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
-        &nbsp;&nbsp;&lt;/head&gt;<br>
-        &nbsp;&nbsp;&lt;body&gt;<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;!--Content to be displayed--&gt;<br>
-        &nbsp;&nbsp;&lt;/body&gt;<br>
-        &lt;/html&gt;<br>
-      </code>
+      <pre>
+        <code>
+          &lt;!DOCTYPE html&gt;<br>
+          &lt;html lang="en"&gt;<br>
+          &nbsp;&nbsp;&lt;head&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Page Title Here&lt;/title&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="utf-8"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+          &nbsp;&nbsp;&lt;/head&gt;<br>
+          &nbsp;&nbsp;&lt;body&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;!--Content to be displayed--&gt;<br>
+          &nbsp;&nbsp;&lt;/body&gt;<br>
+          &lt;/html&gt;<br>
+        </code>
+      </pre>
       <p>Review:</p>
       <ul>
         <li><code>&lt;em&gt;Emphasize text&lt;/em&gt;.</code></li>
@@ -313,75 +350,230 @@
       <p><a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-36"
           target="_blank">Data is submitted</a> by means of a <code>form</code> element. The <code>action</code>
-        attribute indicates where form data should be sent. For example, <code>&lt;form
-          action="/submit-url"&gt;&lt;/form&gt;</code> tells the browser that the form data should be sent to the path
+        attribute indicates where form data should be sent. The following snippet tells the browser that the form data
+        should be sent to the path
         <code>/submit-url</code>.
       </p>
+      <pre>
+        <code>&lt;form action="/submit-url"&gt;&lt;/form&gt;</code>
+      </pre>
       <h3>Inputs</h3>
       <p>The <code>input</code> element allows you several ways to collect data from a web form. Like <code>img</code>
         elements, input elements are self-closing and do not need closing tags.</p>
+      <h5>Attribute: <code>type</code></h5>
       <p>There are many <a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-38"
-          target="_blank">kinds of inputs</a> you can create using the type attribute. You can easily create a password
+          target="_blank">kinds of inputs</a> you can create using the type attribute. You can easily create a
+        password
         field, reset button, or a control to let users select a file from their computer.</p>
+      <pre>
+        <code>
+          &lt;form action="/submit-url"&gt;<br>
+          &nbsp;&nbsp;&lt;input type="text" /&gt;<br>
+          &nbsp;&nbsp;&lt;input type="radio" /&gt;<br>
+          &lt;/form&gt;
+        </code>
+      </pre>
+      <p>You can use <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-44"
+          target="_blank">radio buttons</a> for questions where you want only one answer out of multiple options.</p>
       <h5>Attribute: <code>name</code></h5>
       <p>In order for <a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-39"
-          target="_blank">a form's data to be accessed by the location specified in the action attribute</a>, you must
+          target="_blank">a form&rsquo;s data to be accessed by the location specified in the action attribute</a>, you must
         give the text field a <code>name</code> attribute and assign it a value to represent the data being submitted.
       </p>
       <p>For example, you could use the following syntax for an email address text field:</p>
-      <code>&lt;input type="text" name="email"&gt;</code>
+      <pre>
+        <code>&lt;input type="text" name="email"&gt;</code>
+      </pre>
+      <p>Multiple radio buttons can be selected at the same time. To make it so selecting one radio button
+        automatically
+        deselects the other, <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-48"
+          target="_blank">all buttons in a group must have a <code>name</code> attribute</a> with the same value.</p>
+      <h5>Attribute: <code>value</code></h5>
+      <p>If you select a radio button and submit the form, the form data for the button is based on its name and
+        <code>value</code> attributes. Add a <code>value</code> attribute to <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-49"
+          target="_blank">define data that should be submitted</a> for each radio button.
+      </p>
       <h5>Attribute: <code>placeholder</code></h5>
       <p><a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-40"
           target="_blank">Placeholder text</a> is used to give people a hint about what kind of information to enter
         into an input.</p>
-      <code>&lt;input type="text" placeholder="Email address"&gt;</code>
+      <pre>
+        <code>&lt;input type="text" placeholder="Email address"&gt;</code>
+      </pre>
       <h5>Attribute <code>required</code></h5>
       <p>To prevent a user from submitting your form when <a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-41"
-          target="_blank">required information</a> is missing, you need to add the <code>required</code> attribute to an
-        input element. There's no need to set a value to the required attribute. Instead, just add the word required to
+          target="_blank">required information</a> is missing, you need to add the <code>required</code> attribute to
+        an
+        input element. There&rsquo;s no need to set a value to the required attribute. Instead, just add the word required
+        to
         the input element, making sure there is space between it and other attributes.</p>
-      <code>&lt;input type="text" placeholder="Email address" required /&gt;</code>
-      <p>Par 7</p>
-      <p>Par 8</p>
-      <code>alert("pwned");</code>
-      <p>Par 9</p>
-      <code>alert("pwned");</code>
-      <p>Par 10</p>
+      <pre>
+        <code>&lt;input type="text" placeholder="Email address" required /&gt;</code>
+      </pre>
+      <h5>Attribute: <code>id</code></h5>
+      <p>The <code>id</code> attribute is used to <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-46"
+          target="_blank">identify specific HTML elements</a>. Each <code>id</code> attribute&rsquo;s value must be unique
+        from all other id values for the entire page.</p>
+      <pre>
+        <code>alert("pwned");</code>
+      </pre>
       <ul>
-        <li>list item</li>
-        <li>list item</li>
-        <li>list item</li>
-        <li>list item</li>
-        <li>list item</li>
+        <li>&lt;form action="/submit-url" /&gt;&lt;/form&gt;</li>
+        <li>
+          &lt;form action="/submit-url" /&gt;<br>
+          &nbsp;&nbsp&lt;input type="text" /&gt;<br>
+          &lt;/form&gt;
+        </li>
+        <li>
+          &lt;form action="/submit-url" /&gt;<br>
+          &nbsp;&nbsp&lt;input type="radio" name="starch" value="potatoes"/&gt;<br>
+          &nbsp;&nbsp&lt;input type="radio" name="starch" value="rice"/&gt;<br>
+          &nbsp;&nbsp&lt;input type="radio" name="starch" value="yam"/&gt;<br>
+          &lt;/form&gt;
+        </li>
+        <li>
+          &lt;form action="/submit-url" /&gt;<br>
+          &nbsp;&nbsp&lt;input type="text" name="email" required/&gt;<br>
+          &lt;/form&gt;
+        </li>
+        <li>
+          &lt;form action="/submit-url" /&gt;<br>
+          &nbsp;&nbsp&lt;input type="text" name="age" placeholder="Please provide you age (Optional)."/&gt;<br>
+          &lt;/form&gt;
+        </li>
       </ul>
     </section>
-    <section class="main-section" id="Section_Header_5">
-      <header>Section Header 5</header>
-      <p>Par 1</p>
-      <p>Par 4</p>
-      <code>alert("pwned");</code>
-      <p>Par 3</p>
-      <p>Par 4</p>
-      <p>Par 5</p>
-      <code>alert("pwned");</code>
-      <p>Par 6</p>
-      <code>alert("pwned");</code>
-      <p>Par 7</p>
-      <p>Par 8</p>
-      <code>alert("pwned");</code>
-      <p>Par 9</p>
-      <code>alert("pwned");</code>
-      <p>Par 10</p>
+    <section class="main-section" id="More_On_Forms">
+      <header>More On Forms</header>
+      <h3>Checkboxes</h3>
+      <p>Forms commonly use <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-54"
+          target="_blank">checkboxes for questions that may have more than one answer</a>. For example, here&rsquo;s a
+        checkbox with the option of tacos:</p>
+      <pre>
+        <code>&lt;input type="checkbox" /&gt;</code>
+      </pre>
+      <p>While you won&rsquo;t notice this in the browser, adding a <code>name</code> attribute to each checkbox
+        <code>input</code> element makes it <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-57"
+          target="_blank">easier for a server to process your web form</a>, especially when there are several
+        checkboxes.
+      </p>
+      <p>Like radio buttons, form data for selected checkboxes are <code>name</code> / <code>value</code> attribute
+        pairs. While the <code>value</code> attribute is optional, it&rsquo;s <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-60"
+          target="_blank">best practice to include it with any checkboxes or radio buttons on the page</a>.</p>
+      <h3>Labels</h3>
+      <p><code>label</code> elements are used to help <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-45"
+          target="_blank">associate the text for an input element with the input element itself</a> (especially for
+        assistive technologies like screen readers). For example, <code>&lt;label&gt;&lt;input type="radio"&gt;
+          cat&lt;/label&gt;</code> makes it so clicking the word cat also selects the corresponding radio button.</p>
+      <h5>Attribute: <code>for</code></h5>
+      <p>There&rsquo;s <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-56"
+          target="_blank">another way to associate an <code>input</code> element&rsquo;s text with the element itself</a>.
+        You
+        can nest the text within a <code>label</code> element and add a <code>for</code> attribute with the same value
+        as the input element&rsquo;s <code>id</code> attribute.</p>
+      <pre>
+        <code>
+          &lt;form&gt;<br>
+          &nbsp;&nbsp;&lt;label for="e_1"&gt;Example 1: &lt;input type="checkbox" id="e_1" name="examples" value="1"
+          /&gt;&lt;/label&gt;<br>
+          &nbsp;&nbsp;&lt;label for="e_2"&gt;Example 2: &lt;input type="checkbox" id="e_2" name="examples" value="2"
+          /&gt;&lt;/label&gt;<br>
+          &lt;/form&gt;<br>
+        </code>
+      </pre>
+      <h5>Attribute: <code>checked</code></h5>
+      <p>In order to <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-61"
+          target="_blank">make a checkbox checked or radio button selected by default</a>, you need to add the checked
+        attribute to it. There&rsquo;s no need to set a value to the checked attribute. Instead, just add the word checked
+        to
+        the input element, making sure there is space between it and other attributes.</p>
+      <pre>
+        <code>
+          &lt;form&gt;<br>
+          &nbsp;&nbsp;&lt;label for="c1"&gt;First Choice: &lt;input type="checkbox" id="c1" name="choices" value="1"
+          checked /&gt;&lt;/label&gt;<br>
+          &nbsp;&nbsp;&lt;label for="c2"&gt;First Choice: &lt;input type="checkbox" id="c2" name="choices" value="2"
+          /&gt;&lt;/label&gt;<br>
+          &nbsp;&nbsp;&lt;label for="c3"&gt;First Choice: &lt;input type="checkbox" id="c3" name="choices" value="3"
+          /&gt;&lt;/label&gt;<br>
+          &lt;/form&gt;
+        </code>
+      </pre>
+      <h3>Buttons</h3>
+      <p>Use the <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-42"
+          target="_blank"><code>button</code> element</a> to create a clickable button. For example, the following
+        code
+        creates a button with the text &ldquo;Click Here&rdquo;.</p>
+      <pre>
+        <code>&lt;button&gt;Click Here&lt;/button&gt;</code>
+      </pre>
+      <p>Both input and button elements are inline elements, which don&rsquo;t appear on new lines.</p>
+      <p>A button in a form will submit the form by default. However, relying on default behavior may cause confusion,
+        so it&rsquo;s best practice to add the <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-43"
+          target="_blank"><code>type</code> attribute with the value &ldquo;submit&rdquo; to the button</a> to make it clear that
+        it
+        is a submit button.</p>
+      <pre>
+        <code>
+          &lt;form&gt;<br>
+          &nbsp;&nbsp;&lt;label for="o1"&gt;&lt;input type="radio" id="o1" name="options" value="1" /&gt; Option
+          1&lt;/label&gt;&lt;br&gt;<br>
+          &nbsp;&nbsp;&lt;label for="o2"&gt;&lt;input type="radio" id="o2" name="options" value="2" /&gt; Option
+          2&lt;/label&gt;&lt;br&gt;<br>
+          &nbsp;&nbsp;&lt;button type="submit" value="Submit"&gt;Submit&lt;/button&gt;<br>
+          &lt;/form&gt;
+        </code>
+      </pre>
+      <p>Review:</p>
       <ul>
-        <li>list item</li>
-        <li>list item</li>
-        <li>list item</li>
-        <li>list item</li>
-        <li>list item</li>
+        <li><code>&lt;input type="checkbox" /&gt;</code></li>
+        <li>
+          <code>
+            &lt;form&gt;<br>
+            &nbsp;&nbsp;&lt;label for="id1"&gt;&lt;input="checkbox" id="id1" name="veg" value="carrots" /&gt;
+            Carrots&lt;/label&gt;&lt;br&gt;&lt;br&gt;<br>
+            &nbsp;&nbsp;&lt;label for="id2"&gt;&lt;input="checkbox" id="id2" name="veg" value="broccoli" /&gt;
+            Broccoli&lt;/label&gt;&lt;br&gt;&lt;br&gt;<br>
+            &lt;/form&gt;
+          </code>
+        </li>
+        <code>
+          &lt;form&gt;<br>
+          &nbsp;&nbsp;&lt;label for="dessert1"&gt;&lt;input="checkbox" id="dessert1" name="dessert" value="ice cream"
+          checked /&gt; Strawberry Ice Cream&lt;/label&gt;&lt;br&gt;<br>
+          &nbsp;&nbsp;&lt;label for="dessert2"&gt;&lt;input="checkbox" id="dessert2" name="dessert" value="cake" /&gt;
+          Chocolate Cake&lt;/label&gt;&lt;br&gt;<br>
+          &lt;/form&gt;
+        </code>
+        <li>
+          <code>
+            &lt;form&gt;<br>
+            &nbsp;&nbsp;&lt;label for="e1"&gt;Enter your email:&lt;br&gt;&lt;input="text" id="e1" name="email"
+            /&gt;&lt;/label&gt;&lt;br&gt;<br>
+            &nbsp;&nbsp;&lt;label for="dessert2"&gt;&lt;input="checkbox" id="dessert2" name="dessert" value="cake"
+            /&gt;
+            Chocolate Cake&lt;/label&gt;&lt;br&gt;<br>
+            &nbsp;&nbsp;&lt;button type="submit" value="Submit"&gt;Submit&lt;/button&gt;<br>
+            &lt;/form&gt;
+          </code>
+        </li>
+        <li>Learn more at <a href="https://www.freecodecamp.org/" target="_blank">www.freecodecamp.com</a></li>
       </ul>
     </section>
   </main>
