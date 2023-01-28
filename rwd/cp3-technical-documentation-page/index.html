@@ -15,7 +15,7 @@
       <li><a class="nav-link" href="#Basics">Basics</a></li>
       <li><a class="nav-link" href="#Organizing_Content">Organizing Content</a></li>
       <li><a class="nav-link" href="#More_Common_Tags">More Common Tags</a></li>
-      <li><a class="nav-link" href="#Section_Header_4">Section Header 4</a></li>
+      <li><a class="nav-link" href="#Forms">Forms</a></li>
       <li><a class="nav-link" href="#Section_Header_5">Section Header 5</a></li>
     </ul>
   </nav>
@@ -308,17 +308,43 @@
         </li>
       </ul>
     </section>
-    <section class="main-section" id="Section_Header_4">
-      <header>Section Header 4</header>
-      <p>Par 1</p>
-      <p>Par 2</p>
-      <code>alert("pwned");</code>
-      <p>Par 3</p>
-      <p>Par 4</p>
-      <p>Par 5</p>
-      <code>alert("pwned");</code>
-      <p>Par 6</p>
-      <code>alert("pwned");</code>
+    <section class="main-section" id="Forms">
+      <header>Forms</header>
+      <p><a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-36"
+          target="_blank">Data is submitted</a> by means of a <code>form</code> element. The <code>action</code>
+        attribute indicates where form data should be sent. For example, <code>&lt;form
+          action="/submit-url"&gt;&lt;/form&gt;</code> tells the browser that the form data should be sent to the path
+        <code>/submit-url</code>.
+      </p>
+      <h3>Inputs</h3>
+      <p>The <code>input</code> element allows you several ways to collect data from a web form. Like <code>img</code>
+        elements, input elements are self-closing and do not need closing tags.</p>
+      <p>There are many <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-38"
+          target="_blank">kinds of inputs</a> you can create using the type attribute. You can easily create a password
+        field, reset button, or a control to let users select a file from their computer.</p>
+      <h5>Attribute: <code>name</code></h5>
+      <p>In order for <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-39"
+          target="_blank">a form's data to be accessed by the location specified in the action attribute</a>, you must
+        give the text field a <code>name</code> attribute and assign it a value to represent the data being submitted.
+      </p>
+      <p>For example, you could use the following syntax for an email address text field:</p>
+      <code>&lt;input type="text" name="email"&gt;</code>
+      <h5>Attribute: <code>placeholder</code></h5>
+      <p><a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-40"
+          target="_blank">Placeholder text</a> is used to give people a hint about what kind of information to enter
+        into an input.</p>
+      <code>&lt;input type="text" placeholder="Email address"&gt;</code>
+      <h5>Attribute <code>required</code></h5>
+      <p>To prevent a user from submitting your form when <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-41"
+          target="_blank">required information</a> is missing, you need to add the <code>required</code> attribute to an
+        input element. There's no need to set a value to the required attribute. Instead, just add the word required to
+        the input element, making sure there is space between it and other attributes.</p>
+      <code>&lt;input type="text" placeholder="Email address" required /&gt;</code>
       <p>Par 7</p>
       <p>Par 8</p>
       <code>alert("pwned");</code>
