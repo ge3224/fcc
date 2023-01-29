@@ -7,7 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -148,14 +150,15 @@
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-8"
           target="_blank">HTML attributes</a> are special words used inside the opening tag of an element to control
         the
-        element&rsquo;s behavior. The <code>src</code> attribute in an <code>img</code> element specifies the image&rsquo;s URL
+        element&rsquo;s behavior. The <code>src</code> attribute in an <code>img</code> element specifies the
+        image&rsquo;s URL
         (where the image is located).</p>
       <p>An example of an <code>img</code> element using an src attribute:</p>
       <pre>
         <code>&lt;img src="https://www.example.com/the-image.jpg"&gt;</code>.
       </pre>
-      <p>All <code>img</code> elements should have an <code>alt</code> attribute. The alt attribute&rsquo;s text is used <a
-          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-9"
+      <p>All <code>img</code> elements should have an <code>alt</code> attribute. The alt attribute&rsquo;s text is used
+        <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-9"
           target="_blank">for screen readers to improve accessibility and is displayed if the image fails to load</a>.
       </p>
       <p>For example, the following example has an <code>alt</code> attribute with the text &ldquo;A cat&rdquo;.</p>
@@ -193,19 +196,34 @@
         <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-15"
           target="_blank">image into a link</a> by surrounding it with anchor tags.
       </p>
-      <p>Add a <code>target</code> attribute with the value &ldquo;_blank&rdquo; to the <code>a</code> element&rsquo;s opening tag, so
+      <p>Add a <code>target</code> attribute with the value &ldquo;_blank&rdquo; to the <code>a</code> element&rsquo;s
+        opening tag, so
         that the link <a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-14"
           target="_blank">opens in a new tab</a>.</p>
       <p>Review:</p>
-      <ul>
-        <li>&lt;main&gt;<br>&nbsp;&nbsp;&lt;!-- content --&gt;<br>&lt/main&gt;</li>
-        <li>&lt;section&gt;<br>&nbsp;&nbsp;&lt;!-- content section --&gt;<br>&lt/section&gt;</li>
-        <li>&lt;img src="image.jpg" alt="an image description" /&gt;</li>
-        <li>&lt;figure&gt;<br>&nbsp;&nbsp;&lt;img src="image.jpg" alt="description"
-          /&gt;<br>&nbsp;&nbsp;&lt;figcaption&gt;caption&lt;/figcaption&gt;<br>&lt;/figure&gt;</li>
-        <li>&lt;a href="https://www.example.com" target="_blank"&gt;Link&lt;/a&gt;</li>
-      </ul>
+      <ol>
+        <li>
+          <pre><code>&lt;main&gt;<br>&nbsp;&nbsp;&lt;!-- content --&gt;<br>&lt/main&gt;</code></pre>
+        </li>
+        <li>
+          <pre><code>&lt;section&gt;<br>&nbsp;&nbsp;&lt;!-- content section --&gt;<br>&lt/section&gt;</code></pre>
+        </li>
+        <li>
+          <pre><code>&lt;img src="image.jpg" alt="an image description" /&gt;</code></pre>
+        </li>
+        <li>
+          <pre>
+            <code>
+              <&lt;figure&gt;<br>&nbsp;&nbsp;&lt;img src="image.jpg" alt="description"
+                /&gt;<br>&nbsp;&nbsp;&lt;figcaption&gt;caption&lt;/figcaption&gt;<br>&lt;/figure&gt;>
+            </code>
+          </pre>
+        </li>
+        <li>
+          <pre><code>&lt;a href="https://www.example.com" target="_blank"&gt;Link&lt;/a&gt;</code></pre>
+        </li>
+      </ol>
     </section>
     <section class="main-section" id="More_Common_Tags">
       <header>More Common Tags</header>
@@ -264,9 +282,11 @@
       <p>The last line of the document should have a closing <code>&lt;/html&gt;</code> tag.</p>
       <p>Within the opening <code>&lt;html&gt;</code> tag, the <code>lang</code> attribute should be included to <a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-67"
-          target="_blank">specify the language of the page</a>. For example, a value of &ldquo;en&rdquo; could be used to indicate
+          target="_blank">specify the language of the page</a>. For example, a value of &ldquo;en&rdquo; could be used
+        to indicate
         English.</p>
-      <p>All page content elements that should be rendered to the page go inside the page&rsquo;s <code>body</code> element.
+      <p>All page content elements that should be rendered to the page go inside the page&rsquo;s <code>body</code>
+        element.
       </p>
       <pre>
         <code>
@@ -307,43 +327,53 @@
         </code>
       </pre>
       <p>Review:</p>
-      <ul>
-        <li><code>&lt;em&gt;Emphasize text&lt;/em&gt;.</code></li>
-        <li><code>&lt;strong&gt;Make text important&lt;/strong&gt;.</code></li>
+      <ol>
         <li>
-          <code>
-            &lt;ul&gt;<br>
-            &nbsp;&nbsp;&lt;li&gt;List&lt;/li&gt;<br>
-            &nbsp;&nbsp;&lt;li&gt;Items&lt;/li&gt;<br>
-            &nbsp;&nbsp;&lt;li&gt;Without numbers&lt;/li&gt;<br>
-            &lt;/ul&gt;<br>
-          </code>
+          <pre><code>&lt;em&gt;Emphasize text&lt;/em&gt;.</code></pre>
         </li>
         <li>
-          <code>
-            &lt;ol&gt;<br>
-            &nbsp;&nbsp;&lt;li&gt;List&lt;/li&gt;<br>
-            &nbsp;&nbsp;&lt;li&gt;Items&lt;/li&gt;<br>
-            &nbsp;&nbsp;&lt;li&gt;With numbers&lt;/li&gt;<br>
-            &lt;/ol&gt;<br>
-          </code>
+          <pre><code>&lt;strong&gt;Make text important&lt;/strong&gt;.</code></pre>
         </li>
         <li>
-          <code>
-            &lt;!DOCTYPE html&gt;<br>
-            &lt;html lang="en"&gt;<br>
-            &nbsp;&nbsp;&lt;head&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Setup Your Document&lt;/title&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="utf-8"&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
-            &nbsp;&nbsp;&lt;/head&gt;<br>
-            &nbsp;&nbsp;&lt;body&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;!--Content to be displayed--&gt;<br>
-            &nbsp;&nbsp;&lt;/body&gt;<br>
-            &lt;/html&gt;<br>
-          </code>
+          <pre>
+            <code>
+              &lt;ul&gt;<br>
+              &nbsp;&nbsp;&lt;li&gt;List&lt;/li&gt;<br>
+              &nbsp;&nbsp;&lt;li&gt;Items&lt;/li&gt;<br>
+              &nbsp;&nbsp;&lt;li&gt;Without numbers&lt;/li&gt;<br>
+              &lt;/ul&gt;<br>
+            </code>
+          </pre>
         </li>
-      </ul>
+        <li>
+          <pre>
+            <code>
+              &lt;ol&gt;<br>
+              &nbsp;&nbsp;&lt;li&gt;List&lt;/li&gt;<br>
+              &nbsp;&nbsp;&lt;li&gt;Items&lt;/li&gt;<br>
+              &nbsp;&nbsp;&lt;li&gt;With numbers&lt;/li&gt;<br>
+              &lt;/ol&gt;<br>
+            </code>
+          </pre>
+        </li>
+        <li>
+          <pre>
+            <code>
+              &lt;!DOCTYPE html&gt;<br>
+              &lt;html lang="en"&gt;<br>
+              &nbsp;&nbsp;&lt;head&gt;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Setup Your Document&lt;/title&gt;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="utf-8"&gt;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+              &nbsp;&nbsp;&lt;/head&gt;<br>
+              &nbsp;&nbsp;&lt;body&gt;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;!--Content to be displayed--&gt;<br>
+              &nbsp;&nbsp;&lt;/body&gt;<br>
+              &lt;/html&gt;<br>
+            </code>
+          </pre>
+        </li>
+      </ol>
     </section>
     <section class="main-section" id="Forms">
       <header>Forms</header>
@@ -380,7 +410,8 @@
       <h5>Attribute: <code>name</code></h5>
       <p>In order for <a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-39"
-          target="_blank">a form&rsquo;s data to be accessed by the location specified in the action attribute</a>, you must
+          target="_blank">a form&rsquo;s data to be accessed by the location specified in the action attribute</a>, you
+        must
         give the text field a <code>name</code> attribute and assign it a value to represent the data being submitted.
       </p>
       <p>For example, you could use the following syntax for an email address text field:</p>
@@ -398,6 +429,12 @@
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-49"
           target="_blank">define data that should be submitted</a> for each radio button.
       </p>
+      <pre>
+        <code>
+          &lt;input type="radio" name="choice" value="chocolate" /&gt;<br>
+          &lt;input type="radio" name="choice" value="vanilla" /&gt;
+        </code>
+      </pre>
       <h5>Attribute: <code>placeholder</code></h5>
       <p><a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-40"
@@ -409,47 +446,60 @@
       <h5>Attribute <code>required</code></h5>
       <p>To prevent a user from submitting your form when <a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-41"
-          target="_blank">required information</a> is missing, you need to add the <code>required</code> attribute to
-        an
-        input element. There&rsquo;s no need to set a value to the required attribute. Instead, just add the word required
-        to
-        the input element, making sure there is space between it and other attributes.</p>
+          target="_blank">required information</a> is missing, you need to add the <code>required</code> attribute to an
+        input element. There&rsquo;s no need to set a value to the required attribute. Instead, just add the word
+        required to the input element, making sure there is space between it and other attributes.</p>
       <pre>
         <code>&lt;input type="text" placeholder="Email address" required /&gt;</code>
       </pre>
       <h5>Attribute: <code>id</code></h5>
       <p>The <code>id</code> attribute is used to <a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-46"
-          target="_blank">identify specific HTML elements</a>. Each <code>id</code> attribute&rsquo;s value must be unique
-        from all other id values for the entire page.</p>
-      <pre>
-        <code>alert("pwned");</code>
-      </pre>
-      <ul>
-        <li>&lt;form action="/submit-url" /&gt;&lt;/form&gt;</li>
+          target="_blank">identify specific HTML elements</a>. Each <code>id</code> attribute&rsquo;s value must be
+        unique from all other id values for the entire page.</p>
+      <ol>
         <li>
-          &lt;form action="/submit-url" /&gt;<br>
-          &nbsp;&nbsp&lt;input type="text" /&gt;<br>
-          &lt;/form&gt;
+          <pre><code>&lt;form action="/submit-url" /&gt;&lt;/form&gt;</code></pre>
         </li>
         <li>
-          &lt;form action="/submit-url" /&gt;<br>
-          &nbsp;&nbsp&lt;input type="radio" name="starch" value="potatoes"/&gt;<br>
-          &nbsp;&nbsp&lt;input type="radio" name="starch" value="rice"/&gt;<br>
-          &nbsp;&nbsp&lt;input type="radio" name="starch" value="yam"/&gt;<br>
-          &lt;/form&gt;
+          <pre>
+            <code>
+              &lt;form action="/submit-url" /&gt;<br>
+              &nbsp;&nbsp&lt;input type="text" /&gt;<br>
+              &lt;/form&gt;
+            </code>
+          </pre>
         </li>
         <li>
-          &lt;form action="/submit-url" /&gt;<br>
-          &nbsp;&nbsp&lt;input type="text" name="email" required/&gt;<br>
-          &lt;/form&gt;
+          <pre>
+            <code>
+              &lt;form action="/submit-url" /&gt;<br>
+              &nbsp;&nbsp&lt;input type="radio" name="starch" value="potatoes"/&gt;<br>
+              &nbsp;&nbsp&lt;input type="radio" name="starch" value="rice"/&gt;<br>
+              &nbsp;&nbsp&lt;input type="radio" name="starch" value="yam"/&gt;<br>
+              &lt;/form&gt;
+            </code>
+          </pre>
         </li>
         <li>
-          &lt;form action="/submit-url" /&gt;<br>
-          &nbsp;&nbsp&lt;input type="text" name="age" placeholder="Please provide you age (Optional)."/&gt;<br>
-          &lt;/form&gt;
+          <pre>
+            <code>
+              &lt;form action="/submit-url" /&gt;<br>
+              &nbsp;&nbsp&lt;input type="text" name="email" required/&gt;<br>
+              &lt;/form&gt;
+            </code>
+          </pre>
         </li>
-      </ul>
+        <li>
+          <pre>
+            <code>
+              &lt;form action="/submit-url" /&gt;<br>
+              &nbsp;&nbsp&lt;input type="text" name="age" placeholder="Please provide you age (Optional)."/&gt;<br>
+              &lt;/form&gt;
+            </code>
+          </pre>
+        </li>
+      </ol>
     </section>
     <section class="main-section" id="More_On_Forms">
       <header>More On Forms</header>
@@ -480,7 +530,8 @@
       <h5>Attribute: <code>for</code></h5>
       <p>There&rsquo;s <a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-56"
-          target="_blank">another way to associate an <code>input</code> element&rsquo;s text with the element itself</a>.
+          target="_blank">another way to associate an <code>input</code> element&rsquo;s text with the element
+          itself</a>.
         You
         can nest the text within a <code>label</code> element and add a <code>for</code> attribute with the same value
         as the input element&rsquo;s <code>id</code> attribute.</p>
@@ -498,7 +549,8 @@
       <p>In order to <a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-61"
           target="_blank">make a checkbox checked or radio button selected by default</a>, you need to add the checked
-        attribute to it. There&rsquo;s no need to set a value to the checked attribute. Instead, just add the word checked
+        attribute to it. There&rsquo;s no need to set a value to the checked attribute. Instead, just add the word
+        checked
         to
         the input element, making sure there is space between it and other attributes.</p>
       <pre>
@@ -526,9 +578,8 @@
       <p>A button in a form will submit the form by default. However, relying on default behavior may cause confusion,
         so it&rsquo;s best practice to add the <a
           href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-43"
-          target="_blank"><code>type</code> attribute with the value &ldquo;submit&rdquo; to the button</a> to make it clear that
-        it
-        is a submit button.</p>
+          target="_blank"><code>type</code> attribute with the value &ldquo;submit&rdquo; to the button</a> to make it
+        clear that it is a submit button.</p>
       <pre>
         <code>
           &lt;form&gt;<br>
@@ -541,40 +592,46 @@
         </code>
       </pre>
       <p>Review:</p>
-      <ul>
-        <li><code>&lt;input type="checkbox" /&gt;</code></li>
+      <ol>
+        <li><pre><code>&lt;input type="checkbox" /&gt;</code></pre></li>
         <li>
-          <code>
-            &lt;form&gt;<br>
-            &nbsp;&nbsp;&lt;label for="id1"&gt;&lt;input="checkbox" id="id1" name="veg" value="carrots" /&gt;
-            Carrots&lt;/label&gt;&lt;br&gt;&lt;br&gt;<br>
-            &nbsp;&nbsp;&lt;label for="id2"&gt;&lt;input="checkbox" id="id2" name="veg" value="broccoli" /&gt;
-            Broccoli&lt;/label&gt;&lt;br&gt;&lt;br&gt;<br>
-            &lt;/form&gt;
-          </code>
+          <pre>
+            <code>
+              &lt;form&gt;<br>
+              &nbsp;&nbsp;&lt;label for="id1"&gt;&lt;input="checkbox" id="id1" name="veg" value="carrots" /&gt;
+              Carrots&lt;/label&gt;&lt;br&gt;&lt;br&gt;<br>
+              &nbsp;&nbsp;&lt;label for="id2"&gt;&lt;input="checkbox" id="id2" name="veg" value="broccoli" /&gt;
+              Broccoli&lt;/label&gt;&lt;br&gt;&lt;br&gt;<br>
+              &lt;/form&gt;
+            </code>
+          </pre>
         </li>
-        <code>
-          &lt;form&gt;<br>
-          &nbsp;&nbsp;&lt;label for="dessert1"&gt;&lt;input="checkbox" id="dessert1" name="dessert" value="ice cream"
-          checked /&gt; Strawberry Ice Cream&lt;/label&gt;&lt;br&gt;<br>
-          &nbsp;&nbsp;&lt;label for="dessert2"&gt;&lt;input="checkbox" id="dessert2" name="dessert" value="cake" /&gt;
-          Chocolate Cake&lt;/label&gt;&lt;br&gt;<br>
-          &lt;/form&gt;
-        </code>
-        <li>
+        <pre>
           <code>
             &lt;form&gt;<br>
-            &nbsp;&nbsp;&lt;label for="e1"&gt;Enter your email:&lt;br&gt;&lt;input="text" id="e1" name="email"
-            /&gt;&lt;/label&gt;&lt;br&gt;<br>
-            &nbsp;&nbsp;&lt;label for="dessert2"&gt;&lt;input="checkbox" id="dessert2" name="dessert" value="cake"
-            /&gt;
+            &nbsp;&nbsp;&lt;label for="dessert1"&gt;&lt;input="checkbox" id="dessert1" name="dessert" value="ice cream"
+            checked /&gt; Strawberry Ice Cream&lt;/label&gt;&lt;br&gt;<br>
+            &nbsp;&nbsp;&lt;label for="dessert2"&gt;&lt;input="checkbox" id="dessert2" name="dessert" value="cake" /&gt;
             Chocolate Cake&lt;/label&gt;&lt;br&gt;<br>
-            &nbsp;&nbsp;&lt;button type="submit" value="Submit"&gt;Submit&lt;/button&gt;<br>
             &lt;/form&gt;
           </code>
+        </pre>
+        <li>
+          <pre>
+            <code>
+              &lt;form&gt;<br>
+              &nbsp;&nbsp;&lt;label for="e1"&gt;Enter your email:&lt;br&gt;&lt;input="text" id="e1" name="email"
+              /&gt;&lt;/label&gt;&lt;br&gt;<br>
+              &nbsp;&nbsp;&lt;label for="dessert2"&gt;&lt;input="checkbox" id="dessert2" name="dessert" value="cake"
+              /&gt;
+              Chocolate Cake&lt;/label&gt;&lt;br&gt;<br>
+              &nbsp;&nbsp;&lt;button type="submit" value="Submit"&gt;Submit&lt;/button&gt;<br>
+              &lt;/form&gt;
+            </code>
+          </pre>
         </li>
         <li>Learn more at <a href="https://www.freecodecamp.org/" target="_blank">www.freecodecamp.com</a></li>
-      </ul>
+      </ol>
     </section>
   </main>
 </body>
