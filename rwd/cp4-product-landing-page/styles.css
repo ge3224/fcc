@@ -1,3 +1,12 @@
+:root {
+  --color-nav-bg: hsl(42, 36%, 62%);
+  --color-brand-text: hsl(222, 100%, 5%);
+  --color-link-text: hsl(222, 30%, 22%);
+  --color-link-text-hover: hsl(222, 20%, 36%);
+  --color-link-text-active: hsl(222, 20%, 44%);
+  --width-main: 1280px;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -8,23 +17,47 @@ html {
 
 body {
   margin: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
-#header {
+a, a:visited {
+  color: var(--color-link-text);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+a:hover {
+  color: var(--color-link-text-hover);
+}
+
+a:active {
+  color: var(--color-link-text-active);
+}
+
+p {
+  max-width: 64ch;
+}
+
+video {
+  width: 540px;
+}
+
+.header {
   width: 100%;
-  background-color: pink;
+  background-color: var(--color-nav-bg);
   position: fixed;
   top: 0;
   display: flex;
+  padding: 0.25rem 1.25rem 0.25rem 0;
 }
 
-#nav-bar {
+.nav-bar {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   gap: 1rem;
-  margin-right: 2rem;
+  margin-right: 0;
   margin-left: auto;
 }
 
@@ -32,23 +65,35 @@ body {
   display: flex;
   width: 12rem;
   align-items: center;
+  font-family: 'Imperial Script', cursive;
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--color-brand-text);
 }
 
 .brand-symbol {
-  max-width: 4rem;
+  max-width: 3rem;
   height: auto;
 }
 
-p {
-  max-width: 64ch;
+.content-container {
+  margin: 6rem auto 2rem;
+  max-width: var(--width-main);
 }
 
-main {
-  margin-top: 6rem;
+.call-to-action {
+  margin: 2rem 0;
 }
 
-video {
-  width: 540px;
+.call-to-action-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0.25rem 0;
+}
+
+.call-to-action-form {
+  margin: 0.75rem 0;
+  line-height: 1.5;
 }
 
 @media only screen and (max-width: 420px) {
