@@ -79,6 +79,7 @@ video {
 .content-container {
   margin: 6rem auto 2rem;
   max-width: var(--width-main);
+  padding: 0 0.5rem;
 }
 
 .call-to-action {
@@ -100,4 +101,28 @@ video {
   video {
     width: 315px;
   }
+}
+
+@media screen and (min-width: 640px) {
+  .content-container {
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  
+}
+
+@media screen and (min-width: 1024px) {
+  .content-container {
+    padding: 0;
+  }  
+}
+
+@media screen and (min-width: 1280px) {
+  
+}
+
+@media screen and (min-width: 1536px) {
+  
 }
