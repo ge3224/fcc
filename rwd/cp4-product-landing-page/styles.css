@@ -109,20 +109,8 @@ video {
   }
 }
 
-@media screen and (min-width: 768px) {
-  
-}
-
 @media screen and (min-width: 1024px) {
   .content-container {
     padding: 0;
   }  
-}
-
-@media screen and (min-width: 1280px) {
-  
-}
-
-@media screen and (min-width: 1536px) {
-  
 }
