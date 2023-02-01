@@ -1,28 +1,114 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FCC Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <nav id="navbar">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jacob's FCC Portfolio Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header>
+    <nav id="navbar">
+      <div class="nav-container">
         <ul>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#links" target="_blank">External Links</a></li>
         </ul>
-      </nav>
-    </header>
-    <section id="welcome-section">
-      <h1>My FCC Portfolio</h1>
-    </section> 
-    <section id="projects">
-      <div class="project-tile"><a href="https://jacobbenison.com/projects/unitswitch/"/></div>
-    </section>
-    <section>
-      <a id="profile-link" href="https://github.com/ge3224" target="_blank">My Github</a>
-    </section>
-    <footer></footer>
-  </body>
+      </div>
+    </nav>
+  </header>
+  <section class="welcome-section" id="welcome-section">
+    <h1>My FCC Portfolio</h1>
+  </section>
+  <section class="projects-section" id="projects">
+    <div class="project-tile">
+      <a class="link-h3" href="https://github.com/ge3224/tailkick" target="_blank">
+        <div class="svg-bg">
+          <img class="project-tile-img"
+            src="https://user-images.githubusercontent.com/75739874/210090629-6116d0c8-b268-4121-a142-fe59239bf7d5.svg" />
+        </div>
+        <h3>A WordPress Theme Utilizing Tailwind CSS</h3>
+      </a>
+      <p>TailKick offers WordPress site owners a fresh look and theme builders a surprisingly pleasant developer
+        experience.</p>
+    </div>
+    <div class="project-tile">
+      <a class="link-h3" href="https://github.com/ge3224/rust-gedcom" target="_blank">
+        <div class="gif-shallow">
+          <img class="project-tile-img"
+            src="https://user-images.githubusercontent.com/75739874/208138255-50d9bcf2-d8e3-4519-b91a-b0fc53bdd669.gif" />
+        </div>
+        <h3>Genealogical Data Parser</h3>
+      </a>
+      <p>My fork of Robert Pirtle&rsquo;s Rust GEDCOM parser.</p>
+    </div>
+    <div class="project-tile">
+      <a class="link-h3" href="https://burleytechfl.com/" target="_blank">
+        <img class="project-tile-img" src="https://jacobbenison.com/img/previews/burley_tech.jpg" />
+        <h3>Redesign for Burley Technology Solution</h3>
+      </a>
+      <p>Redesigning burleytechfl.com and using the client’s web-building platform gives rise to CSS specificity combat.
+      </p>
+    </div>
+    <div class="project-tile">
+      <a class="link-h3" href="https://jacobbenison.com/projects/unitswitch/" target="_blank">
+        <img class="project-tile-img" src="https://jacobbenison.com/img/previews/unitswitch.jpg" />
+        <h3>React App: UnitSwitch</h3>
+      </a>
+      <p>A web app for designers, UnitSwitch shows at a glance the correlation between frequently-used units of
+        measurement.</p>
+    </div>
+    <div class="project-tile">
+      <a class="link-h3" href="https://pf-engineering.com/cart" target="_blank">
+        <img class="project-tile-img" src="https://jacobbenison.com/img/previews/pfe_cart.jpg" />
+        <h3>A Custom Shopping Cart Integration</h3>
+      </a>
+      <p>A full-stack cart application for P.F. Engineering streamlines online customer checkout.</p>
+    </div>
+    <div class="project-tile">
+      <a class="link-h3" href="https://pf-engineering.com/" target="_blank">
+        <img class="project-tile-img" src="https://jacobbenison.com/img/previews/pfe_redesign.jpg" />
+        <h3>A Redesign for P.F. Engineering</h3>
+      </a>
+      <p>The redesign of pf-engineering.com improves navigation and brings the company’s brand identity into focus.</p>
+    </div>
+    <div class="project-tile">
+      <a class="link-h3" href="https://jacobbenison.com/projects/rubik/" target="_blank">
+        <img class="project-tile-img" src="https://jacobbenison.com/img/previews/cubism.jpg" />
+        <h3>Rubik&rsquo;s Cube Solved in 3 Steps</h3>
+      </a>
+      <p>The Cube has 43 quintillion possible ways of arranging its pieces. Learn how to conquer the popular puzzle with
+        this three-phase method.</p>
+    </div>
+    <div class="project-tile">
+      <a class="link-h3" href="https://jacobbenison.com/projects/skateboarding/" target="_blank">
+        <img class="project-tile-img" src="https://jacobbenison.com/img/previews/skateboarding.jpg" />
+        <h3>Skateboarding Fundamentals</h3>
+      </a>
+      <p>Learn about ollies, grinds, slides, and kickflips—the ABCs of skateboarding.</p>
+    </div>
+  </section>
+  <section class="about-section" id="about">
+    <h2>About</h3>
+      <p>I’m a web developer, graphic designer and illustrator who is passionate about discovery, design, the
+        natural world, creative coding, data visualization, and storytelling.</p>
+  </section>
+  <footer id="links">
+    <div class="footer-container">
+      <ul>
+        <li>Copyright &#169; 2023 Jacob Benison </li>
+        <li><a id="profile-link" href="https://jacobbenison.com/" target="_blank">My Website</a></li>
+        <li><a href="https://github.com/ge3224" target="_blank">My Github</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
 </html>

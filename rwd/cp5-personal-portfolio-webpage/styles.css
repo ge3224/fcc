@@ -1,5 +1,239 @@
-@media only screen and (max-width: 390px) {
-  body {
-    background-color: black;
+:root {
+  --border-radius: 4px;
+  --color-bg: hsl(0, 0%, 98%);
+  --color-gif-bg: hsl(275, 03%, 55%);
+  --color-link: hsl(180, 65%, 42%);
+  --color-link-active: hsl(180, 60%, 60%);
+  --color-link-hover: hsl(180, 60%, 50%);
+  --color-link-footer: hsl(0, 0%, 55%);
+  --color-aside: hsl(0, 0%, 95%);
+  --color-prose: hsl(0, 0%, 0%);
+  --color-svg-bg: hsl(275, 10%, 15%);
+  --color-border: hsl(0, 0%, 90%);
+  --width-main: 1280px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  font-family: 'Rubik', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 2.75rem;
+}
+
+h2 {
+  margin-bottom: 0.25rem;
+}
+
+h3 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  max-width: 80ch;
+}
+
+a, a:visited {
+  color: var(--color-link);
+}
+
+a > h3,
+a:visited > h3 {
+  color: var(--color-prose);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
+
+.link-h3 {
+  text-decoration: none;
+  color: var(--color-prose)
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+}
+
+#navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.nav-container {
+  max-width: var(--width-main);  
+  margin: 4rem auto 0.25rem;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-container > ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  gap: 0.25rem;
+}
+
+.project-tile {
+  margin-bottom: 1rem;
+  height: 100%;
+}
+
+.svg-bg {
+  background-color: var(--color-svg-bg);
+  border-radius: var(--border-radius);
+  height: 100%;
+  max-height: 319px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.gif-shallow {
+  background-color: var(--color-gif-bg);
+  height: 100%;
+  max-height: 319px;
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-section {
+  max-width: var(--width-main);  
+  margin: 8rem auto 2rem;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.projects-section {
+  max-width: var(--width-main);
+  gap: 1rem;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+}
+
+.about-section {
+  max-width: var(--width-main);
+  margin: 1rem auto;
+  background-color: var(--color-aside);
+  border-radius: var(--border-radius);
+  padding: 3rem;
+}
+
+footer {
+  border-top: 1px solid var(--color-border);
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  padding: 2rem 0;
+  font-size: 0.875rem;
+  color: var(--color-link-footer);
+}
+
+.footer-container {
+  max-width: var(--width-main);
+  margin: 0 auto;
+  padding: 0 0.5rem;
+}
+
+.footer-container > ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-container > ul > li {
+  margin: 0.40rem 0;
+}
+
+.footer-container > ul > li > a,
+.footer-container > ul > li > a:visited {
+  color: var(--color-link-footer);
+}
+
+@media screen and (min-width: 640px) {
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .footer-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .projects-section {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  
+  .nav-container > ul {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .projects-section {
+    display: grid;
+    grid: 28rem / auto auto;
+  }
+
+  .project-tile {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  
+  .projects-section {
+    display: grid;
+    grid: 28rem / auto auto auto;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+
+  .footer-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .projects-section {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
