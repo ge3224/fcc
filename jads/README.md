@@ -122,4 +122,3 @@ JavaScript, arrays are technically a type of object.
 
 - [link](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/debugging/use-typeof-to-check-the-type-of-a-variable)
 
-
