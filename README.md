@@ -4,7 +4,7 @@
 
 ### [(New) Responsive Web Design Certification](./rwd/README.md)
 
-### JavaScript Algorithms and Data Structures Certification
+### [JavaScript Algorithms and Data Structures Certification](./jads/README.md)
 
 ### Front End Development Libraries Certification
 
