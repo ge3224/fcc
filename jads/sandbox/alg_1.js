@@ -14,9 +14,12 @@ function reverseAString() {
 }
 
 function factorializeANumber() {
-  const num = 5;
-  let result = 0;
-  console.log(result);
+  const start = 5;
+  let result = 1;
+  for (let i = 0; i < start; i++) {
+    result *= i + 1;
+  }
+  console.log(start, result);
 }
 
 function init() {
@@ -26,7 +29,7 @@ function init() {
     ["007", factorializeANumber],
   ];
 
-  for (let i=0; i<ids.length; i++) {
+  for (let i = 0; i < ids.length; i++) {
     const el = document.getElementById(ids[i][0]);
     if (el !== null && el !== undefined && el !== void 0) {
       el.addEventListener("click", ids[i][1]);
