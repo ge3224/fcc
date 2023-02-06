@@ -81,6 +81,29 @@ function largestNumberHandler() {
   });
 }
 
+function confirmEnding(str, target) {
+  return false;
+}
+
+function confirmEndingHandler() {
+  const tests = [
+    ["Bastian", "n"],
+    ["Congratulation", "on"],
+    ["Connor", "n"],
+    ["Walking on water and developing software from a specification are easy if both are frozen", "specification"],
+    ["He has to give me a new name", "name"],
+    ["Open sesame", "same"],
+    ["Open sesame", "sage"],
+    ["Open sesame", "game"],
+    ["If you want to save our world, you must hurry. We dont know how much longer we can withstand the nothing", "mountain"],
+    ["Abstraction", "action"],
+  ]
+
+  tests.forEach(args => {
+    console.log(confirmEnding(args[0], args[1]));
+  });
+}
+
 function init() {
   const ids = [
     ["005", celsiusToFahrenheit],
@@ -88,6 +111,7 @@ function init() {
     ["007", factorialize],
     ["008", findLongestWordHandler],
     ["009", largestNumberHandler],
+    ["010", confirmEndingHandler],
   ];
 
   for (let i = 0; i < ids.length; i++) {
