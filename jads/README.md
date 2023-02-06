@@ -104,3 +104,12 @@ function howMany(...args) {
 }
 
 ```
+
+---
+
+*Lookaheads* are patterns that tell JavaScript to look-ahead in your string to check for patterns further along. This can be useful when you want to search for multiple patterns over the same string.
+
+There are two kinds of lookaheads: *positive* lookahead and *negative* lookahead.
+
+-[link](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/positive-and-negative-lookahead)
+
