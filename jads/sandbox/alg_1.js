@@ -13,15 +13,24 @@ function reverseAString() {
   console.log(str, result);
 }
 
-function init() {
-  const fifth = document.getElementById("005");
-  if (fifth !== null && fifth !== undefined && fifth !== void 0) {
-    fifth.addEventListener("click", celsiusToFahrenheit);
-  }
+function factorializeANumber() {
+  const num = 5;
+  let result = 0;
+  console.log(result);
+}
 
-  const sixth = document.getElementById("006");
-  if (sixth !== null && sixth !== undefined && sixth !== void 0) {
-    sixth.addEventListener("click", reverseAString);
+function init() {
+  const ids = [
+    ["005", celsiusToFahrenheit],
+    ["006", reverseAString],
+    ["007", factorializeANumber],
+  ];
+
+  for (let i=0; i<ids.length; i++) {
+    const el = document.getElementById(ids[i][0]);
+    if (el !== null && el !== undefined && el !== void 0) {
+      el.addEventListener("click", ids[i][1]);
+    }
   }
 }
 
