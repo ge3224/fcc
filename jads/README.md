@@ -113,3 +113,13 @@ There are two kinds of lookaheads: *positive* lookahead and *negative* lookahead
 
 -[link](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/positive-and-negative-lookahead)
 
+---
+
+JavaScript recognizes seven primitive (immutable) data types: `Boolean`,
+`Null`, `Undefined`, `Number`, `String`, `Symbol` (new with ES6), and `BigInt`
+(new with ES2020), and one type for mutable items: `Object`. Note that in
+JavaScript, arrays are technically a type of object.
+
+- [link](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/debugging/use-typeof-to-check-the-type-of-a-variable)
+
+
