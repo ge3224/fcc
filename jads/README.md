@@ -75,3 +75,32 @@ a type conversion.
 
 - [link](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/use-the-parseint-function-with-a-radix)
 
+---
+
+JavaScript provides a function Object.freeze to prevent data mutation.
+
+- [link](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/prevent-object-mutation)
+
+```javascript
+
+let obj = {
+  name: "FreeCodeCamp",
+  review: "Awesome",
+};
+Object.freeze(obj);
+obj.review = "bad"; // this will result in an error
+
+```
+---
+
+With the *rest parameter*, you can create functions that take a variable number of arguments.
+
+- [link](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/use-the-rest-parameter-with-function-parameters)
+
+```javascript
+
+function howMany(...args) {
+  return "You have passed " + args.length + " arguments.";
+}
+
+```
