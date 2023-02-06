@@ -4,7 +4,7 @@ function celsiusToFahrenheit() {
   console.log(c, f);
 }
 
-function reverseAString() {
+function reverseString() {
   const str = "hello";
   let result = "";
   for (let i = str.length - 1; i >= 0; i--) {
@@ -13,7 +13,7 @@ function reverseAString() {
   console.log(str, result);
 }
 
-function factorializeANumber() {
+function factorialize() {
   const start = 5;
   let result = 1;
   for (let i = 0; i < start; i++) {
@@ -22,11 +22,72 @@ function factorializeANumber() {
   console.log(start, result);
 }
 
+function findLongestWord(str) {
+  const regex = /(\w+)/g;
+  const words = str.match(regex);
+  let longest = 0;
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].length > longest) {
+      longest = words[i].length;
+    }
+  }
+  return longest;
+}
+
+function findLongestWordHandler() {
+  const tests = [
+    "The quick brown fox jumped over the lazy dog",
+    "May the force be with you",
+    "Google do a barrel roll",
+    "What is the average airspeed velocity of an unladen swallow",
+    "What if we try a super-long word such as otorhinolaryngology",
+  ]
+
+  tests.forEach(str => {
+    console.log(`longest word: ${findLongestWord(str)} chars`);
+  });
+}
+
+function largestNumber(arr) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    let largest;
+    for (let j = 0; j < arr[i].length; j++) {
+
+      if (!largest) {
+        largest = arr[i][j];
+      }
+
+      if (arr[i][j] > largest) {
+        largest = arr[i][j];
+      }
+    }
+    newArr.push(largest);
+  }
+
+  return newArr;
+}
+
+function largestNumberHandler() {
+  const tests = [
+    [[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]],
+    [[13, 27, 18, 26], [4, 5, 1, 3], [32, 35, 37, 39], [1000, 1001, 857, 1]],
+    [[4, 9, 1, 3], [13, 35, 18, 26], [32, 35, 97, 39], [1000000, 1001, 857, 1]],
+    [[17, 23, 25, 12], [25, 7, 34, 48], [4, -10, 18, 21], [-72, -3, -17, -10]],
+  ]
+
+  tests.forEach(arr => {
+    console.log(largestNumber(arr));
+  });
+}
+
 function init() {
   const ids = [
     ["005", celsiusToFahrenheit],
-    ["006", reverseAString],
-    ["007", factorializeANumber],
+    ["006", reverseString],
+    ["007", factorialize],
+    ["008", findLongestWordHandler],
+    ["009", largestNumberHandler],
   ];
 
   for (let i = 0; i < ids.length; i++) {
