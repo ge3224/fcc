@@ -205,6 +205,35 @@ function booWhoHandler() {
   });
 }
 
+function titleCase(str) {
+  str = str.toLowerCase();
+  const words = str.split(" ");
+
+  let newStr = "";
+  for (let i = 0; i < words.length; i++) {
+    const first = words[i].slice(0, 1).toUpperCase();
+    const remaining = words[i].slice(1, words[i].length);
+    newStr += first + remaining;
+    if (i !== words.length - 1) {
+      newStr += " ";
+    }
+  }
+  return newStr;
+}
+
+function titleCaseHandler() {
+  const tests = [
+    "I'm a little tea pot",
+    "I'm a little tea pot",
+    "sHoRt AnD sToUt",
+    "HERE IS MY HANDLE HERE IS MY SPOUT",
+  ];
+
+  tests.forEach(str => {
+    console.log(titleCase(str));
+  });
+}
+
 function init() {
   const ids = [
     ["005", celsiusToFahrenheit],
@@ -217,6 +246,7 @@ function init() {
     ["012", truncateStringHandler],
     ["013", findElementHandler],
     ["014", booWhoHandler],
+    ["015", titleCaseHandler],
   ];
 
   for (let i = 0; i < ids.length; i++) {
