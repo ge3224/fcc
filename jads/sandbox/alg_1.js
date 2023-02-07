@@ -313,6 +313,40 @@ function getIndexToInsHandler() {
   });
 }
 
+function mutation(arr) {
+  const first = arr[0].toLowerCase();
+  const second = arr[1].toLowerCase();
+  let includes = true;
+  for (let i = 0; i < second.length; i++) {
+   if(!first.includes(second[i])) {
+     includes = first.includes(second[i]);
+     break;
+   }
+  }
+  return includes;
+}
+
+function mutationHandler() {
+  const tests = [
+    ["hello", "hey"],
+    ["hello", "Hello"],
+    ["zyxwvutsrqponmlkjihgfedcba", "qrstu"],
+    ["Mary", "Army"],
+    ["Mary", "Aarmy"],
+    ["Alien", "line"],
+    ["floor", "for"],
+    ["hello", "neo"],
+    ["voodoo", "no"],
+    ["ate", "date"],
+    ["Tiger", "Zebra"],
+    ["Noel", "Ole"],
+  ];
+
+  tests.forEach(arg => {
+    console.log(mutation(arg));
+  });
+}
+
 function init() {
   const ids = [
     ["005", celsiusToFahrenheit],
@@ -329,6 +363,7 @@ function init() {
     ["016", frankenSpliceHandler],
     ["017", bounceHandler],
     ["018", getIndexToInsHandler],
+    ["019", mutationHandler],
   ];
 
   for (let i = 0; i < ids.length; i++) {
