@@ -138,6 +138,70 @@ function stringRepeatHandler() {
   });
 }
 
+function truncateString(str, num) {
+  if (str.length <= num || num <= 0) {
+    return str;
+  }
+  return `${str.slice(0, num)}...`;
+}
+
+function truncateStringHandler() {
+  const tests = [
+    ["A-tisket a-tasket A green and yellow basket", 8],
+    ["Peter Piper picked a peck of pickled peppers", 11],
+    ["A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length],
+    ["A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length + 2],
+    ["A-", 1],
+    ["Absolutely Longer", 2],
+  ]
+
+  tests.forEach(args => {
+    console.log(truncateString(args[0], args[1]));
+  });
+}
+
+function findElement(arr, func) {
+  for (let i = 0; i < arr.length; i++) {
+    if (func(arr[i])) {
+      return arr[i];
+    }
+  }
+  return undefined;
+}
+
+function findElementHandler() {
+  const tests = [
+    [[1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; }],
+    [[1, 3, 5, 9], function(num) { return num % 2 === 0; }],
+  ];
+
+  tests.forEach(args => {
+    console.log(findElement(args[0], args[1]));
+  });
+}
+
+function booWho(bool) {
+  return bool;
+}
+
+function booWhoHandler() {
+  const tests = [
+    [true],
+    [false],
+    [[1, 2, 3]],
+    [[].slice],
+    [{ "a": 1 }],
+    [1],
+    [NaN],
+    ["a"],
+    ["true"],
+    ["false"],
+  ]
+  tests.forEach(arg => {
+    console.log(booWho(arg));
+  });
+}
+
 function init() {
   const ids = [
     ["005", celsiusToFahrenheit],
@@ -147,6 +211,9 @@ function init() {
     ["009", largestNumberHandler],
     ["010", confirmEndingHandler],
     ["011", stringRepeatHandler],
+    ["012", truncateStringHandler],
+    ["013", findElementHandler],
+    ["014", booWhoHandler],
   ];
 
   for (let i = 0; i < ids.length; i++) {
