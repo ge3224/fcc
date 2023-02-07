@@ -122,3 +122,25 @@ JavaScript, arrays are technically a type of object.
 
 - [link](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/debugging/use-typeof-to-check-the-type-of-a-variable)
 
+---
+
+The simplest way to make this public property private is by creating a variable
+within the constructor function. This changes the scope of that variable to be
+within the constructor function versus available globally. This way, the
+variable can only be accessed and changed by methods also within the
+constructor function.
+
+```javascript
+
+function ContructorFn() {
+  let privateVar = 10;
+
+  this.getValue = () => privateVar;
+}
+
+let obj = new ContructorFn();
+obj.getValue();
+```
+
+- [link](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/object-oriented-programming/use-closure-to-protect-properties-within-an-object-from-being-modified-externally)
+
