@@ -82,7 +82,7 @@ function largestNumberHandler() {
 }
 
 function confirmEnding(str, target) {
-  const ending = str.slice(str.length-target.length, str.length);
+  const ending = str.slice(str.length - target.length, str.length);
   if (ending === target) {
     return true;
   }
@@ -108,6 +108,36 @@ function confirmEndingHandler() {
   });
 }
 
+function repeatStringNumTimes(str, num) {
+  let newStr = "";
+
+  if (num <= 0) {
+    return newStr;
+  }
+
+  for (let i = 0; i < num; i++) {
+    newStr += str;
+  }
+
+  return newStr;
+}
+
+function stringRepeatHandler() {
+  const tests = [
+    ["*", 3],
+    ["abc", 3],
+    ["abc", 4],
+    ["abc", 1],
+    ["*", 8],
+    ["abc", -2],
+    ["abc", 0],
+  ]
+
+  tests.forEach(args => {
+    console.log(repeatStringNumTimes(args[0], args[1]));
+  });
+}
+
 function init() {
   const ids = [
     ["005", celsiusToFahrenheit],
@@ -116,6 +146,7 @@ function init() {
     ["008", findLongestWordHandler],
     ["009", largestNumberHandler],
     ["010", confirmEndingHandler],
+    ["011", stringRepeatHandler],
   ];
 
   for (let i = 0; i < ids.length; i++) {
