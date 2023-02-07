@@ -273,13 +273,43 @@ function bouncer(arr) {
 
 function bounceHandler() {
   const tests = [
-    [[7, "ate", "", false, 9], [7,"ate",9]],
-    [["a", "b", "c"], ["a","b","c"]],
+    [[7, "ate", "", false, 9], [7, "ate", 9]],
+    [["a", "b", "c"], ["a", "b", "c"]],
     [[false, null, 0, NaN, undefined, ""], []],
-    [[null, NaN, 1, 2, undefined], [1,2]],
+    [[null, NaN, 1, 2, undefined], [1, 2]],
   ]
   tests.forEach(args => {
     console.log(bouncer(args[0]));
+  });
+}
+
+function getIndexToIns(arr, num) {
+  arr.sort((a, b) => a - b);
+  let ins = arr.length;
+  for (let i = 0; i < arr.length; i++) {
+    if (num <= arr[i]) {
+      ins = i;
+      break;
+    }
+  }
+
+  return ins;
+}
+
+function getIndexToInsHandler() {
+  const tests = [
+    [[10, 20, 30, 40, 50], 35],
+    [[10, 20, 30, 40, 50], 30],
+    [[40, 60], 50],
+    [[3, 10, 5], 3],
+    [[5, 3, 20, 3], 5],
+    [[2, 20, 10], 19],
+    [[2, 5, 10], 15],
+    [[], 1],
+  ];
+
+  tests.forEach(args => {
+    console.log(getIndexToIns(args[0], args[1]));
   });
 }
 
@@ -298,6 +328,7 @@ function init() {
     ["015", titleCaseHandler],
     ["016", frankenSpliceHandler],
     ["017", bounceHandler],
+    ["018", getIndexToInsHandler],
   ];
 
   for (let i = 0; i < ids.length; i++) {
