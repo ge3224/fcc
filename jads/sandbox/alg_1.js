@@ -318,10 +318,10 @@ function mutation(arr) {
   const second = arr[1].toLowerCase();
   let includes = true;
   for (let i = 0; i < second.length; i++) {
-   if(!first.includes(second[i])) {
-     includes = first.includes(second[i]);
-     break;
-   }
+    if (!first.includes(second[i])) {
+      includes = first.includes(second[i]);
+      break;
+    }
   }
   return includes;
 }
@@ -347,6 +347,31 @@ function mutationHandler() {
   });
 }
 
+function chunkArrayInGroups(arr, size) {
+  let newArr = [];
+  // console.log(arr.slice(size, size + size));
+  for (let i = 0; i < arr.length; i += size) {
+      newArr.push(arr.slice(i, i + size));
+  }
+  return newArr;
+}
+
+function chunkArrayInGroupsHandler() {
+  const tests = [
+    [["a", "b", "c", "d"], 2],
+    [[0, 1, 2, 3, 4, 5], 3],
+    [[0, 1, 2, 3, 4, 5], 2],
+    [[0, 1, 2, 3, 4, 5], 4],
+    [[0, 1, 2, 3, 4, 5, 6], 3],
+    [[0, 1, 2, 3, 4, 5, 6, 7, 8], 4],
+    [[0, 1, 2, 3, 4, 5, 6, 7, 8], 2],
+  ]
+
+  tests.forEach(args => {
+    console.log(chunkArrayInGroups(args[0], args[1]));
+  });
+}
+
 function init() {
   const ids = [
     ["005", celsiusToFahrenheit],
@@ -364,6 +389,7 @@ function init() {
     ["017", bounceHandler],
     ["018", getIndexToInsHandler],
     ["019", mutationHandler],
+    ["020", chunkArrayInGroupsHandler],
   ];
 
   for (let i = 0; i < ids.length; i++) {
