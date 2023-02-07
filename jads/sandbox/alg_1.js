@@ -181,21 +181,24 @@ function findElementHandler() {
 }
 
 function booWho(bool) {
-  return bool;
+  if (typeof bool === "boolean") {
+    return true;
+  }
+  return false;
 }
 
 function booWhoHandler() {
   const tests = [
-    [true],
-    [false],
-    [[1, 2, 3]],
-    [[].slice],
-    [{ "a": 1 }],
-    [1],
-    [NaN],
-    ["a"],
-    ["true"],
-    ["false"],
+    true,
+    false,
+    [1, 2, 3],
+    [].slice,
+    { "a": 1 },
+    1,
+    NaN,
+    "a",
+    "true",
+    "false",
   ]
   tests.forEach(arg => {
     console.log(booWho(arg));
