@@ -18,7 +18,7 @@ Window.prototype.tabOpen = function(tab) {
 // When you close a tab
 Window.prototype.tabClose = function(index) {
   const tabsBeforeIndex = this.tabs.slice(0, index); // Get the tabs before the tab
-  const tabsAfterIndex = this.tabs.slice(index+1); // Get the tabs after the tab
+  const tabsAfterIndex = this.tabs.slice(index + 1); // Get the tabs after the tab
   this.tabs = tabsBeforeIndex.concat(tabsAfterIndex); // Join them together
   return this;
 };
@@ -39,26 +39,33 @@ function tabsChallengeHandler() {
   /*
   assertion: [
     'FB',
-		'Gitter',
-		'Reddit',
-		'Twitter',
-		'Medium',
-		'new tab',
-		'Netflix',
-		'YouTube',
-		'Vine',
-		'GMail',
-		'Work mail',
-		'Docs',
-		'freeCodeCamp',
-		'new tab'
+    'Gitter',
+    'Reddit',
+    'Twitter',
+    'Medium',
+    'new tab',
+    'Netflix',
+    'YouTube',
+    'Vine',
+    'GMail',
+    'Work mail',
+    'Docs',
+    'freeCodeCamp',
+    'new tab'
   ]
   */
 }
 
+// initialize
 (() => {
-  const el = document.getElementById("022");
-  if (el !== null && el !== undefined && el !== void 0) {
-    el.addEventListener("click", tabsChallengeHandler);
-  }
+  const ids = [
+    ["022", tabsChallengeHandler],
+  ];
+
+  ids.map(item => {
+    const el = document.getElementById(item[0]);
+    if (el !== null && el !== undefined && el !== void 0) {
+      el.addEventListener("click", item[1]);
+    }
+  });
 })();
