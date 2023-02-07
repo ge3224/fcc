@@ -164,4 +164,12 @@ When functions are passed in to or returned from another function, then those fu
 
 - [link](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/understand-functional-programming-terminology)
 
+---
 
+Hint: using something like const newArr = arrVar, where arrVar is an array will
+simply create a reference to the existing variable and not a copy. So changing
+a value in newArr would change the value in arrVar.
+
+- [link](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/refactor-global-variables-out-of-functions)
+
+---
