@@ -371,7 +371,8 @@ function chunkArrayInGroupsHandler() {
   });
 }
 
-function init() {
+// init DOM elements
+(() => {
   const ids = [
     ["005", celsiusToFahrenheit],
     ["006", reverseString],
@@ -397,6 +398,4 @@ function init() {
       el.addEventListener("click", ids[i][1]);
     }
   }
-}
-
-init();
+})();
