@@ -144,3 +144,22 @@ obj.getValue();
 
 - [link](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/object-oriented-programming/use-closure-to-protect-properties-within-an-object-from-being-modified-externally)
 
+---
+
+Functional programming is about:
+
+Isolated functions - there is no dependence on the state of the program, which includes global variables that are subject to change
+
+Pure functions - the same input always gives the same output
+
+Functions with limited side effects - any changes, or mutations, to the state of the program outside the function are carefully controlled
+
+- [link](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/learn-about-functional-programming)
+
+---
+
+The functions that take a function as an argument, or return a function as a return value, are called *higher order functions*.
+
+- [link](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/understand-functional-programming-terminology)
+
+
