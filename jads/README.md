@@ -160,6 +160,8 @@ Functions with limited side effects - any changes, or mutations, to the state of
 
 The functions that take a function as an argument, or return a function as a return value, are called *higher order functions*.
 
+When functions are passed in to or returned from another function, then those functions which were passed in or returned can be called a *lambda*.
+
 - [link](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/understand-functional-programming-terminology)
 
 
