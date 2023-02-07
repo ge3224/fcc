@@ -234,6 +234,33 @@ function titleCaseHandler() {
   });
 }
 
+function frankenSplice(arr1, arr2, n) {
+
+  let newArr = arr2.slice(0, n);
+  for (let i = 0; i < arr1.length; i++) {
+    newArr.push(arr1[i]);
+  }
+
+  const tail = arr2.slice(n, arr2.length);
+  for (let i = 0; i < tail.length; i++) {
+    newArr.push(tail[i]);
+  }
+
+  return newArr;
+}
+
+function frankenSpliceHandler() {
+  const tests = [
+    [[1, 2, 3], [4, 5], 1],
+    [[1, 2], ["a", "b", "c", "d"], 1],
+    [["claw", "tentacle"], ["head", "shoulders", "knees", "toes"], 2],
+    [[1, 2, 3, 4], [], 0],
+  ];
+  tests.forEach(args => {
+    console.log(frankenSplice(args[0], args[1], args[2]));
+  });
+}
+
 function init() {
   const ids = [
     ["005", celsiusToFahrenheit],
@@ -247,6 +274,7 @@ function init() {
     ["013", findElementHandler],
     ["014", booWhoHandler],
     ["015", titleCaseHandler],
+    ["016", frankenSpliceHandler],
   ];
 
   for (let i = 0; i < ids.length; i++) {
