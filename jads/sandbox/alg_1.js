@@ -261,6 +261,28 @@ function frankenSpliceHandler() {
   });
 }
 
+function bouncer(arr) {
+  const newArr = arr.filter((item) => {
+    if (typeof item !== "boolean") {
+      return item;
+    }
+  });
+
+  return newArr;
+}
+
+function bounceHandler() {
+  const tests = [
+    [[7, "ate", "", false, 9], [7,"ate",9]],
+    [["a", "b", "c"], ["a","b","c"]],
+    [[false, null, 0, NaN, undefined, ""], []],
+    [[null, NaN, 1, 2, undefined], [1,2]],
+  ]
+  tests.forEach(args => {
+    console.log(bouncer(args[0]));
+  });
+}
+
 function init() {
   const ids = [
     ["005", celsiusToFahrenheit],
@@ -275,6 +297,7 @@ function init() {
     ["014", booWhoHandler],
     ["015", titleCaseHandler],
     ["016", frankenSpliceHandler],
+    ["017", bounceHandler],
   ];
 
   for (let i = 0; i < ids.length; i++) {
