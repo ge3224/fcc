@@ -110,12 +110,25 @@ function challenge21() {
   });
 }
 
+// currying
+function add(x) {
+  return (y) => (z) => x + y + z;
+}
+
+function challenge24() {
+  // console.log(add(10)(20)(30));
+  const phase1 = add(10);
+  const phase2 = phase1(20);
+  console.log(phase2(30));
+}
+
 // initialize
 (() => {
   const ids = [
     ["022", tabsChallengeHandler],
     ["023", challenge16],
     ["024", challenge21],
+    ["025", challenge24],
   ];
 
   ids.map(item => {
