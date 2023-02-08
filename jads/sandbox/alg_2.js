@@ -1,6 +1,21 @@
+
+// Compare two arrays and return a new array with any items only found in one of
+// the two given arrays, but not both. In other words, return the symmetric 
+// difference of the two arrays.
 function diffArray(arr1, arr2) {
-  // TODO
-  return [];
+  const first = arr1.filter(item => {
+    if (arr2.indexOf(item) === -1) {
+      return item;
+    }
+  });
+
+  const second = arr2.filter(item => {
+    if (arr1.indexOf(item) === -1) {
+      return item;
+    }
+  });
+
+  return second.concat(first);
 }
 
 function ch2Handler() {
@@ -12,7 +27,13 @@ function ch2Handler() {
 
   tests.forEach(args => {
     const result = diffArray(args[0], args[1]);
-    const passing = (result === args[2]) ? true : false;
+    let passing = true;
+    for (let i = 0; i < result.length; i++) {
+      if (result[i] !== args[2][i]) {
+        passing = false;
+        break;
+      } 
+    }
     printResults(result, passing, args[2], "diffArray");
   });
 }
@@ -43,7 +64,7 @@ function ch1Handler() {
   });
 }
 
-function printResults(result, passing, assertion, label="Output") {
+function printResults(result, passing, assertion, label = "Output") {
   const testMessage = (passing) ? "PASS" : `FAIL, should be: "${assertion}"`;
   console.log(`${label}: ${result}\n::${testMessage}`);
 }
