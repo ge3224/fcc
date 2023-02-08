@@ -89,11 +89,33 @@ function challenge16() {
   });
 }
 
+function urlSlug(title) {
+  const arr = title.split(" ")
+    .filter(item => item !== "" && item !== " ");
+  return arr.join("-").toLowerCase();
+}
+
+function challenge21() {
+  const tests = [
+    ["Winter Is Coming", "winter-is-coming"],
+    [" Winter Is  Coming", "winter-is-coming"],
+    ["A Mind Needs Books Like A Sword Needs A Whetstone", "a-mind-needs-books-like-a-sword-needs-a-whetstone"],
+    ["Hold The Door", "hold-the-door"],
+  ];
+
+  tests.forEach(args => {
+    const result = urlSlug(args[0]);
+    const passing = (result !== args[1]) ? "FAIL" : "PASS";
+    console.log(result, passing);
+  });
+}
+
 // initialize
 (() => {
   const ids = [
     ["022", tabsChallengeHandler],
     ["023", challenge16],
+    ["024", challenge21],
   ];
 
   ids.map(item => {
