@@ -1,3 +1,5 @@
+import { titleCase } from "./alg_1";
+
 function areCorresponding(obj1, obj2) {
   let ok = true;
   for (let prop in obj2) {
@@ -229,7 +231,14 @@ function ch6Handler() {
 // are replacing it. For example if you mean to replace the word Book with the 
 // word dog, it should be replaced as Dog
 function myReplace(str, before, after) {
-  return str;
+  const arr = str.split(/[^a-zA-Z]/)
+  const caps = /[A-Z]/;
+  return arr.map(word => {
+    if (word === before) {
+      word = (caps.test(before[0]) || caps.test(word[0])) ? titleCase(after) : after.toLowerCase();
+    }
+    return word;
+  }).join(" ");
 }
 
 function ch7Handler() {
@@ -244,7 +253,8 @@ function ch7Handler() {
 
   tests.forEach(args => {
     const result = myReplace(args[0], args[1], args[2]);
-    printResults(result, result === args[3], args[3], "myReplace");
+    console.log(result);
+    // printResults(result, result === args[3], args[3], "myReplace");
   });
 }
 

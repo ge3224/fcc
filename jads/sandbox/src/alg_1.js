@@ -205,7 +205,7 @@ function booWhoHandler() {
   });
 }
 
-function titleCase(str) {
+export function titleCase(str) {
   str = str.toLowerCase();
   const words = str.split(" ");
 
