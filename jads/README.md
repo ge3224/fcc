@@ -173,3 +173,10 @@ a value in newArr would change the value in arrVar.
 - [link](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/refactor-global-variables-out-of-functions)
 
 ---
+
+The arity of a function is the number of arguments it requires. Currying a
+function means to convert a function of N arity into N functions of arity 1.
+
+- [link](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/introduction-to-currying-and-partial-application)
+
+---
