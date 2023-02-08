@@ -185,6 +185,37 @@ function ch5Handler() {
   });
 }
 
+// Translate the provided string to Pig Latin. Input strings are guaranteed to 
+// be English words in all lowercase.
+function translatePigLatin(str) {
+  let newEnd = "ay";
+  const regex = /[aeiou]/i;
+  const firstVowel = regex.exec(str);
+  let newStart = str.slice();
+  if (firstVowel !== null && firstVowel !== undefined && firstVowel !== void 0) {
+    newEnd = (firstVowel.index > 0) ? str.slice(0, firstVowel.index) + "ay" : "way";
+    newStart = str.slice(firstVowel.index);
+  }
+  return newStart + newEnd;
+}
+
+function ch6Handler() {
+  const tests = [
+    ["california", "aliforniacay"],
+    ["paragraphs", "aragraphspay"],
+    ["glove", "oveglay"],
+    ["algorithm", "algorithmway"],
+    ["eight", "eightway"],
+    ["schwartz", "artzschway"],
+    ["rhythm", "rhythmay"],
+  ];
+
+  tests.forEach(args => {
+    const result = translatePigLatin(args[0]);
+    printResults(result, result === args[1], args[1], "translatePigLatin");
+  });
+}
+
 (() => {
   const ids = [
     ["026", ch1Handler],
@@ -192,6 +223,7 @@ function ch5Handler() {
     ["028", ch3Handler],
     ["029", ch4Handler],
     ["030", ch5Handler],
+    ["031", ch6Handler],
   ];
 
   ids.map(item => {
