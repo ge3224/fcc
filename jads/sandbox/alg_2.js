@@ -1,3 +1,25 @@
+// You will be provided with an initial array (the first argument in the 
+// destroyer function), followed by one or more arguments. Remove all elements 
+// from the initial array that are of the same value as these arguments.
+function destroyer(arr, ...args) {
+  return arr.filter(item => args.indexOf(item) === -1);
+}
+
+function ch3Handler() {
+  const tests = [
+    [[[1, 2, 3, 1, 2, 3], 2, 3], [1, 1]],
+    [[[1, 2, 3, 5, 1, 2, 3], 2, 3], [1, 5, 1]],
+    [[[3, 5, 1, 2, 2], 2, 3, 5], [1]],
+    [[[2, 3, 2, 3], 2, 3], []],
+    [[["tree", "hamburger", 53], "tree", 53], ["hamburger"]],
+    [[["possum", "trollo", 12, "safari", "hotdog", 92, 65, "grandma", "bugati", "trojan", "yacht"], "yacht", "possum", "trollo", "safari", "hotdog", "grandma", "bugati", "trojan"], [12, 92, 65]],
+  ];
+
+  tests.forEach(args => {
+    const result = destroyer(args[0][0], ...args[0].slice(1));
+    printResults(result, areMatch(result, args[1]), args[1], "destroyer");
+  });
+}
 
 // Compare two arrays and return a new array with any items only found in one of
 // the two given arrays, but not both. In other words, return the symmetric 
@@ -27,13 +49,7 @@ function ch2Handler() {
 
   tests.forEach(args => {
     const result = diffArray(args[0], args[1]);
-    let passing = true;
-    for (let i = 0; i < result.length; i++) {
-      if (result[i] !== args[2][i]) {
-        passing = false;
-        break;
-      } 
-    }
+    const passing = areMatch(result, args[2]);
     printResults(result, passing, args[2], "diffArray");
   });
 }
@@ -64,6 +80,17 @@ function ch1Handler() {
   });
 }
 
+function areMatch(arr1, arr2) {
+  let match = true;
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) {
+      match = false;
+      break;
+    }
+  }
+  return match
+}
+
 function printResults(result, passing, assertion, label = "Output") {
   const testMessage = (passing) ? "PASS" : `FAIL, should be: "${assertion}"`;
   console.log(`${label}: ${result}\n::${testMessage}`);
@@ -73,6 +100,7 @@ function printResults(result, passing, assertion, label = "Output") {
   const ids = [
     ["026", ch1Handler],
     ["027", ch2Handler],
+    ["028", ch3Handler],
   ];
 
   ids.map(item => {
