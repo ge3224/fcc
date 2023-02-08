@@ -26,11 +26,9 @@ function celsiusToFahrenheit() {
   console.log(countOnline(users));
 }
 
-function init() {
+export const dataStructs = () => {
   const fourth = document.getElementById("004");
   if (fourth !== null && fourth !== undefined && fourth !== void 0) {
     fourth.addEventListener("click", celsiusToFahrenheit);
   }
 }
-
-init();

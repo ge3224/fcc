@@ -144,7 +144,7 @@ function ch4Handler() {
 
   tests.forEach(args => {
     const result = whatIsInAName(args[0][0], args[0][1]);
-    const passing = true;
+    let passing = true;
     for (let i = 0; i < result.length; i++) {
       if (!areCorresponding(result[i], args[1][0])) {
         passing = false;
@@ -216,7 +216,39 @@ function ch6Handler() {
   });
 }
 
-(() => {
+// Perform a search and replace on the sentence using the arguments provided 
+// and return the new sentence.
+//
+// First argument is the sentence to perform the search and replace on.
+//
+// Second argument is the word that you will be replacing (before).
+//
+// Third argument is what you will be replacing the second argument with (after).
+//
+// Note: Preserve the case of the first character in the original word when you 
+// are replacing it. For example if you mean to replace the word Book with the 
+// word dog, it should be replaced as Dog
+function myReplace(str, before, after) {
+  return str;
+}
+
+function ch7Handler() {
+  const tests = [
+    ["Let us go to the store", "store", "mall", "Let us go to the mall"],
+    ["He is Sleeping on the couch", "Sleeping", "sitting", "He is Sitting on the couch"],
+    ["I think we should look up there", "up", "Down", "I think we should look down there"],
+    ["This has a spellngi error", "spellngi", "spelling", "This has a spelling error"],
+    ["His name is Tom", "Tom", "john", "His name is John"],
+    ["Let us get back to more Coding", "Coding", "algorithms", "Let us get back to more Algorithms"],
+  ];
+
+  tests.forEach(args => {
+    const result = myReplace(args[0], args[1], args[2]);
+    printResults(result, result === args[3], args[3], "myReplace");
+  });
+}
+
+export const alg2 = () => {
   const ids = [
     ["026", ch1Handler],
     ["027", ch2Handler],
@@ -224,6 +256,7 @@ function ch6Handler() {
     ["029", ch4Handler],
     ["030", ch5Handler],
     ["031", ch6Handler],
+    ["032", ch7Handler],
   ];
 
   ids.map(item => {
@@ -232,4 +265,4 @@ function ch6Handler() {
       el.addEventListener("click", item[1]);
     }
   });
-})();
+}

@@ -42,9 +42,9 @@ function oopTestHandler() {
   console.log(daffy.isCute());
 }
 
-(() => {
+export const oop = () => {
   const el = document.getElementById("021");
   if (el !== null && el !== undefined && el !== void 0) {
     el.addEventListener("click", oopTestHandler);
   }
-})();
+}

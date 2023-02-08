@@ -123,7 +123,7 @@ function challenge24() {
 }
 
 // initialize
-(() => {
+export const funcProg = () => {
   const ids = [
     ["022", tabsChallengeHandler],
     ["023", challenge16],
@@ -137,4 +137,4 @@ function challenge24() {
       el.addEventListener("click", item[1]);
     }
   });
-})();
+}
