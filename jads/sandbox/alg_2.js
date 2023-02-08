@@ -1,23 +1,23 @@
-function areMatchingObjects(obj1, obj2) {
-  let match = true;
+function areCorresponding(obj1, obj2) {
+  let ok = true;
   for (let prop in obj2) {
     if (obj1[prop] !== obj2[prop]) {
-      match = false;
+      ok = false;
       break;
     }
   }
-  return match;
+  return ok;
 }
 
-function areMatchingArrays(arr1, arr2) {
-  let match = true;
+function areMatching(arr1, arr2) {
+  let ok = true;
   for (let i = 0; i < arr1.length; i++) {
     if (arr1[i] !== arr2[i]) {
-      match = false;
+      ok = false;
       break;
     }
   }
-  return match
+  return ok
 }
 
 function printResults(result, passing, assertion, label = "Output") {
@@ -79,7 +79,7 @@ function ch2Handler() {
 
   tests.forEach(args => {
     const result = diffArray(args[0], args[1]);
-    const passing = areMatchingArrays(result, args[2]);
+    const passing = areMatching(result, args[2]);
     printResults(result, passing, args[2], "diffArray");
   });
 }
@@ -103,7 +103,7 @@ function ch3Handler() {
 
   tests.forEach(args => {
     const result = destroyer(args[0][0], ...args[0].slice(1));
-    printResults(result, areMatchingArrays(result, args[1]), args[1], "destroyer");
+    printResults(result, areMatching(result, args[1]), args[1], "destroyer");
   });
 }
 
@@ -146,7 +146,7 @@ function ch4Handler() {
     const result = whatIsInAName(args[0][0], args[0][1]);
     const passing = true;
     for (let i = 0; i < result.length; i++) {
-      if (!areMatchingObjects(result[i], args[1][0])) {
+      if (!areCorresponding(result[i], args[1][0])) {
         passing = false;
         break;
       }
@@ -161,12 +161,37 @@ function ch4Handler() {
   });
 }
 
+// Convert a string to spinal case. Spinal case is 
+// all-lowercase-words-joined-by-dashes.
+function spinalCase(str) {
+  return str.replace(/([a-z])([A-Z])/g, "$1-$2")
+    .replace(/\s/g, "-")
+    .replace(/_/g, "-")
+    .toLowerCase();
+}
+
+function ch5Handler() {
+  const tests = [
+    ["This Is Spinal Tap", "this-is-spinal-tap"],
+    ["thisIsSpinalTap", "this-is-spinal-tap"],
+    ["The_Andy_Griffith_Show", "the-andy-griffith-show"],
+    ["Teletubbies say Eh-oh", "teletubbies-say-eh-oh"],
+    ["AllThe-small Things", "all-the-small-things"],
+  ];
+
+  tests.forEach(args => {
+    const result = spinalCase(args[0]);
+    printResults(result, result === args[1], args[1], "spinalCase");
+  });
+}
+
 (() => {
   const ids = [
     ["026", ch1Handler],
     ["027", ch2Handler],
     ["028", ch3Handler],
     ["029", ch4Handler],
+    ["030", ch5Handler],
   ];
 
   ids.map(item => {
