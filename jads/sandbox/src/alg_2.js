@@ -392,6 +392,36 @@ function ch10Handler() {
   });
 }
 
+// Convert the characters &, <, >, " (double quote), and ' (apostrophe), in a 
+// string to their corresponding HTML entities.
+function convertHTML(str) {
+  return str.replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
+}
+
+function ch11Handler() {
+  const tests = [
+    ["Dolce & Gabbana", "Dolce &amp; Gabbana"],
+    ["Hamburgers < Pizza < Tacos", "Hamburgers &lt; Pizza &lt; Tacos"],
+    ["Sixty > twelve", "Sixty &gt; twelve"],
+    ['Stuff in "quotation marks"', "Stuff in &quot;quotation marks&quot;"],
+    ["Schindler's List", "Schindler&apos;s List"],
+    ["<>", "&lt;&gt;"],
+    ["abc", "abc"],
+  ];
+
+  const results = tests.map(args => {
+    return assertion(convertHTML(args[0]), args[1]);
+  });
+
+  checkResults(results, (result, assert) => {
+    console.log((result === assert) ? "PASS" : `FAIL\n\texpected: ${assert}\n\tgot: ${result}`);
+  });
+}
+
 export const IntermediateAlgorithmScripting = () => {
   const ids = [
     ["026", ch1Handler],
@@ -404,6 +434,7 @@ export const IntermediateAlgorithmScripting = () => {
     ["033", ch8Handler],
     ["034", ch9Handler],
     ["035", ch10Handler],
+    ["036", ch11Handler],
   ];
 
   ids.map(item => {
