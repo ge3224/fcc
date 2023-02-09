@@ -1,12 +1,12 @@
 import { titleCase } from "./alg_1";
 import { assertion, checkResults, areCorresponding, areMatching } from "./util";
 
-
-function printResults(result, passing, assertion, label = "Output") {
-  const testMessage = (passing) ? "PASS" : `FAIL, should be: "${assertion}"`;
-  console.log(`${label}: ${result}\n::${testMessage}`);
-}
-
+// We'll pass you an array of two numbers. Return the sum of those two numbers 
+// plus the sum of all the numbers between them. The lowest number will not 
+// always come first.
+//
+// For example, sumAll([4,1]) should return 10 because sum of all the numbers 
+// between 1 and 4 (both inclusive) is 10.
 function sumAll(arr) {
   const newArr = arr.slice().sort((a, b) => a - b);
   let sum = 0;
@@ -26,10 +26,12 @@ function ch1Handler() {
     [[10, 5], 45],
   ];
 
-  tests.forEach(args => {
-    const result = sumAll(args[0]);
-    const passing = (result === args[1]) ? true : false;
-    printResults(result, passing, args[1], "sumAll");
+  const results = tests.map(args => {
+    return assertion(sumAll(args[0]), args[1]);
+  });
+
+  checkResults(results, (result, assert) => {
+    console.log((result === assert) ? "PASS" : `FAIL:\n\t${result}`);
   });
 }
 
@@ -59,10 +61,12 @@ function ch2Handler() {
     [["andesite", "grass", "dirt", "dead shrub"], ["andesite", "grass", "dirt", "dead shrub"], []],
   ];
 
-  tests.forEach(args => {
-    const result = diffArray(args[0], args[1]);
-    const passing = areMatching(result, args[2]);
-    printResults(result, passing, args[2], "diffArray");
+  const results = tests.map(args => {
+    return assertion(diffArray(args[0], args[1]), args[2]);
+  });
+
+  checkResults(results, (result, assert) => {
+    console.log((areMatching(result, assert)) ? "PASS" : `FAIL:\n\t${result}`);
   });
 }
 
@@ -83,9 +87,13 @@ function ch3Handler() {
     [[["possum", "trollo", 12, "safari", "hotdog", 92, 65, "grandma", "bugati", "trojan", "yacht"], "yacht", "possum", "trollo", "safari", "hotdog", "grandma", "bugati", "trojan"], [12, 92, 65]],
   ];
 
-  tests.forEach(args => {
-    const result = destroyer(args[0][0], ...args[0].slice(1));
-    printResults(result, areMatching(result, args[1]), args[1], "destroyer");
+  const results = tests.map(args => {
+    return assertion(destroyer(args[0][0], ...args[0].slice(1)), args[1]);
+  });
+
+  checkResults(results, (result, assert) => {
+    const ok = areMatching(result, assert);
+    console.log((ok) ? "PASS" : `FAIL:\n\t${result}`);
   });
 }
 
@@ -124,22 +132,19 @@ function ch4Handler() {
     [[[{ "a": 1, "b": 2, "c": 3, "d": 9999 }], { "a": 1, "b": 9999, "c": 3 }], []],
   ];
 
-  tests.forEach(args => {
-    const result = whatIsInAName(args[0][0], args[0][1]);
-    let passing = true;
+  const results = tests.map(args => {
+    return assertion(whatIsInAName(args[0][0], args[0][1]), args[1][0]);
+  });
+
+  checkResults(results, (result, assert) => {
+    let ok = true;
     for (let i = 0; i < result.length; i++) {
-      if (!areCorresponding(result[i], args[1][0])) {
-        passing = false;
+      if (!areCorresponding(result[i], assert)) {
+        ok = false;
         break;
       }
     }
-
-    printResults(
-      result,
-      passing,
-      args[1][0],
-      "whatIsInAName",
-    );
+    console.log((ok) ? "PASS" : `FAIL\n\t${result}\n\t${assert}`);
   });
 }
 
@@ -161,9 +166,12 @@ function ch5Handler() {
     ["AllThe-small Things", "all-the-small-things"],
   ];
 
-  tests.forEach(args => {
-    const result = spinalCase(args[0]);
-    printResults(result, result === args[1], args[1], "spinalCase");
+  const results = tests.map(args => {
+    return assertion(spinalCase(args[0]), args[1]);
+  });
+
+  checkResults(results, (result, assert) => {
+    console.log((result === assert) ? "PASS" : `FAIL:\n\t${result}`);
   });
 }
 
@@ -192,9 +200,12 @@ function ch6Handler() {
     ["rhythm", "rhythmay"],
   ];
 
-  tests.forEach(args => {
-    const result = translatePigLatin(args[0]);
-    printResults(result, result === args[1], args[1], "translatePigLatin");
+  const results = tests.map(args => {
+    return assertion(translatePigLatin(args[0]), args[1]);
+  });
+
+  checkResults(results, (result, assert) => {
+    console.log((result === assert) ? "PASS" : `FAIL:\n\t${result}`);
   });
 }
 
@@ -231,10 +242,15 @@ function ch7Handler() {
     ["Let us get back to more Coding", "Coding", "algorithms", "Let us get back to more Algorithms"],
   ];
 
-  tests.forEach(args => {
-    const result = myReplace(args[0], args[1], args[2]);
-    printResults(result, result === args[3], args[3], "myReplace");
+  const results = tests.map(args => {
+    return assertion(myReplace(args[0], args[1], args[2]), args[3]);
   });
+
+  checkResults(results, (result, assert) => {
+    const pass = result === assert;
+    console.log((pass) ? "PASS" : `FAIL:\n\texpect: ${assert}\n\tgot: ${result}`);
+  });
+
 }
 
 // Pairs of DNA strands consist of nucleobase pairs. Base pairs are represented
