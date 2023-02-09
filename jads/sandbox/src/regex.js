@@ -4,7 +4,7 @@ function lookaheadExample() {
   console.log(`checkPass: ${checkPass.test(password)}`);
 }
 
-export const regEx = () => {
+export const RegularExpressions = () => {
   const third = document.getElementById("003");
   if (third !== null && third !== undefined && third !== void 0) {
     third.addEventListener("click", lookaheadExample);

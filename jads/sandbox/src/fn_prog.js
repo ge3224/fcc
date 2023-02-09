@@ -116,14 +116,12 @@ function add(x) {
 }
 
 function challenge24() {
-  // console.log(add(10)(20)(30));
   const phase1 = add(10);
   const phase2 = phase1(20);
   console.log(phase2(30));
 }
 
-// initialize
-export const funcProg = () => {
+export const FunctionalProgramming = () => {
   const ids = [
     ["022", tabsChallengeHandler],
     ["023", challenge16],

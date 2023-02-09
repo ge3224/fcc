@@ -372,7 +372,7 @@ function chunkArrayInGroupsHandler() {
 }
 
 // init DOM elements
-export const alg1 = () => {
+export const BasicAlgorithmScripting = () => {
   const ids = [
     ["005", celsiusToFahrenheit],
     ["006", reverseString],

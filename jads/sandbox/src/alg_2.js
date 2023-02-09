@@ -343,7 +343,11 @@ function ch9Handler() {
 
 }
 
-export const alg2 = () => {
+function ch10Handler() {
+  console.log("Hello, world");
+}
+
+export const IntermediateAlgorithmScripting = () => {
   const ids = [
     ["026", ch1Handler],
     ["027", ch2Handler],
@@ -354,6 +358,7 @@ export const alg2 = () => {
     ["032", ch7Handler],
     ["033", ch8Handler],
     ["034", ch9Handler],
+    ["035", ch10Handler],
   ];
 
   ids.map(item => {

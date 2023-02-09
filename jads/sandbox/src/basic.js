@@ -23,7 +23,7 @@ function radixClickHandler() {
   parseIntWithRadixArg("111111");
 }
 
-export const basicJs = () => {
+export const BasicJS = () => {
   const first = document.getElementById("001");
   if (first !== null && first !== undefined && first !== void 0) {
     first.addEventListener("click", queueClickHandler);
