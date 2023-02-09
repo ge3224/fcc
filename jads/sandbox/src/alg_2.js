@@ -305,6 +305,44 @@ function ch8Handler() {
   });
 }
 
+// Find the missing letter in the passed letter range and return it.
+//
+// If all letters are present in the range, return undefined.
+function fearNotLetter(str) {
+  let missing;
+
+  for (let i = 0; i < str.length - 1; i++) {
+    const current = str[i].charCodeAt(0);
+    const next = str[i + 1].charCodeAt(0);
+
+    if (next > current + 1) {
+      missing = String.fromCharCode(current + 1);
+      break;
+    }
+  }
+
+  return missing;
+}
+
+function ch9Handler() {
+  const tests = [
+    ["abce", "d"],
+    ["abcdefghjklmno", "i"],
+    ["stvwx", "u"],
+    ["bcdf", "e"],
+    ["abcdefghijklmnopqrstuvwxyz", undefined],
+  ];
+
+  const results = tests.map(args => {
+    return assertion(fearNotLetter(args[0]), args[1]);
+  });
+
+  checkResults(results, (result, assert) => {
+    console.log((result === assert) ? "PASS" : `FAIL:\n\texpected: ${assert}\n\tgot: ${result}`);
+  });
+
+}
+
 export const alg2 = () => {
   const ids = [
     ["026", ch1Handler],
@@ -315,6 +353,7 @@ export const alg2 = () => {
     ["031", ch6Handler],
     ["032", ch7Handler],
     ["033", ch8Handler],
+    ["034", ch9Handler],
   ];
 
   ids.map(item => {
