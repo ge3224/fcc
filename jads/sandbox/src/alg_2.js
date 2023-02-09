@@ -1,26 +1,6 @@
 import { titleCase } from "./alg_1";
+import { assertion, checkResults, areCorresponding, areMatching } from "./util";
 
-function areCorresponding(obj1, obj2) {
-  let ok = true;
-  for (let prop in obj2) {
-    if (obj1[prop] !== obj2[prop]) {
-      ok = false;
-      break;
-    }
-  }
-  return ok;
-}
-
-function areMatching(arr1, arr2) {
-  let ok = true;
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      ok = false;
-      break;
-    }
-  }
-  return ok
-}
 
 function printResults(result, passing, assertion, label = "Output") {
   const testMessage = (passing) ? "PASS" : `FAIL, should be: "${assertion}"`;
@@ -231,7 +211,7 @@ function ch6Handler() {
 // are replacing it. For example if you mean to replace the word Book with the 
 // word dog, it should be replaced as Dog
 function myReplace(str, before, after) {
-  const arr = str.split(/[^a-zA-Z]/)
+  const arr = str.split(" ");
   const caps = /[A-Z]/;
   return arr.map(word => {
     if (word === before) {
@@ -253,8 +233,59 @@ function ch7Handler() {
 
   tests.forEach(args => {
     const result = myReplace(args[0], args[1], args[2]);
-    console.log(result);
-    // printResults(result, result === args[3], args[3], "myReplace");
+    printResults(result, result === args[3], args[3], "myReplace");
+  });
+}
+
+// Pairs of DNA strands consist of nucleobase pairs. Base pairs are represented
+// by the characters AT and CG, which form building blocks of the DNA double helix.
+//
+// The DNA strand is missing the pairing element. Write a function to match the
+// missing base pairs for the provided DNA strand. For each character in the 
+// provided string, find the base pair character. Return the results as a 2d array.
+//
+// For example, for the input GCG, return [["G", "C"], ["C","G"], ["G", "C"]]
+//
+// The character and its pair are paired up in an array, and all the arrays are 
+// grouped into one encapsulating array.
+function pairElement(str) {
+  const newArr = [];
+  for (let i = 0; i < str.length; i++) {
+    switch (str[i]) {
+      case "A":
+        newArr.push(["A", "T"]);
+        break;
+      case "T":
+        newArr.push(["T", "A"]);
+        break;
+      case "G":
+        newArr.push(["G", "C"]);
+        break;
+      case "C":
+        newArr.push(["C", "G"]);
+        break;
+      default:
+        console.error(`Unknown base pair: ${str[i]}`);
+    }
+  }
+  return newArr;
+}
+
+function ch8Handler() {
+  const tests = [
+    ["ATCGA", [["A", "T"], ["T", "A"], ["C", "G"], ["G", "C"], ["A", "T"]]],
+    ["TTGAG", [["T", "A"], ["T", "A"], ["G", "C"], ["A", "T"], ["G", "C"]]],
+    ["CTCTA", [["C", "G"], ["T", "A"], ["C", "G"], ["T", "A"], ["A", "T"]]],
+  ];
+
+  const results = tests.map(args => {
+    return assertion(pairElement(args[0]), args[1]);
+  });
+
+  checkResults(results, (result, assert) => {
+    const x = JSON.stringify(result);
+    const y = JSON.stringify(assert);
+    console.log((x === y) ? "PASS" : `FAIL:\n\t${x}\n\t${y}`);
   });
 }
 
@@ -267,6 +298,7 @@ export const alg2 = () => {
     ["030", ch5Handler],
     ["031", ch6Handler],
     ["032", ch7Handler],
+    ["033", ch8Handler],
   ];
 
   ids.map(item => {
