@@ -1,6 +1,31 @@
 import { titleCase } from "./alg_1";
 import { assertion, checkResults, areCorresponding, areMatching } from "./util";
 
+// Solutions for Intermediate Algorithm Challenges
+export const IntermediateAlgorithmScripting = () => {
+  const ids = [
+    ["026", ch1Handler],
+    ["027", ch2Handler],
+    ["028", ch3Handler],
+    ["029", ch4Handler],
+    ["030", ch5Handler],
+    ["031", ch6Handler],
+    ["032", ch7Handler],
+    ["033", ch8Handler],
+    ["034", ch9Handler],
+    ["035", ch10Handler],
+    ["036", ch11Handler],
+    ["037", ch12Handler],
+  ];
+
+  ids.map(item => {
+    const el = document.getElementById(item[0]);
+    if (el !== null && el !== undefined && el !== void 0) {
+      el.addEventListener("click", item[1]);
+    }
+  });
+}
+
 // We'll pass you an array of two numbers. Return the sum of those two numbers 
 // plus the sum of all the numbers between them. The lowest number will not 
 // always come first.
@@ -422,25 +447,46 @@ function ch11Handler() {
   });
 }
 
-export const IntermediateAlgorithmScripting = () => {
-  const ids = [
-    ["026", ch1Handler],
-    ["027", ch2Handler],
-    ["028", ch3Handler],
-    ["029", ch4Handler],
-    ["030", ch5Handler],
-    ["031", ch6Handler],
-    ["032", ch7Handler],
-    ["033", ch8Handler],
-    ["034", ch9Handler],
-    ["035", ch10Handler],
-    ["036", ch11Handler],
+// Given a positive integer num, return the sum of all odd Fibonacci numbers 
+// that are less than or equal to num.
+//
+// The first two numbers in the Fibonacci sequence are 1 and 1. Every additional
+// number in the sequence is the sum of the two previous numbers. The first six 
+// numbers of the Fibonacci sequence are 1, 1, 2, 3, 5 and 8.
+//
+// For example, sumFibs(10) should return 10 because all odd Fibonacci numbers 
+// less than or equal to 10 are 1, 1, 3, and 5.
+function sumFibs(num) {
+  let index = 1;
+  let prev = 0;
+  let sum = 0;
+
+  while (index <= num) {
+    let current = index;
+    if (current % 2 === 1) {
+      sum += current;
+    }
+    index += prev;
+    prev = current;
+  }
+
+  return sum;
+}
+
+function ch12Handler() {
+  const tests = [
+    [1000, 1785],
+    [4000000, 4613732],
+    [4, 5],
+    [75024, 60696],
+    [75025, 135721],
   ];
 
-  ids.map(item => {
-    const el = document.getElementById(item[0]);
-    if (el !== null && el !== undefined && el !== void 0) {
-      el.addEventListener("click", item[1]);
-    }
+  const results = tests.map((args) => {
+    return assertion(sumFibs(args[0]), args[1]);
+  });
+
+  checkResults(results, (result, assert) => {
+    console.log((result === assert) ? "PASS" : `FAIL\n\texpected: ${assert}\n\tgot: ${result}`);
   });
 }
