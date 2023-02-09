@@ -343,8 +343,53 @@ function ch9Handler() {
 
 }
 
+// Write a function that takes two or more arrays and returns a new array of 
+// unique values in the order of the original provided arrays.
+//
+// In other words, all values present from all arrays should be included in 
+// their original order, but with no duplicates in the final array.
+//
+// The unique numbers should be sorted by their original order, but the final 
+// array should not be sorted in numerical order.
+//
+// Check the assertion tests for examples.
+function uniteUnique(...arr) {
+  if (arr.length < 2) {
+    console.error("not enough arguments");
+    return undefined;
+  }
+  return arr.reduce((previous, current) => {
+    for (let i = 0; i < current.length; i++) {
+      if (!previous.includes(current[i])) {
+        previous.push(current[i]);
+      }
+    }
+    return previous;
+  }, []);
+}
+
 function ch10Handler() {
-  console.log("Hello, world");
+  const tests = [
+    [[1, 3, 2], [5, 2, 1, 4], [2, 1], [1, 3, 2, 5, 4]],
+    [[1, 2, 3], [5, 2, 1], [1, 2, 3, 5]],
+    [[1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8], [1, 2, 3, 5, 4, 6, 7, 8]],
+    [[1, 3, 2], [5, 4], [5, 6], [1, 3, 2, 5, 4, 6]],
+    [[1, 3, 2, 3], [5, 2, 1, 4], [2, 1], [1, 3, 2, 5, 4]],
+  ];
+
+  const results = [
+    assertion(uniteUnique(tests[0][0], tests[0][1], tests[0][2]), tests[0][3]),
+    assertion(uniteUnique(tests[1][0], tests[1][1]), tests[1][2]),
+    assertion(uniteUnique(tests[2][0], tests[2][1], tests[2][2], tests[2][3]), tests[2][4]),
+    assertion(uniteUnique(tests[3][0], tests[3][1], tests[3][2]), tests[3][3]),
+    assertion(uniteUnique(tests[4][0], tests[4][1], tests[4][2]), tests[4][3]),
+  ];
+
+  checkResults(results, (result, assert) => {
+    const x = JSON.stringify(result);
+    const y = JSON.stringify(assert);
+    console.log((x === y) ? "PASS" : `FAIL\n\texpected: ${y}\n\tgot: ${x}`);
+  });
 }
 
 export const IntermediateAlgorithmScripting = () => {
