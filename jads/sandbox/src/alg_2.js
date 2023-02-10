@@ -19,6 +19,8 @@ export const IntermediateAlgorithmScripting = () => {
     ["a2_13", ch13Handler],
     ["a2_14", ch14Handler],
     ["a2_15", ch15Handler],
+    ["a2_16", ch16Handler],
+    ["a2_17", ch17Handler],
   ];
 
   ids.forEach(item => {
@@ -626,6 +628,57 @@ function ch15Handler() {
   checkResults(results, (result, assertion) => {
     const left = JSON.stringify(result);
     const right = JSON.stringify(assertion);
+    console.log((left === right) ? "PASS" : `FAIL:\n\texpect: ${right}\n\tgot: ${left}`);
+  });
+}
+
+function steamrollArray(arr) {
+  return arr.reduce((flat, item) => {
+    return flat.concat((Array.isArray(item)) ? steamrollArray(item) : item);
+  }, []);
+}
+
+function ch16Handler() {
+  const tests = [
+    [[[["a"]], [["b"]]], ["a", "b"]],
+    [[1, [2], [3, [[4]]]], [1, 2, 3, 4]],
+    [[1, [], [3, [[4]]]], [1, 3, 4]],
+    [[1, {}, [3, [[4]]]], [1, {}, 3, 4]],
+  ];
+
+  const results = tests.map((args) => {
+    return assertion(steamrollArray(args[0]), args[1]);
+  })
+
+  checkResults(results, (result, assert) => {
+    const left = JSON.stringify(result);
+    const right = JSON.stringify(assert);
+    console.log((left === right) ? "PASS" : `FAIL:\n\texpect: ${right}\n\tgot: ${left}`);
+  });
+}
+
+// Return an English translated sentence of the passed binary string.
+//
+// The binary string will be space separated.
+function binaryAgent(str) {
+  const arr = str.split(" ").map(item => {
+    return String.fromCharCode(parseInt(item, 2));
+  });
+
+  return arr.join("");
+}
+
+function ch17Handler() {
+  const tests = [
+    ["01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111", "Aren't bonfires fun!?"],
+    ["01001001 00100000 01101100 01101111 01110110 01100101 00100000 01000110 01110010 01100101 01100101 01000011 01101111 01100100 01100101 01000011 01100001 01101101 01110000 00100001", "I love FreeCodeCamp!"],
+  ];
+
+  const results = tests.map((args) => {
+    return assertion(binaryAgent(args[0]), args[1]);
+  })
+
+  checkResults(results, (left, right) => {
     console.log((left === right) ? "PASS" : `FAIL:\n\texpect: ${right}\n\tgot: ${left}`);
   });
 }
