@@ -4,21 +4,24 @@ import { assertion, checkResults, areCorresponding, areMatching } from "./util";
 // Solutions for Intermediate Algorithm Challenges
 export const IntermediateAlgorithmScripting = () => {
   const ids = [
-    ["026", ch1Handler],
-    ["027", ch2Handler],
-    ["028", ch3Handler],
-    ["029", ch4Handler],
-    ["030", ch5Handler],
-    ["031", ch6Handler],
-    ["032", ch7Handler],
-    ["033", ch8Handler],
-    ["034", ch9Handler],
-    ["035", ch10Handler],
-    ["036", ch11Handler],
-    ["037", ch12Handler],
+    ["a2_01", ch1Handler],
+    ["a2_02", ch2Handler],
+    ["a2_03", ch3Handler],
+    ["a2_04", ch4Handler],
+    ["a2_05", ch5Handler],
+    ["a2_06", ch6Handler],
+    ["a2_07", ch7Handler],
+    ["a2_08", ch8Handler],
+    ["a2_09", ch9Handler],
+    ["a2_10", ch10Handler],
+    ["a2_11", ch11Handler],
+    ["a2_12", ch12Handler],
+    ["a2_13", ch13Handler],
+    ["a2_14", ch14Handler],
+    ["a2_15", ch15Handler],
   ];
 
-  ids.map(item => {
+  ids.forEach(item => {
     const el = document.getElementById(item[0]);
     if (el !== null && el !== undefined && el !== void 0) {
       el.addEventListener("click", item[1]);
@@ -488,5 +491,141 @@ function ch12Handler() {
 
   checkResults(results, (result, assert) => {
     console.log((result === assert) ? "PASS" : `FAIL\n\texpected: ${assert}\n\tgot: ${result}`);
+  });
+}
+
+// A prime number is a whole number greater than 1 with exactly two divisors: 
+// 1 and itself. For example, 2 is a prime number because it is only divisible 
+// by 1 and 2. In contrast, 4 is not prime since it is divisible by 1, 2 and 4.
+//
+// Rewrite sumPrimes so it returns the sum of all prime numbers that are less 
+// than or equal to num.
+function sumPrimes(n) {
+  if (n < 2) {
+    return 0;
+  }
+
+  if (n === 2) {
+    return 2;
+  }
+
+  if (n === 3) {
+    return 5;
+  }
+
+  let sum = 0;
+
+  for (let i = 2; i <= n; i++) {
+    let isPrime = true;
+    for (let j = 2, k = Math.sqrt(i); j <= k; j++) {
+      if (i % j === 0) isPrime = false;
+    }
+
+    if (isPrime) {
+      sum += i;
+    }
+  }
+
+  return sum;
+}
+
+function ch13Handler() {
+  const tests = [
+    [10, 17],
+    [977, 73156],
+  ];
+
+  const results = tests.map((args) => {
+    return assertion(sumPrimes(args[0]), args[1]);
+  })
+
+  checkResults(results, (result, assert) => {
+    console.log((result === assert) ? "PASS" : `FAIL\n\texpected: ${assert}\n\tgot: ${result}`);
+  });
+}
+
+// Find the smallest common multiple of the provided parameters that can be 
+// evenly divided by both, as well as by all sequential numbers in the range 
+// between these parameters.
+//
+// The range will be an array of two numbers that will not necessarily be in 
+// numerical order.
+//
+// For example, if given 1 and 3, find the smallest common multiple of both 1 
+// and 3 that is also evenly divisible by all numbers between 1 and 3. The 
+// answer here would be 6.
+function smallestCommons(arr) {
+  const [min, max] = arr
+    .slice(0, 2) // avoid mutating `arr`; discard extra values
+    .sort((a, b) => a - b);
+
+  const range = Array(max - min + 1)
+    .fill(0)
+    .map((_, i) => i + min);
+
+  const ceil = range
+    .reduce((tally, val) => tally *= val, 1);
+
+  for (let multiple = max; multiple <= ceil; multiple += max) {
+    const divisible = range.every(val => multiple % val === 0);
+    if (divisible) return multiple;
+  }
+}
+
+function ch14Handler() {
+  const tests = [
+    [[1, 5], 60],
+    [[5, 1], 60],
+    [[2, 10], 2520],
+    [[1, 13], 360360],
+    [[23, 18], 6056820],
+  ];
+
+  const results = tests.map(args => {
+    return assertion(smallestCommons(args[0]), args[1]);
+  });
+
+  checkResults(results, (result, assert) => {
+    console.log((result === assert) ? "PASS" : `FAIL:\n\texpected: ${assert}\n\tgot: ${result}`);
+  });
+}
+
+
+// Given the array arr, iterate through and remove each element starting from 
+// the first element (the 0 index) until the function func returns true when 
+// the iterated element is passed through it.
+//
+// Then return the rest of the array once the condition is satisfied, otherwise,
+// arr should be returned as an empty array.
+function dropElements(arr, func) {
+  let newStart = -1;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (func(arr[i])) {
+      newStart = i;
+      break;
+    }
+  }
+  return (newStart === -1) ? [] : arr.slice(newStart);
+}
+
+function ch15Handler() {
+  const tests = [
+    [[1, 2, 3, 4], function(n) { return n >= 3; }, [3, 4]],
+    [[0, 1, 0, 1], function(n) { return n === 1; }, [1, 0, 1]],
+    [[1, 2, 3], function(n) { return n > 0; }, [1, 2, 3]],
+    [[1, 2, 3, 4], function(n) { return n > 5; }, []],
+    [[1, 2, 3, 7, 4], function(n) { return n > 3; }, [7, 4]],
+    [[1, 2, 3, 9, 2], function(n) { return n > 2; }, [3, 9, 2]],
+  ];
+
+  const results = tests.map((args) => {
+    return assertion(dropElements(args[0], args[1]), args[2]);
+  });
+
+  checkResults(results, (result, assertion) => {
+    const left = JSON.stringify(result);
+    const right = JSON.stringify(assertion);
+    console.log((left === right) ? "PASS" : `FAIL:\n\texpect: ${right}\n\tgot: ${left}`);
   });
 }

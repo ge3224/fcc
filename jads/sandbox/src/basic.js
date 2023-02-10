@@ -83,7 +83,7 @@ function ch112Handler() {
 // to the ending number. Your function must use recursion by calling itself and 
 // not use loops of any kind. It should also work for cases where both startNum 
 // and endNum are the same.
-function rangeOfNumbers(startNum, endNum) {
+export function rangeOfNumbers(startNum, endNum) {
   if (startNum > endNum) {
     return [];
   } else {
