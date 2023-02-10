@@ -21,6 +21,7 @@ export const IntermediateAlgorithmScripting = () => {
     ["a2_15", ch15Handler],
     ["a2_16", ch16Handler],
     ["a2_17", ch17Handler],
+    ["a2_18", ch18Handler],
   ];
 
   ids.forEach(item => {
@@ -682,3 +683,47 @@ function ch17Handler() {
     console.log((left === right) ? "PASS" : `FAIL:\n\texpect: ${right}\n\tgot: ${left}`);
   });
 }
+
+
+// Check if the predicate (second argument) is truthy on all elements of a 
+// collection (first argument).
+//
+// In other words, you are given an array collection of objects. The predicate 
+// pre will be an object property and you need to return true if its value is 
+// truthy. Otherwise, return false.
+//
+// In JavaScript, truthy values are values that translate to true when 
+// evaluated in a Boolean context.
+//
+// Remember, you can access object properties through either dot notation or 
+// [] notation.
+function truthCheck(collection, pre) {
+  const score = collection.reduce((score, obj) => {
+    return (obj[pre]) ? score + 1 : score;
+  }, 0);
+  return (score === collection.length) ? true : false;
+}
+
+function ch18Handler() {
+  const tests = [
+    [[{ name: "Quincy", role: "Founder", isBot: false }, { name: "Naomi", role: "", isBot: false }, { name: "Camperbot", role: "Bot", isBot: true }], "isBot", false],
+    [[{ name: "Quincy", role: "Founder", isBot: false }, { name: "Naomi", role: "", isBot: false }, { name: "Camperbot", role: "Bot", isBot: true }], "name", true],
+    [[{ name: "Quincy", role: "Founder", isBot: false }, { name: "Naomi", role: "", isBot: false }, { name: "Camperbot", role: "Bot", isBot: true }], "role", false],
+    [[{ name: "Pikachu", number: 25, caught: 3 }, { name: "Togepi", number: 175, caught: 1 }], "number", true],
+    [[{ name: "Pikachu", number: 25, caught: 3 }, { name: "Togepi", number: 175, caught: 1 }, { name: "MissingNo", number: NaN, caught: 0 }], "caught", false],
+    [[{ name: "Pikachu", number: 25, caught: 3 }, { name: "Togepi", number: 175, caught: 1 }, { name: "MissingNo", number: NaN, caught: 0 }], "number", false],
+    [[{ name: "Quincy", username: "QuincyLarson" }, { name: "Naomi", username: "nhcarrigan" }, { name: "Camperbot" }], "username", false],
+    [[{ name: "freeCodeCamp", users: [{ name: "Quincy" }, { name: "Naomi" }] }, { name: "Code Radio", users: [{ name: "Camperbot" }] }, { name: "", users: [] }], "users", true],
+    [[{ id: 1, data: { url: "https://freecodecamp.org", name: "freeCodeCamp" } }, { id: 2, data: { url: "https://coderadio.freecodecamp.org/", name: "CodeRadio" } }, { id: null, data: {} }], "data", true],
+    [[{ id: 1, data: { url: "https://freecodecamp.org", name: "freeCodeCamp" } }, { id: 2, data: { url: "https://coderadio.freecodecamp.org/", name: "CodeRadio" } }, { id: null, data: {} }], "id", false],
+  ];
+
+  const results = tests.map((args) => {
+    return assertion(truthCheck(args[0], args[1]), args[2]);
+  })
+
+  checkResults(results, (left, right) => {
+    console.log((left === right) ? "PASS" : `FAIL:\n\texpect: ${right}\n\tgot: ${left}`);
+  });
+}
+
