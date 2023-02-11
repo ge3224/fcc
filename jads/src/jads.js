@@ -64,7 +64,6 @@ function cp1Handler() {
   });
 }
 
-
 // Convert the given number into a roman numeral. All roman numerals answers 
 // should be provided in upper-case.
 function convertToRoman(num) {
@@ -96,7 +95,7 @@ function convertToRoman(num) {
     case (num < 1000):
       return "CM" + convertToRoman(num - 900);
     default:
-      return "M".repeat(num/1000) + convertToRoman(num % 1000);
+      return "M".repeat(num / 1000) + convertToRoman(num % 1000);
   }
 }
 
@@ -143,8 +142,47 @@ function cp2Handler() {
   });
 }
 
+// One of the simplest and most widely known ciphers is a Caesar cipher, also 
+// known as a shift cipher. In a shift cipher the meanings of the letters are 
+// shifted by some set amount.
+//
+// A common modern use is the ROT13 cipher, where the values of the letters are 
+// shifted by 13 places. Thus A ↔ N, B ↔ O and so on.
+//
+// Write a function which takes a ROT13 encoded string as input and returns a 
+// decoded string.
+//
+// All letters will be uppercase. Do not transform any non-alphabetic character 
+// (i.e. spaces, punctuation), but do pass them on.
+function rot13(str) {
+  let newStr = "";
+  for (let i = 0; i < str.length; i++) {
+    const code = str[i].charCodeAt(0);
+    // 65 is "A" and 90 is "Z"
+    if (code < 65 || code > 90) {
+      newStr += str[i];
+    } else {
+      let decoded = code + 13;
+      if (code + 13 > 90) {
+        decoded = decoded - 90 + 64;
+      }
+      newStr += String.fromCharCode(decoded);
+    }
+  }
+  return newStr;
+}
+
 function cp3Handler() {
-  console.log("Hello, from cp3!");
+  const tests = [
+    assertion(rot13("SERR PBQR PNZC"), "FREE CODE CAMP"),
+    assertion(rot13("SERR CVMMN!"), "FREE PIZZA!"),
+    assertion(rot13("SERR YBIR?"), "FREE LOVE?"),
+    assertion(rot13("GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT."), "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG."),
+  ];
+
+  checkResults(tests, (left, right) => {
+    console.log((left === right) ? "PASS" : `FAIL:\n\texpected: ${right}\n\tgot: ${left}`);
+  });
 }
 
 function cp4Handler() {
