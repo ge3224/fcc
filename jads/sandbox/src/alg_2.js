@@ -23,6 +23,8 @@ export const IntermediateAlgorithmScripting = () => {
     ["a2_17", ch17Handler],
     ["a2_18", ch18Handler],
     ["a2_19", ch19Handler],
+    ["a2_20", ch20Handler],
+    ["a2_21", ch21Handler],
   ];
 
   ids.forEach(item => {
@@ -783,4 +785,12 @@ function ch19Handler() {
   checkResults(results, (left, right) => {
     console.log((left === right) ? "PASS" : `FAIL:\n\texpect: ${right}\n\tgot: ${left}`);
   });
+}
+
+function ch20Handler() {
+  console.log("TODO");
+}
+
+function ch21Handler() {
+  console.log("TODO");
 }
