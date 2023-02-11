@@ -787,8 +787,65 @@ function ch19Handler() {
   });
 }
 
+// Fill in the object constructor with the following methods below:
+const Person = function(firstAndLast) {
+  let [_firstName, _lastName] = firstAndLast.split(" ");
+
+  this.getFullName = () => {
+    return `${_firstName} ${_lastName}`;
+  }
+
+  this.getFirstName = () => {
+    return _firstName;
+  }
+
+  this.setFirstName = (firstName) => {
+    _firstName = firstName;
+  }
+
+  this.getLastName = () => {
+    return _lastName;
+  }
+
+  this.setLastName = (lastName) => {
+    _lastName = lastName;
+  }
+
+  this.setFullName = (firstAndLast) => {
+    [_firstName, _lastName] = firstAndLast.split(" ");
+  }
+
+  return firstAndLast;
+}
+
 function ch20Handler() {
-  console.log("TODO");
+  const bob = new Person("Bob Ross");
+  bob.getFullName();
+
+  const tests = [
+    assertion(bob instanceof Person, true),
+    assertion(bob.firstName, undefined),
+    assertion(bob.lastName, undefined),
+    assertion(bob.getFirstName(), "Bob"),
+    assertion(bob.getLastName(), "Ross"),
+    assertion(bob.getFullName(), "Bob Ross"),
+  ];
+
+  bob.setFirstName("Haskell");
+  tests.push(assertion(bob.getFullName(), "Haskell Ross"));
+
+  bob.setLastName("Curry");
+  tests.push(assertion(bob.getFullName(), "Haskell Curry"));
+
+  bob.setFullName("Haskell Curry");
+  tests.push(assertion(bob.getFullName(), "Haskell Curry"));
+
+  tests.push(assertion(bob.getFirstName(), "Haskell"));
+  tests.push(assertion(bob.getLastName(), "Curry"));
+
+  checkResults(tests, (left, right) => {
+    console.log((left === right) ? "PASS" : `FAIL:\n\texpected: ${right}\n\tgot: ${left}`);
+  });
 }
 
 function ch21Handler() {
