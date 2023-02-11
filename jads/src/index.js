@@ -5,6 +5,7 @@ import { BasicAlgorithmScripting } from "./alg_1.js";
 import { ObjectOrientedProgramming } from "./oop.js";
 import { FunctionalProgramming } from "./fn_prog.js";
 import { IntermediateAlgorithmScripting } from "./alg_2.js";
+import { FinalProjects } from "./jads.js";
 
 (() => {
   BasicJS();
@@ -14,4 +15,5 @@ import { IntermediateAlgorithmScripting } from "./alg_2.js";
   ObjectOrientedProgramming();
   FunctionalProgramming();
   IntermediateAlgorithmScripting();
+  FinalProjects();
 })();
