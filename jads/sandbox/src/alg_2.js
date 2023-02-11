@@ -22,6 +22,7 @@ export const IntermediateAlgorithmScripting = () => {
     ["a2_16", ch16Handler],
     ["a2_17", ch17Handler],
     ["a2_18", ch18Handler],
+    ["a2_19", ch19Handler],
   ];
 
   ids.forEach(item => {
@@ -727,3 +728,59 @@ function ch18Handler() {
   });
 }
 
+// Create a function that sums two arguments together. If only one argument is 
+// provided, then return a function that expects one argument and returns 
+// the sum.
+//
+// For example, addTogether(2, 3) should return 5, and addTogether(2) should 
+// return a function.
+//
+// Calling this returned function with a single argument will then return 
+// the sum:
+function addTogether(...args) {
+  if (args.length < 1) return undefined;
+
+  if (typeof args[0] !== "number") return undefined;
+
+  if (args.length < 2) {
+    return x => {
+      if (typeof x !== "number") return undefined;
+      return x + args[0];
+    }
+  } else {
+    return args.reduce((val, item) => {
+      if (typeof item !== "number") {
+        return undefined;
+      } else {
+        return val + item;
+      }
+    }, 0);
+  }
+}
+
+function ch19Handler() {
+  const tests = [
+    [2, 3, 5],
+    [23, 30, 53],
+    [5, 7, 12],
+    ["https://www.youtube.com/watch?v=dQw4w9WgXcQ", undefined],
+    [2, "3", undefined],
+    [2, [3], undefined],
+    ["2", 3, undefined],
+    [5, undefined, undefined],
+  ];
+
+  const results = [
+    assertion(addTogether(tests[0][0], tests[0][1]), tests[0][2]),
+    assertion(addTogether(tests[1][0], tests[1][1]), tests[1][2]),
+    assertion(addTogether(tests[2][0])(tests[2][1]), tests[2][2]),
+    assertion(addTogether(tests[3][0]), tests[3][1]),
+    assertion(addTogether(tests[4][0])(tests[4][1]), tests[4][2]),
+    assertion(addTogether(tests[5][0], tests[5][1]), tests[5][2]),
+    assertion(addTogether(tests[6][0], tests[6][1]), tests[6][2]),
+  ];
+
+  checkResults(results, (left, right) => {
+    console.log((left === right) ? "PASS" : `FAIL:\n\texpect: ${right}\n\tgot: ${left}`);
+  });
+}
