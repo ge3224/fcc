@@ -54,18 +54,14 @@ function sumAll(arr) {
 
 function ch1Handler() {
   const tests = [
-    [[1, 4], 10],
-    [[4, 1], 10],
-    [[5, 10], 45],
-    [[10, 5], 45],
+    assertion(sumAll([1, 4]), 10),
+    assertion(sumAll([4, 1]), 10),
+    assertion(sumAll([5, 10]), 45),
+    assertion(sumAll([10, 5]), 45),
   ];
 
-  const results = tests.map(args => {
-    return assertion(sumAll(args[0]), args[1]);
-  });
-
-  checkResults(results, (result, assert) => {
-    console.log((result === assert) ? "PASS" : `FAIL:\n\t${result}`);
+  checkResults(tests, (left, right) => {
+    console.log((left === right) ? "PASS" : `FAIL:\n\t${left}`);
   });
 }
 
@@ -90,17 +86,13 @@ function diffArray(arr1, arr2) {
 
 function ch2Handler() {
   const tests = [
-    [["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"], ["pink wool"]],
-    [["andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"], ["diorite", "pink wool"]],
-    [["andesite", "grass", "dirt", "dead shrub"], ["andesite", "grass", "dirt", "dead shrub"], []],
+    assertion(diffArray(["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]), ["pink wool"]),
+    assertion(diffArray(["andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]), ["diorite", "pink wool"]),
+    assertion(diffArray(["andesite", "grass", "dirt", "dead shrub"], ["andesite", "grass", "dirt", "dead shrub"]), []),
   ];
 
-  const results = tests.map(args => {
-    return assertion(diffArray(args[0], args[1]), args[2]);
-  });
-
-  checkResults(results, (result, assert) => {
-    console.log((areMatching(result, assert)) ? "PASS" : `FAIL:\n\t${result}`);
+  checkResults(tests, (left, right) => {
+    console.log((areMatching(left, right)) ? "PASS" : `FAIL:\n\t${left}`);
   });
 }
 
@@ -113,21 +105,17 @@ function destroyer(arr, ...args) {
 
 function ch3Handler() {
   const tests = [
-    [[[1, 2, 3, 1, 2, 3], 2, 3], [1, 1]],
-    [[[1, 2, 3, 5, 1, 2, 3], 2, 3], [1, 5, 1]],
-    [[[3, 5, 1, 2, 2], 2, 3, 5], [1]],
-    [[[2, 3, 2, 3], 2, 3], []],
-    [[["tree", "hamburger", 53], "tree", 53], ["hamburger"]],
-    [[["possum", "trollo", 12, "safari", "hotdog", 92, 65, "grandma", "bugati", "trojan", "yacht"], "yacht", "possum", "trollo", "safari", "hotdog", "grandma", "bugati", "trojan"], [12, 92, 65]],
+    assertion(destroyer([1, 2, 3, 1, 2, 3], 2, 3), [1, 1]),
+    assertion(destroyer([1, 2, 3, 5, 1, 2, 3], 2, 3), [1, 5, 1]),
+    assertion(destroyer([3, 5, 1, 2, 2], 2, 3, 5), [1]),
+    assertion(destroyer([2, 3, 2, 3], 2, 3), []),
+    assertion(destroyer(["tree", "hamburger", 53], "tree", 53), ["hamburger"]),
+    assertion(destroyer(["possum", "trollo", 12, "safari", "hotdog", 92, 65, "grandma", "bugati", "trojan", "yacht"], "yacht", "possum", "trollo", "safari", "hotdog", "grandma", "bugati", "trojan"), [12, 92, 65]),
   ];
 
-  const results = tests.map(args => {
-    return assertion(destroyer(args[0][0], ...args[0].slice(1)), args[1]);
-  });
-
-  checkResults(results, (result, assert) => {
-    const ok = areMatching(result, assert);
-    console.log((ok) ? "PASS" : `FAIL:\n\t${result}`);
+  checkResults(tests, (left, right) => {
+    const ok = areMatching(left, right);
+    console.log((ok) ? "PASS" : `FAIL:\n\t${left}`);
   });
 }
 
@@ -157,28 +145,19 @@ function whatIsInAName(collection, source) {
 
 function ch4Handler() {
   const tests = [
-    [[[{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" }], [{ first: "Tybalt", last: "Capulet" }]],
-    [[[{ "apple": 1 }, { "apple": 1 }, { "apple": 1, "bat": 2 }], { "apple": 1 }], [{ "apple": 1 }, { "apple": 1 }, { "apple": 1, "bat": 2 }]],
-    [[[{ "apple": 1, "bat": 2 }, { "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "bat": 2 }], [{ "apple": 1, "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }]],
-    [[[{ "apple": 1, "bat": 2 }, { "apple": 1 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "cookie": 2 }], [{ "apple": 1, "bat": 2, "cookie": 2 }]],
-    [[[{ "apple": 1, "bat": 2 }, { "apple": 1 }, { "apple": 1, "bat": 2, "cookie": 2 }, { "bat": 2 }], { "apple": 1, "bat": 2 }], [{ "apple": 1, "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }]],
-    [[[{ "a": 1, "b": 2, "c": 3 }], { "a": 1, "b": 9999, "c": 3 }], []],
-    [[[{ "a": 1, "b": 2, "c": 3, "d": 9999 }], { "a": 1, "b": 9999, "c": 3 }], []],
+    assertion(whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" }), [{ first: "Tybalt", last: "Capulet" }]),
+    assertion(whatIsInAName([{ "apple": 1 }, { "apple": 1 }, { "apple": 1, "bat": 2 }], { "apple": 1 }), [{ "apple": 1 }, { "apple": 1 }, { "apple": 1, "bat": 2 }]),
+    assertion(whatIsInAName([{ "apple": 1, "bat": 2 }, { "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "bat": 2 }), [{ "apple": 1, "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }]),
+    assertion(whatIsInAName([{ "apple": 1, "bat": 2 }, { "apple": 1 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "cookie": 2 }), [{ "apple": 1, "bat": 2, "cookie": 2 }]),
+    assertion(whatIsInAName([{ "apple": 1, "bat": 2 }, { "apple": 1 }, { "apple": 1, "bat": 2, "cookie": 2 }, { "bat": 2 }], { "apple": 1, "bat": 2 }), [{ "apple": 1, "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }]),
+    assertion(whatIsInAName([{ "a": 1, "b": 2, "c": 3 }], { "a": 1, "b": 9999, "c": 3 }), []),
+    assertion(whatIsInAName([{ "a": 1, "b": 2, "c": 3, "d": 9999 }], { "a": 1, "b": 9999, "c": 3 }), []),
   ];
 
-  const results = tests.map(args => {
-    return assertion(whatIsInAName(args[0][0], args[0][1]), args[1][0]);
-  });
-
-  checkResults(results, (result, assert) => {
-    let ok = true;
-    for (let i = 0; i < result.length; i++) {
-      if (!areCorresponding(result[i], assert)) {
-        ok = false;
-        break;
-      }
-    }
-    console.log((ok) ? "PASS" : `FAIL\n\t${result}\n\t${assert}`);
+  checkResults(tests, (left, right) => {
+    const a = JSON.stringify(left);
+    const b = JSON.stringify(right)
+    console.log((a === b) ? "PASS" : `FAIL:\n\texpected: ${b}\n\tgot: ${a}`);
   });
 }
 
@@ -193,19 +172,15 @@ function spinalCase(str) {
 
 function ch5Handler() {
   const tests = [
-    ["This Is Spinal Tap", "this-is-spinal-tap"],
-    ["thisIsSpinalTap", "this-is-spinal-tap"],
-    ["The_Andy_Griffith_Show", "the-andy-griffith-show"],
-    ["Teletubbies say Eh-oh", "teletubbies-say-eh-oh"],
-    ["AllThe-small Things", "all-the-small-things"],
+    assertion(spinalCase("This Is Spinal Tap"), "this-is-spinal-tap"),
+    assertion(spinalCase("thisIsSpinalTap"), "this-is-spinal-tap"),
+    assertion(spinalCase("The_Andy_Griffith_Show"), "the-andy-griffith-show"),
+    assertion(spinalCase("Teletubbies say Eh-oh"), "teletubbies-say-eh-oh"),
+    assertion(spinalCase("AllThe-small Things"), "all-the-small-things"),
   ];
 
-  const results = tests.map(args => {
-    return assertion(spinalCase(args[0]), args[1]);
-  });
-
-  checkResults(results, (result, assert) => {
-    console.log((result === assert) ? "PASS" : `FAIL:\n\t${result}`);
+  checkResults(tests, (left, right) => {
+    console.log((left === right) ? "PASS" : `FAIL:\n\t${left}`);
   });
 }
 
@@ -225,21 +200,17 @@ function translatePigLatin(str) {
 
 function ch6Handler() {
   const tests = [
-    ["california", "aliforniacay"],
-    ["paragraphs", "aragraphspay"],
-    ["glove", "oveglay"],
-    ["algorithm", "algorithmway"],
-    ["eight", "eightway"],
-    ["schwartz", "artzschway"],
-    ["rhythm", "rhythmay"],
+    assertion(translatePigLatin("california"), "aliforniacay"),
+    assertion(translatePigLatin("paragraphs"), "aragraphspay"),
+    assertion(translatePigLatin("glove"), "oveglay"),
+    assertion(translatePigLatin("algorithm"), "algorithmway"),
+    assertion(translatePigLatin("eight"), "eightway"),
+    assertion(translatePigLatin("schwartz"), "artzschway"),
+    assertion(translatePigLatin("rhythm"), "rhythmay"),
   ];
 
-  const results = tests.map(args => {
-    return assertion(translatePigLatin(args[0]), args[1]);
-  });
-
-  checkResults(results, (result, assert) => {
-    console.log((result === assert) ? "PASS" : `FAIL:\n\t${result}`);
+  checkResults(tests, (left, right) => {
+    console.log((left === right) ? "PASS" : `FAIL:\n\t${left}`);
   });
 }
 
@@ -268,21 +239,17 @@ function myReplace(str, before, after) {
 
 function ch7Handler() {
   const tests = [
-    ["Let us go to the store", "store", "mall", "Let us go to the mall"],
-    ["He is Sleeping on the couch", "Sleeping", "sitting", "He is Sitting on the couch"],
-    ["I think we should look up there", "up", "Down", "I think we should look down there"],
-    ["This has a spellngi error", "spellngi", "spelling", "This has a spelling error"],
-    ["His name is Tom", "Tom", "john", "His name is John"],
-    ["Let us get back to more Coding", "Coding", "algorithms", "Let us get back to more Algorithms"],
+    assertion(myReplace("Let us go to the store", "store", "mall"), "Let us go to the mall"),
+    assertion(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"), "He is Sitting on the couch"),
+    assertion(myReplace("I think we should look up there", "up", "Down"), "I think we should look down there"),
+    assertion(myReplace("This has a spellngi error", "spellngi", "spelling"), "This has a spelling error"),
+    assertion(myReplace("His name is Tom", "Tom", "john"), "His name is John"),
+    assertion(myReplace("Let us get back to more Coding", "Coding", "algorithms"), "Let us get back to more Algorithms"),
   ];
 
-  const results = tests.map(args => {
-    return assertion(myReplace(args[0], args[1], args[2]), args[3]);
-  });
-
-  checkResults(results, (result, assert) => {
-    const pass = result === assert;
-    console.log((pass) ? "PASS" : `FAIL:\n\texpect: ${assert}\n\tgot: ${result}`);
+  checkResults(tests, (left, right) => {
+    const pass = left === right;
+    console.log((pass) ? "PASS" : `FAIL:\n\texpect: ${right}\n\tgot: ${left}`);
   });
 
 }
@@ -323,18 +290,14 @@ function pairElement(str) {
 
 function ch8Handler() {
   const tests = [
-    ["ATCGA", [["A", "T"], ["T", "A"], ["C", "G"], ["G", "C"], ["A", "T"]]],
-    ["TTGAG", [["T", "A"], ["T", "A"], ["G", "C"], ["A", "T"], ["G", "C"]]],
-    ["CTCTA", [["C", "G"], ["T", "A"], ["C", "G"], ["T", "A"], ["A", "T"]]],
+    assertion(pairElement("ATCGA"), [["A", "T"], ["T", "A"], ["C", "G"], ["G", "C"], ["A", "T"]]),
+    assertion(pairElement("TTGAG"), [["T", "A"], ["T", "A"], ["G", "C"], ["A", "T"], ["G", "C"]]),
+    assertion(pairElement("CTCTA"), [["C", "G"], ["T", "A"], ["C", "G"], ["T", "A"], ["A", "T"]]),
   ];
 
-  const results = tests.map(args => {
-    return assertion(pairElement(args[0]), args[1]);
-  });
-
-  checkResults(results, (result, assert) => {
-    const x = JSON.stringify(result);
-    const y = JSON.stringify(assert);
+  checkResults(tests, (left, right) => {
+    const x = JSON.stringify(left);
+    const y = JSON.stringify(right);
     console.log((x === y) ? "PASS" : `FAIL:\n\t${x}\n\t${y}`);
   });
 }
@@ -360,19 +323,15 @@ function fearNotLetter(str) {
 
 function ch9Handler() {
   const tests = [
-    ["abce", "d"],
-    ["abcdefghjklmno", "i"],
-    ["stvwx", "u"],
-    ["bcdf", "e"],
-    ["abcdefghijklmnopqrstuvwxyz", undefined],
+    assertion(fearNotLetter("abce"), "d"),
+    assertion(fearNotLetter("abcdefghjklmno"), "i"),
+    assertion(fearNotLetter("stvwx"), "u"),
+    assertion(fearNotLetter("bcdf"), "e"),
+    assertion(fearNotLetter("abcdefghijklmnopqrstuvwxyz"), undefined),
   ];
 
-  const results = tests.map(args => {
-    return assertion(fearNotLetter(args[0]), args[1]);
-  });
-
-  checkResults(results, (result, assert) => {
-    console.log((result === assert) ? "PASS" : `FAIL:\n\texpected: ${assert}\n\tgot: ${result}`);
+  checkResults(tests, (left, right) => {
+    console.log((left === right) ? "PASS" : `FAIL:\n\texpected: ${right}\n\tgot: ${left}`);
   });
 
 }
@@ -403,20 +362,12 @@ function uniteUnique(...arr) {
 }
 
 function ch10Handler() {
-  const tests = [
-    [[1, 3, 2], [5, 2, 1, 4], [2, 1], [1, 3, 2, 5, 4]],
-    [[1, 2, 3], [5, 2, 1], [1, 2, 3, 5]],
-    [[1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8], [1, 2, 3, 5, 4, 6, 7, 8]],
-    [[1, 3, 2], [5, 4], [5, 6], [1, 3, 2, 5, 4, 6]],
-    [[1, 3, 2, 3], [5, 2, 1, 4], [2, 1], [1, 3, 2, 5, 4]],
-  ];
-
   const results = [
-    assertion(uniteUnique(tests[0][0], tests[0][1], tests[0][2]), tests[0][3]),
-    assertion(uniteUnique(tests[1][0], tests[1][1]), tests[1][2]),
-    assertion(uniteUnique(tests[2][0], tests[2][1], tests[2][2], tests[2][3]), tests[2][4]),
-    assertion(uniteUnique(tests[3][0], tests[3][1], tests[3][2]), tests[3][3]),
-    assertion(uniteUnique(tests[4][0], tests[4][1], tests[4][2]), tests[4][3]),
+    assertion(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]), [1, 3, 2, 5, 4]),
+    assertion(uniteUnique([1, 2, 3], [5, 2, 1]), [1, 2, 3, 5]),
+    assertion(uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]), [1, 2, 3, 5, 4, 6, 7, 8]),
+    assertion(uniteUnique([1, 3, 2], [5, 4], [5, 6]), [1, 3, 2, 5, 4, 6]),
+    assertion(uniteUnique([1, 3, 2, 3], [5, 2, 1, 4], [2, 1]), [1, 3, 2, 5, 4]),
   ];
 
   checkResults(results, (result, assert) => {
@@ -438,21 +389,17 @@ function convertHTML(str) {
 
 function ch11Handler() {
   const tests = [
-    ["Dolce & Gabbana", "Dolce &amp; Gabbana"],
-    ["Hamburgers < Pizza < Tacos", "Hamburgers &lt; Pizza &lt; Tacos"],
-    ["Sixty > twelve", "Sixty &gt; twelve"],
-    ['Stuff in "quotation marks"', "Stuff in &quot;quotation marks&quot;"],
-    ["Schindler's List", "Schindler&apos;s List"],
-    ["<>", "&lt;&gt;"],
-    ["abc", "abc"],
+    assertion(convertHTML("Dolce & Gabbana"), "Dolce &amp; Gabbana"),
+    assertion(convertHTML("Hamburgers < Pizza < Tacos"), "Hamburgers &lt; Pizza &lt; Tacos"),
+    assertion(convertHTML("Sixty > twelve"), "Sixty &gt; twelve"),
+    assertion(convertHTML("Stuff in \"quotation marks\""), "Stuff in &quot;quotation marks&quot;"),
+    assertion(convertHTML("Schindler's List"), "Schindler&apos;s List"),
+    assertion(convertHTML("<>"), "&lt;&gt;"),
+    assertion(convertHTML("abc"), "abc"),
   ];
 
-  const results = tests.map(args => {
-    return assertion(convertHTML(args[0]), args[1]);
-  });
-
-  checkResults(results, (result, assert) => {
-    console.log((result === assert) ? "PASS" : `FAIL\n\texpected: ${assert}\n\tgot: ${result}`);
+  checkResults(tests, (left, right) => {
+    console.log((left === right) ? "PASS" : `FAIL\n\texpected: ${right}\n\tgot: ${left}`);
   });
 }
 
@@ -484,19 +431,15 @@ function sumFibs(num) {
 
 function ch12Handler() {
   const tests = [
-    [1000, 1785],
-    [4000000, 4613732],
-    [4, 5],
-    [75024, 60696],
-    [75025, 135721],
+    assertion(sumFibs(1000), 1785),
+    assertion(sumFibs(4000000), 4613732),
+    assertion(sumFibs(4), 5),
+    assertion(sumFibs(75024), 60696),
+    assertion(sumFibs(75025), 135721),
   ];
 
-  const results = tests.map((args) => {
-    return assertion(sumFibs(args[0]), args[1]);
-  });
-
-  checkResults(results, (result, assert) => {
-    console.log((result === assert) ? "PASS" : `FAIL\n\texpected: ${assert}\n\tgot: ${result}`);
+  checkResults(tests, (left, right) => {
+    console.log((left === right) ? "PASS" : `FAIL\n\texpected: ${right}\n\tgot: ${left}`);
   });
 }
 
@@ -537,16 +480,12 @@ function sumPrimes(n) {
 
 function ch13Handler() {
   const tests = [
-    [10, 17],
-    [977, 73156],
+    assertion(sumPrimes(10), 17),
+    assertion(sumPrimes(977), 73156),
   ];
 
-  const results = tests.map((args) => {
-    return assertion(sumPrimes(args[0]), args[1]);
-  })
-
-  checkResults(results, (result, assert) => {
-    console.log((result === assert) ? "PASS" : `FAIL\n\texpected: ${assert}\n\tgot: ${result}`);
+  checkResults(tests, (left, right) => {
+    console.log((left === right) ? "PASS" : `FAIL\n\texpected: ${right}\n\tgot: ${left}`);
   });
 }
 
@@ -580,19 +519,15 @@ function smallestCommons(arr) {
 
 function ch14Handler() {
   const tests = [
-    [[1, 5], 60],
-    [[5, 1], 60],
-    [[2, 10], 2520],
-    [[1, 13], 360360],
-    [[23, 18], 6056820],
+    assertion(smallestCommons([1, 5]), 60),
+    assertion(smallestCommons([5, 1]), 60),
+    assertion(smallestCommons([2, 10]), 2520),
+    assertion(smallestCommons([1, 13]), 360360),
+    assertion(smallestCommons([23, 18]), 6056820),
   ];
 
-  const results = tests.map(args => {
-    return assertion(smallestCommons(args[0]), args[1]);
-  });
-
-  checkResults(results, (result, assert) => {
-    console.log((result === assert) ? "PASS" : `FAIL:\n\texpected: ${assert}\n\tgot: ${result}`);
+  checkResults(tests, (left, right) => {
+    console.log((left === right) ? "PASS" : `FAIL:\n\texpected: ${right}\n\tgot: ${left}`);
   });
 }
 
@@ -617,22 +552,18 @@ function dropElements(arr, func) {
 
 function ch15Handler() {
   const tests = [
-    [[1, 2, 3, 4], function(n) { return n >= 3; }, [3, 4]],
-    [[0, 1, 0, 1], function(n) { return n === 1; }, [1, 0, 1]],
-    [[1, 2, 3], function(n) { return n > 0; }, [1, 2, 3]],
-    [[1, 2, 3, 4], function(n) { return n > 5; }, []],
-    [[1, 2, 3, 7, 4], function(n) { return n > 3; }, [7, 4]],
-    [[1, 2, 3, 9, 2], function(n) { return n > 2; }, [3, 9, 2]],
+    assertion(dropElements([1, 2, 3, 4], function(n) { return n >= 3; }), [3, 4]),
+    assertion(dropElements([0, 1, 0, 1], function(n) { return n === 1; }), [1, 0, 1]),
+    assertion(dropElements([1, 2, 3], function(n) { return n > 0; }), [1, 2, 3]),
+    assertion(dropElements([1, 2, 3, 4], function(n) { return n > 5; }), []),
+    assertion(dropElements([1, 2, 3, 7, 4], function(n) { return n > 3; }), [7, 4]),
+    assertion(dropElements([1, 2, 3, 9, 2], function(n) { return n > 2; }), [3, 9, 2]),
   ];
 
-  const results = tests.map((args) => {
-    return assertion(dropElements(args[0], args[1]), args[2]);
-  });
-
-  checkResults(results, (result, assertion) => {
-    const left = JSON.stringify(result);
-    const right = JSON.stringify(assertion);
-    console.log((left === right) ? "PASS" : `FAIL:\n\texpect: ${right}\n\tgot: ${left}`);
+  checkResults(tests, (left, right) => {
+    const a = JSON.stringify(left);
+    const b = JSON.stringify(right);
+    console.log((a === b) ? "PASS" : `FAIL:\n\texpect: ${b}\n\tgot: ${a}`);
   });
 }
 
@@ -644,20 +575,16 @@ function steamrollArray(arr) {
 
 function ch16Handler() {
   const tests = [
-    [[[["a"]], [["b"]]], ["a", "b"]],
-    [[1, [2], [3, [[4]]]], [1, 2, 3, 4]],
-    [[1, [], [3, [[4]]]], [1, 3, 4]],
-    [[1, {}, [3, [[4]]]], [1, {}, 3, 4]],
+    assertion(steamrollArray([[["a"]], [["b"]]]), ["a", "b"]),
+    assertion(steamrollArray([1, [2], [3, [[4]]]]), [1, 2, 3, 4]),
+    assertion(steamrollArray([1, [], [3, [[4]]]]), [1, 3, 4]),
+    assertion(steamrollArray([1, {}, [3, [[4]]]]), [1, {}, 3, 4]),
   ];
 
-  const results = tests.map((args) => {
-    return assertion(steamrollArray(args[0]), args[1]);
-  })
-
-  checkResults(results, (result, assert) => {
-    const left = JSON.stringify(result);
-    const right = JSON.stringify(assert);
-    console.log((left === right) ? "PASS" : `FAIL:\n\texpect: ${right}\n\tgot: ${left}`);
+  checkResults(tests, (left, right) => {
+    const a = JSON.stringify(left);
+    const b = JSON.stringify(right);
+    console.log((a === b) ? "PASS" : `FAIL:\n\texpect: ${b}\n\tgot: ${a}`);
   });
 }
 
@@ -674,15 +601,11 @@ function binaryAgent(str) {
 
 function ch17Handler() {
   const tests = [
-    ["01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111", "Aren't bonfires fun!?"],
-    ["01001001 00100000 01101100 01101111 01110110 01100101 00100000 01000110 01110010 01100101 01100101 01000011 01101111 01100100 01100101 01000011 01100001 01101101 01110000 00100001", "I love FreeCodeCamp!"],
+    assertion(binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111"), "Aren't bonfires fun!?"),
+    assertion(binaryAgent("01001001 00100000 01101100 01101111 01110110 01100101 00100000 01000110 01110010 01100101 01100101 01000011 01101111 01100100 01100101 01000011 01100001 01101101 01110000 00100001"), "I love FreeCodeCamp!"),
   ];
 
-  const results = tests.map((args) => {
-    return assertion(binaryAgent(args[0]), args[1]);
-  })
-
-  checkResults(results, (left, right) => {
+  checkResults(tests, (left, right) => {
     console.log((left === right) ? "PASS" : `FAIL:\n\texpect: ${right}\n\tgot: ${left}`);
   });
 }
@@ -709,23 +632,19 @@ function truthCheck(collection, pre) {
 
 function ch18Handler() {
   const tests = [
-    [[{ name: "Quincy", role: "Founder", isBot: false }, { name: "Naomi", role: "", isBot: false }, { name: "Camperbot", role: "Bot", isBot: true }], "isBot", false],
-    [[{ name: "Quincy", role: "Founder", isBot: false }, { name: "Naomi", role: "", isBot: false }, { name: "Camperbot", role: "Bot", isBot: true }], "name", true],
-    [[{ name: "Quincy", role: "Founder", isBot: false }, { name: "Naomi", role: "", isBot: false }, { name: "Camperbot", role: "Bot", isBot: true }], "role", false],
-    [[{ name: "Pikachu", number: 25, caught: 3 }, { name: "Togepi", number: 175, caught: 1 }], "number", true],
-    [[{ name: "Pikachu", number: 25, caught: 3 }, { name: "Togepi", number: 175, caught: 1 }, { name: "MissingNo", number: NaN, caught: 0 }], "caught", false],
-    [[{ name: "Pikachu", number: 25, caught: 3 }, { name: "Togepi", number: 175, caught: 1 }, { name: "MissingNo", number: NaN, caught: 0 }], "number", false],
-    [[{ name: "Quincy", username: "QuincyLarson" }, { name: "Naomi", username: "nhcarrigan" }, { name: "Camperbot" }], "username", false],
-    [[{ name: "freeCodeCamp", users: [{ name: "Quincy" }, { name: "Naomi" }] }, { name: "Code Radio", users: [{ name: "Camperbot" }] }, { name: "", users: [] }], "users", true],
-    [[{ id: 1, data: { url: "https://freecodecamp.org", name: "freeCodeCamp" } }, { id: 2, data: { url: "https://coderadio.freecodecamp.org/", name: "CodeRadio" } }, { id: null, data: {} }], "data", true],
-    [[{ id: 1, data: { url: "https://freecodecamp.org", name: "freeCodeCamp" } }, { id: 2, data: { url: "https://coderadio.freecodecamp.org/", name: "CodeRadio" } }, { id: null, data: {} }], "id", false],
+    assertion(truthCheck([{ name: "Quincy", role: "Founder", isBot: false }, { name: "Naomi", role: "", isBot: false }, { name: "Camperbot", role: "Bot", isBot: true }], "isBot"), false),
+    assertion(truthCheck([{ name: "Quincy", role: "Founder", isBot: false }, { name: "Naomi", role: "", isBot: false }, { name: "Camperbot", role: "Bot", isBot: true }], "name"), true),
+    assertion(truthCheck([{ name: "Quincy", role: "Founder", isBot: false }, { name: "Naomi", role: "", isBot: false }, { name: "Camperbot", role: "Bot", isBot: true }], "role"), false),
+    assertion(truthCheck([{ name: "Pikachu", number: 25, caught: 3 }, { name: "Togepi", number: 175, caught: 1 }], "number"), true),
+    assertion(truthCheck([{ name: "Pikachu", number: 25, caught: 3 }, { name: "Togepi", number: 175, caught: 1 }, { name: "MissingNo", number: NaN, caught: 0 }], "caught"), false),
+    assertion(truthCheck([{ name: "Pikachu", number: 25, caught: 3 }, { name: "Togepi", number: 175, caught: 1 }, { name: "MissingNo", number: NaN, caught: 0 }], "number"), false),
+    assertion(truthCheck([{ name: "Quincy", username: "QuincyLarson" }, { name: "Naomi", username: "nhcarrigan" }, { name: "Camperbot" }], "username"), false),
+    assertion(truthCheck([{ name: "freeCodeCamp", users: [{ name: "Quincy" }, { name: "Naomi" }] }, { name: "Code Radio", users: [{ name: "Camperbot" }] }, { name: "", users: [] }], "users"), true),
+    assertion(truthCheck([{ id: 1, data: { url: "https://freecodecamp.org", name: "freeCodeCamp" } }, { id: 2, data: { url: "https://coderadio.freecodecamp.org/", name: "CodeRadio" } }, { id: null, data: {} }], "data"), true),
+    assertion(truthCheck([{ id: 1, data: { url: "https://freecodecamp.org", name: "freeCodeCamp" } }, { id: 2, data: { url: "https://coderadio.freecodecamp.org/", name: "CodeRadio" } }, { id: null, data: {} }], "id"), false),
   ];
 
-  const results = tests.map((args) => {
-    return assertion(truthCheck(args[0], args[1]), args[2]);
-  })
-
-  checkResults(results, (left, right) => {
+  checkResults(tests, (left, right) => {
     console.log((left === right) ? "PASS" : `FAIL:\n\texpect: ${right}\n\tgot: ${left}`);
   });
 }
@@ -762,27 +681,17 @@ function addTogether(...args) {
 
 function ch19Handler() {
   const tests = [
-    [2, 3, 5],
-    [23, 30, 53],
-    [5, 7, 12],
-    ["https://www.youtube.com/watch?v=dQw4w9WgXcQ", undefined],
-    [2, "3", undefined],
-    [2, [3], undefined],
-    ["2", 3, undefined],
-    [5, undefined, undefined],
+    assertion(addTogether(2, 3), 5),
+    assertion(addTogether(23, 30), 53),
+    assertion(addTogether(5)(7), 12),
+    assertion(addTogether("https://www.youtube.com/watch?v=dQw4w9WgXcQ"), undefined),
+    assertion(addTogether(2, "3"), undefined),
+    assertion(addTogether(2)([3]), undefined),
+    assertion(addTogether("2", 3), undefined),
+    assertion(addTogether(5, undefined), undefined),
   ];
 
-  const results = [
-    assertion(addTogether(tests[0][0], tests[0][1]), tests[0][2]),
-    assertion(addTogether(tests[1][0], tests[1][1]), tests[1][2]),
-    assertion(addTogether(tests[2][0])(tests[2][1]), tests[2][2]),
-    assertion(addTogether(tests[3][0]), tests[3][1]),
-    assertion(addTogether(tests[4][0])(tests[4][1]), tests[4][2]),
-    assertion(addTogether(tests[5][0], tests[5][1]), tests[5][2]),
-    assertion(addTogether(tests[6][0], tests[6][1]), tests[6][2]),
-  ];
-
-  checkResults(results, (left, right) => {
+  checkResults(tests, (left, right) => {
     console.log((left === right) ? "PASS" : `FAIL:\n\texpect: ${right}\n\tgot: ${left}`);
   });
 }
