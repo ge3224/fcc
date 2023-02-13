@@ -334,18 +334,18 @@ function checkCashRegister(price, cash, cid) {
   });
 
   for (let type in coinsAndBills) {
-    const multiple = coinsAndBills[type];
+    const divisor = coinsAndBills[type];
 
-    if (owe >= multiple) {
+    if (owe >= divisor) {
       const subtotal = [type];
       if (owe <= drawer[type]) {
-        if (owe % multiple === 0) {
+        if (owe % divisor === 0) {
           subtotal.push(owe);
           change.push(subtotal);
           break;
         }
 
-        const deduct = multiple * Math.floor(owe / multiple);
+        const deduct = divisor * Math.floor(owe / divisor);
         subtotal.push(deduct);
         owe = +((owe - deduct).toFixed(2));
         change.push(subtotal);
