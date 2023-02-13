@@ -247,6 +247,132 @@ function cp4Handler() {
   });
 }
 
+// Design a cash register drawer function checkCashRegister() that accepts 
+// purchase price as the first argument (price), payment as the second argument 
+// (cash), and cash-in-drawer (cid) as the third argument.
+//
+// cid is a 2D array listing available currency.
+//
+// The checkCashRegister() function should always return an object with a 
+// status key and a change key.
+//
+// Return {status: "INSUFFICIENT_FUNDS", change: []} if cash-in-drawer is less 
+// than the change due, or if you cannot return the exact change.
+//
+// Return {status: "CLOSED", change: [...]} with cash-in-drawer as the value 
+// for the key change if it is equal to the change due.
+//
+// Otherwise, return {status: "OPEN", change: [...]}, with the change due in 
+// coins and bills, sorted in highest to lowest order, as the value of the 
+// change key.
+//
+// | Currency Unit	      | Amount             |
+// |----------------------|--------------------|
+// | Penny	              | $0.01 (PENNY)      |
+// | Nickel	              | $0.05 (NICKEL)     |
+// | Dime	                | $0.1 (DIME)        |
+// | Quarter	            | $0.25 (QUARTER)    |
+// | Dollar	              | $1 (ONE)           |
+// | Five Dollars	        | $5 (FIVE)          |
+// | Ten Dollars	        | $10 (TEN)          |
+// | Twenty Dollars	      | $20 (TWENTY)       |
+// | One-hundred Dollars	| $100 (ONE HUNDRED) |
+//
+function checkCashRegister(price, cash, cid) {
+  const message = {
+    open: "OPEN",
+    closed: "CLOSED",
+    insufficient: "INSUFFICIENT_FUNDS",
+  }
+
+  const change = [];
+
+  // return early if not enough cash was provided, or no change is owe.
+  if (price >= cash) {
+    return {
+      status: message.closed,
+      change: change,
+    }
+  }
+
+  let owe = +((cash - price).toFixed(2));
+
+  // check cash register for sufficient funds
+  let onhand = cid.reduce((subtotal, slot) => {
+    subtotal += slot[1];
+    return +(subtotal.toFixed(2));
+  }, 0);
+
+  if (onhand < owe) {
+    return {
+      status: message.insufficient,
+      change: change,
+    }
+  }
+
+  // calculate change
+  const drawer = {};
+  cid.forEach(slot => {
+    const prop = slot[0];
+    drawer[prop] = slot[1];
+  });
+
+  const types = [
+    ["ONE HUNDRED", 100],
+    ["TWENTY", 20],
+    ["TEN", 10],
+    ["FIVE", 5],
+    ["ONE", 1],
+    ["QUARTER", 0.25],
+    ["DIME", 0.1],
+    ["NICKEL", 0.05],
+    ["PENNY", 0.01]
+  ];
+
+  for (let i = 0; i < types.length; i++) {
+    const type = types[i][0];
+    const multiple = types[i][1];
+
+    if (owe >= multiple) {
+      const subtotal = [type];
+      if (owe <= drawer[type]) {
+        if (owe % multiple === 0) {
+          subtotal.push(owe);
+          change.push(subtotal);
+          break;
+        }
+
+        const deduct = multiple * Math.floor(owe / multiple);
+        subtotal.push(deduct);
+        owe = +((owe - deduct).toFixed(2));
+        change.push(subtotal);
+
+      } else {
+        subtotal.push(drawer[type]);
+        owe = +((owe - drawer[type]).toFixed(2));
+        change.push(subtotal);
+      }
+    }
+  }
+
+  return {
+    status: message.open,
+    change: change,
+  }
+}
+
 function cp5Handler() {
-  console.log("Hello, from cp5!");
+  const tests = [
+    assertion(checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]), { status: "OPEN", change: [["QUARTER", 0.5]] }),
+    assertion(checkCashRegister(3.26, 100, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]), { status: "OPEN", change: [["TWENTY", 60], ["TEN", 20], ["FIVE", 15], ["ONE", 1], ["QUARTER", 0.5], ["DIME", 0.2], ["PENNY", 0.04]] }),
+    assertion(checkCashRegister(19.5, 20, [["PENNY", 0.01], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]), { status: "INSUFFICIENT_FUNDS", change: [] }),
+    assertion(checkCashRegister(19.5, 20, [["PENNY", 0.01], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 1], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]), { status: "INSUFFICIENT_FUNDS", change: [] }),
+    // assertion(checkCashRegister(19.5, 20, [["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]), { status: "CLOSED", change: [["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]] }),
+  ];
+
+  checkResults(tests, (left, right) => {
+    const a = JSON.stringify(left);
+    const b = JSON.stringify(right);
+    console.log((a === b) ? "PASS" : `FAIL:\n\texpected: ${b}\n\tgot: ${a}`);
+  });
 }
