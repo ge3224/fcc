@@ -384,6 +384,96 @@ export function challenge7() {
   runTests(tests);
 }
 
+function userConstForActionTypes() {
+  // A common practice when working with Redux is to assign action types as 
+  // read-only constants, then reference these constants wherever they are used. 
+  // You can refactor the code you're working with to write the action types as 
+  // const declarations.
+  // ---
+  // Declare LOGIN and LOGOUT as const values and assign them to the strings 
+  // 'LOGIN' and 'LOGOUT', respectively. Then, edit the authReducer() and the 
+  // action creators to reference these constants instead of string values.
+  //
+  // Note: It's generally a convention to write constants in all uppercase, and 
+  // this is standard practice in Redux as well.
+  const LOGIN = "LOGIN";
+  const LOGOUT = "LOGOUT";
+
+  const defaultState = {
+    authenticated: false
+  };
+
+  const authReducer = (state = defaultState, action) => {
+
+    switch (action.type) {
+      case LOGIN:
+        return {
+          authenticated: true
+        }
+      case LOGOUT:
+        return {
+          authenticated: false
+        }
+
+      default:
+        return state;
+
+    }
+
+  };
+
+  const store = Redux.createStore(authReducer);
+
+  const loginUser = () => {
+    return {
+      type: LOGIN
+    }
+  };
+
+  const logoutUser = () => {
+    return {
+      type: LOGOUT
+    }
+  };
+
+  return {
+    loginUser,
+    logoutUser,
+    defaultState,
+    store,
+    LOGIN,
+    LOGOUT,
+  };
+}
+
+export const CH_8 = "challenge_8";
+
+export function challenge8() {
+
+  const eight = userConstForActionTypes();
+  const dispatchTest1 = () => {
+    eight.store.dispatch(eight.loginUser());
+    return eight.store.getState().authenticated;
+  }
+
+  const dispatchTest2 = () => {
+    eight.store.dispatch(eight.logoutUser());
+    return eight.store.getState().authenticated;
+  }
+
+  const tests = [
+    assertion(typeof eight.loginUser(), "object"),
+    assertion(typeof eight.logoutUser(), "object"),
+    assertion(eight.defaultState.authenticated, false),
+    assertion(eight.LOGIN, "LOGIN"),
+    assertion(eight.LOGOUT, "LOGOUT"),
+    assertion(dispatchTest1(), true),
+    assertion(dispatchTest2(), false),
+  ];
+
+  runTests(tests);
+}
+
 function runTests(tests) {
   checkResults(tests, (left, right) => {
     console.log((left === right) ? "PASS" : `FAIL:\n\t${left}`);
