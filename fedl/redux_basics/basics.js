@@ -1,5 +1,6 @@
 import { assertion, checkResults } from "../../jads/src/util";
 import * as Redux from "redux";
+import * as ReduxThunk from "redux-thunk";
 
 function runTests(tests) {
   checkResults(tests, (left, right) => {
@@ -528,13 +529,6 @@ export const CH_9 = "challenge_9";
 export function challenge9() {
   const nine = registerStoreListener();
 
-  // store.dispatch({ type: ADD });
-  // console.log(count);
-  // store.dispatch({ type: ADD });
-  // console.log(count);
-  // store.dispatch({ type: ADD });
-  // console.log(count);
-
   const dispTest = () => {
     nine.store.dispatch({ type: nine.ADD });
     return nine.getCount();
@@ -765,3 +759,155 @@ export function challenge11() {
   runTests(tests);
 }
 
+function useMiddlewareToHandleAsyncActions() {
+  // So far these challenges have avoided discussing asynchronous actions, but 
+  // they are an unavoidable part of web development. At some point you'll need 
+  // to call asynchronous endpoints in your Redux app, so how do you handle 
+  // these types of requests? Redux provides middleware designed specifically 
+  // for this purpose, called Redux Thunk middleware. Here's a brief 
+  // description how to use this with Redux.
+  //
+  // To include Redux Thunk middleware, you pass it as an argument to Redux.
+  // applyMiddleware(). This statement is then provided as a second optional 
+  // parameter to the createStore() function. Take a look at the code at the 
+  // bottom of the editor to see this. Then, to create an asynchronous action, 
+  // you return a function in the action creator that takes dispatch as an 
+  // argument. Within this function, you can dispatch actions and perform 
+  // asynchronous requests.
+  //
+  // In this example, an asynchronous request is simulated with a setTimeout()
+  // call. It's common to dispatch an action before initiating any 
+  // asynchronous behavior so that your application state knows that some data 
+  // is being requested (this state could display a loading icon, for instance). 
+  // Then, once you receive the data, you dispatch another action which 
+  // carries the data as a payload along with information that the action is 
+  // completed.
+  //
+  // Remember that you're passing dispatch as a parameter to this special 
+  // action creator. This is what you'll use to dispatch your actions, you 
+  // simply pass the action directly to dispatch and the middleware takes care 
+  // of the rest.
+  // ---
+  // Write both dispatches in the handleAsync() action creator. Dispatch 
+  // requestingData() before the setTimeout() (the simulated API call). Then, 
+  // after you receive the (pretend) data, dispatch the receivedData() action, 
+  // passing in this data. Now you know how to handle asynchronous actions in 
+  // Redux. Everything else continues to behave as before.
+  const REQUESTING_DATA = 'REQUESTING_DATA'
+  const RECEIVED_DATA = 'RECEIVED_DATA'
+
+  const requestingData = () => { return { type: REQUESTING_DATA } }
+  const receivedData = (data) => { return { type: RECEIVED_DATA, users: data.users } }
+
+  const handleAsync = () => {
+    return function(dispatch) {
+      dispatch(requestingData());
+
+      setTimeout(function() {
+        let data = {
+          users: ['Jeff', 'William', 'Alice']
+        }
+        dispatch(receivedData(data))
+
+      }, 2500);
+    }
+  };
+
+  const defaultState = {
+    fetching: false,
+    users: []
+  };
+
+  const asyncDataReducer = (state = defaultState, action) => {
+    switch (action.type) {
+      case REQUESTING_DATA:
+        return {
+          fetching: true,
+          users: []
+        }
+      case RECEIVED_DATA:
+        return {
+          fetching: false,
+          users: action.users
+        }
+      default:
+        return state;
+    }
+  };
+
+  const store = Redux.createStore(
+    asyncDataReducer,
+    Redux.applyMiddleware(ReduxThunk.default)
+  );
+
+  return {
+    store,
+    requestingData,
+    receivedData,
+    asyncDataReducer,
+    handleAsync,
+    REQUESTING_DATA,
+    RECEIVED_DATA,
+  }
+}
+
+export const CH_12 = "challenge_12";
+
+export function challenge12() {
+  const obj = useMiddlewareToHandleAsyncActions();
+
+  const dispatchFetching = () => {
+    obj.store.dispatch(obj.requestingData());
+    return obj.store.getState().fetching;
+  }
+
+  const dispatchAsync = () => {
+    // reset state
+    obj.store.dispatch({
+      type: "",
+      data: {
+        fetching: false,
+        users: []
+      }
+    });
+    // dispatch handleAsync
+    obj.store.dispatch(obj.handleAsync());
+    const result = {
+      initial: {
+        fetching: obj.store.getState().fetching,
+        users: obj.store.getState().users
+      }
+    }
+    return obj.store.getState();
+  }
+
+  const tests = [
+    // The requestingData action creator should return an object of type equal 
+    // to the value of REQUESTING_DATA.
+    assertion(typeof obj.requestingData(), "object"),
+    assertion(obj.requestingData().hasOwnProperty("type"), true),
+    assertion(obj.requestingData().type, obj.REQUESTING_DATA),
+
+    // The receivedData action creator should return an object of type equal to 
+    // the value of RECEIVED_DATA.
+    assertion(typeof obj.receivedData({ users: [] }), "object"),
+    assertion(obj.receivedData({ users: [] }).hasOwnProperty("type"), true),
+    assertion(obj.receivedData({ users: [] }).type, obj.RECEIVED_DATA),
+
+    // asyncDataReducer should be a function.
+    assertion(typeof obj.asyncDataReducer, "function"),
+
+    // Dispatching the requestingData action creator should update the store 
+    // state property of fetching to true.
+    assertion(obj.store.getState().fetching, false),
+    assertion(dispatchFetching(), true),
+
+    // Dispatching handleAsync should dispatch the data request action and 
+    // then dispatch the received data action after a delay.
+    assertion(dispatchAsync().fetching, true),
+    assertion(dispatchAsync().users.length, 0),
+    // solution passing in browser, skipping setup of async tests
+  ];
+
+  runTests(tests);
+}

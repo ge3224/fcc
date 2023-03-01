@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "redux-thunk": "^2.4.2",
     "vite": "^4.1.0"
   },
   "dependencies": {
