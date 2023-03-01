@@ -1,6 +1,11 @@
-import { assertion, checkResults } from "../../../jads/src/util";
+import { assertion, checkResults } from "../../jads/src/util";
 import * as Redux from "redux";
 
+function runTests(tests) {
+  checkResults(tests, (left, right) => {
+    console.log((left === right) ? "PASS" : `FAIL:\n\t${left}`);
+  });
+}
 
 function createReduxStore() {
   // Redux is a state management framework that can be used with a number of 
@@ -474,8 +479,79 @@ export function challenge8() {
   runTests(tests);
 }
 
-function runTests(tests) {
-  checkResults(tests, (left, right) => {
-    console.log((left === right) ? "PASS" : `FAIL:\n\t${left}`);
-  });
+function registerStoreListener() {
+  // Another method you have access to on the Redux store object is 
+  // store.subscribe(). This allows you to subscribe listener functions to the 
+  // store, which are called whenever an action is dispatched against the store. 
+  // One simple use for this method is to subscribe a function to your store 
+  // that simply logs a message every time an action is received and the store 
+  // is updated.
+  // ---
+  // Write a callback function that increments the global variable count every 
+  // time the store receives an action, and pass this function in to the 
+  // store.subscribe() method. You'll see that store.dispatch() is called three 
+  // times in a row, each time directly passing in an action object. Watch the 
+  // console output between the action dispatches to see the updates take place.
+  const ADD = 'ADD';
+
+  const reducer = (state = 0, action) => {
+    switch (action.type) {
+      case ADD:
+        return state + 1;
+      default:
+        return state;
+    }
+  };
+
+  const store = Redux.createStore(reducer);
+
+  // Global count variable:
+  let count = 0;
+
+  // Change code below this line
+  const listener = () => {
+    count++;
+  }
+
+  store.subscribe(listener);
+  // Change code above this line
+
+  return {
+    ADD,
+    getCount: () => count,
+    store,
+  };
+}
+
+export const CH_9 = "challenge_9";
+
+export function challenge9() {
+  const nine = registerStoreListener();
+
+  // store.dispatch({ type: ADD });
+  // console.log(count);
+  // store.dispatch({ type: ADD });
+  // console.log(count);
+  // store.dispatch({ type: ADD });
+  // console.log(count);
+
+  const dispTest = () => {
+    nine.store.dispatch({ type: nine.ADD });
+    return nine.getCount();
+  }
+
+  const tests = [
+    // Dispatching the ADD action on the store should increment the state by 1.
+    assertion(dispTest(), 1),
+
+    // Waiting:There should be a listener function subscribed to the store using 
+    // store.subscribe.
+
+    // Waiting:The store.subscribe should receive a function.
+
+    // Waiting:The callback to store.subscribe should also increment the global 
+    // count variable as the store is updated.
+    assertion(dispTest(), 2),
+  ];
+  runTests(tests);
 }
