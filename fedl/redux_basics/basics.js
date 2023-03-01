@@ -1,12 +1,6 @@
-import { assertion, checkResults } from "../../jads/src/util";
+import { assertion, test } from "../../jads/src/util";
 import * as Redux from "redux";
 import * as ReduxThunk from "redux-thunk";
-
-function runTests(tests) {
-  checkResults(tests, (left, right) => {
-    console.log((left === right) ? "PASS" : `FAIL:\n\t${left}`);
-  });
-}
 
 function createReduxStore() {
   // Redux is a state management framework that can be used with a number of 
@@ -57,7 +51,7 @@ export function challenge1() {
     assertion(store.getState(), 5),
   ];
 
-  runTests(tests);
+  test(tests);
 }
 
 function getStateFromTheReduxStore() {
@@ -89,7 +83,7 @@ export function challenge2() {
     assertion(state, 5),
   ];
 
-  runTests(tests);
+  test(tests);
 }
 
 function defineReduxAction() {
@@ -127,7 +121,7 @@ export function challenge3() {
     assertion(action.type, "LOGIN"),
   ];
 
-  runTests(tests);
+  test(tests);
 }
 
 function defineActionCreator() {
@@ -164,7 +158,7 @@ export function challenge4() {
     assertion(func().type, "LOGIN"),
   ];
 
-  runTests(tests);
+  test(tests);
 }
 
 function dispatchActionEvent() {
@@ -219,7 +213,7 @@ export function challenge5() {
     assertion(five.initialState.login, false),
   ];
 
-  runTests(tests);
+  test(tests);
 }
 
 function handleActionInStore() {
@@ -296,7 +290,7 @@ export function challenge6() {
     assertion(dispatchTest2(), true),
   ];
 
-  runTests(tests);
+  test(tests);
 }
 
 function useSwitchStatementForMultipleActions() {
@@ -387,7 +381,7 @@ export function challenge7() {
     assertion(dispatchTest2(), false),
   ];
 
-  runTests(tests);
+  test(tests);
 }
 
 function userConstForActionTypes() {
@@ -477,7 +471,7 @@ export function challenge8() {
     assertion(dispatchTest2(), false),
   ];
 
-  runTests(tests);
+  test(tests);
 }
 
 function registerStoreListener() {
@@ -547,7 +541,7 @@ export function challenge9() {
     // count variable as the store is updated.
     assertion(dispTest(), 2),
   ];
-  runTests(tests);
+  test(tests);
 }
 
 function combineMultipleReducers() {
@@ -672,7 +666,7 @@ export function challenge10() {
     // counterReducer and the authReducer.
     assertion(typeof ten.rootReducer, "function"),
   ];
-  runTests(tests);
+  test(tests);
 }
 
 function sendActionDataToStore() {
@@ -756,7 +750,7 @@ export function challenge11() {
     assertion(eleven.store.getState(), "Initial State"),
     assertion(dispatchTest(), "Hello!"),
   ];
-  runTests(tests);
+  test(tests);
 }
 
 function useMiddlewareToHandleAsyncActions() {
@@ -909,5 +903,5 @@ export function challenge12() {
     // solution passing in browser, skipping setup of async tests
   ];
 
-  runTests(tests);
+  test(tests);
 }

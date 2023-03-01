@@ -1,4 +1,5 @@
 import * as Basics from "./basics";
+import * as Counter from "./counter.js";
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -16,6 +17,7 @@ document.querySelector('#app').innerHTML = `
       <li><a href="#" id="${Basics.CH_10}">Challenge 10</a></li>
       <li><a href="#" id="${Basics.CH_11}">Challenge 11</a></li>
       <li><a href="#" id="${Basics.CH_12}">Challenge 12</a></li>
+      <li><a href="#" id="${Counter.CH_13}">Challenge 13</a></li>
     </ul>
   </div>
 `;
@@ -34,6 +36,7 @@ function ready() {
     [Basics.CH_10, Basics.challenge10],
     [Basics.CH_11, Basics.challenge11],
     [Basics.CH_12, Basics.challenge12],
+    [Counter.CH_13, Counter.challenge13],
   ];
 
   targets.forEach(target => {

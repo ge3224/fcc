@@ -23,6 +23,12 @@ export function checkResults(assertions, callback) {
   });
 }
 
+export function test(tests) {
+  checkResults(tests, (left, right) => {
+    console.log((left === right) ? "PASS" : `FAIL:\n\t${left}`);
+  });
+}
+
 // check if two objects are corresponding
 export function areCorresponding(obj1, obj2) {
   let ok = true;
