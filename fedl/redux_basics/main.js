@@ -1,5 +1,6 @@
 import * as Basics from "./basics";
-import * as Counter from "./counter.js";
+import * as Counter from "./counter";
+import * as State from "./state_management";
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -18,6 +19,7 @@ document.querySelector('#app').innerHTML = `
       <li><a href="#" id="${Basics.CH_11}">Challenge 11</a></li>
       <li><a href="#" id="${Basics.CH_12}">Challenge 12</a></li>
       <li><a href="#" id="${Counter.CH_13}">Challenge 13</a></li>
+      <li><a href="#" id="${State.CH_14}">Challenge 14</a></li>
     </ul>
   </div>
 `;
@@ -37,6 +39,7 @@ function ready() {
     [Basics.CH_11, Basics.challenge11],
     [Basics.CH_12, Basics.challenge12],
     [Counter.CH_13, Counter.challenge13],
+    [State.CH_14, State.challenge14],
   ];
 
   targets.forEach(target => {
