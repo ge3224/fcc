@@ -20,6 +20,8 @@ document.querySelector('#app').innerHTML = `
       <li><a href="#" id="${Basics.CH_12}">Challenge 12</a></li>
       <li><a href="#" id="${Counter.CH_13}">Challenge 13</a></li>
       <li><a href="#" id="${State.CH_14}">Challenge 14</a></li>
+      <li><a href="#" id="${State.CH_15}">Challenge 15</a></li>
+      <li><a href="#" id="${State.CH_16}">Challenge 16</a></li>
     </ul>
   </div>
 `;
@@ -40,6 +42,8 @@ function ready() {
     [Basics.CH_12, Basics.challenge12],
     [Counter.CH_13, Counter.challenge13],
     [State.CH_14, State.challenge14],
+    [State.CH_15, State.challenge15],
+    [State.CH_16, State.challenge16],
   ];
 
   targets.forEach(target => {
