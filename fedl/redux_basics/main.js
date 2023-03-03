@@ -22,6 +22,7 @@ document.querySelector('#app').innerHTML = `
       <li><a href="#" id="${State.CH_14}">Challenge 14</a></li>
       <li><a href="#" id="${State.CH_15}">Challenge 15</a></li>
       <li><a href="#" id="${State.CH_16}">Challenge 16</a></li>
+      <li><a href="#" id="${State.CH_17}">Challenge 17</a></li>
     </ul>
   </div>
 `;
@@ -44,6 +45,7 @@ function ready() {
     [State.CH_14, State.challenge14],
     [State.CH_15, State.challenge15],
     [State.CH_16, State.challenge16],
+    [State.CH_17, State.challenge17],
   ];
 
   targets.forEach(target => {
