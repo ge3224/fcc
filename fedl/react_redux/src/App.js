@@ -2,6 +2,7 @@ import { DisplayMessages as Challenge1 } from "./Challenge1";
 import { DisplayMessages as Challenge2 } from "./Challenge2";
 import { Challenge3 } from "./Challenge3";
 import AppWrapper from "./Challenge4";
+import { Challenge5 } from "./Challenge5";
 
 export function App() {
   return (
@@ -18,6 +19,9 @@ export function App() {
       <hr />
       <h3>Challenge 4:</h3>
       <AppWrapper />
+      <hr />
+      <h3>Challenge 5:</h3>
+      <Challenge5 />
       <hr />
     </div>
   );
