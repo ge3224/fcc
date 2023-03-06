@@ -6,6 +6,7 @@ import { Challenge5 } from "./Challenge5";
 import { Challenge6 } from "./Challenge6";
 import { Challenge7 } from "./Challenge7";
 import { Challenge8 } from "./Challenge8";
+import { Challenge9 } from "./Challenge9";
 
 export function App() {
   return (
@@ -34,6 +35,9 @@ export function App() {
       <hr />
       <h3>Challenge 8:</h3>
       <Challenge8 />
+      <hr />
+      <h3>Challenge 9:</h3>
+      <Challenge9 />
       <hr />
     </div>
   );
