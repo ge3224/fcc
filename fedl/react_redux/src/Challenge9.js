@@ -2,6 +2,8 @@ import * as Redux from "redux";
 import React from "react";
 import * as ReactRedux from "react-redux";
 
+// Challenge 9. 
+//
 // You're almost done! Recall that you wrote all the Redux code so that Redux
 // could control the state management of your React messages app. Now that
 // Redux is connected, you need to extract the state management out of the

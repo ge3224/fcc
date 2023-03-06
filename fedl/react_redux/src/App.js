@@ -39,6 +39,8 @@ export function App() {
       <h3>Challenge 9:</h3>
       <Challenge9 />
       <hr />
+      <h3>Challenge 10:</h3>
+      <hr />
     </div>
   );
 }
