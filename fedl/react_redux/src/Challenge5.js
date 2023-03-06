@@ -1,6 +1,4 @@
-import * as Redux from "redux";
 import React from "react";
-import * as ReactRedux from "react-redux";
 
 // Challenge 5. Map State to Props
 //
