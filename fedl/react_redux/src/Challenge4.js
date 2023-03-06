@@ -120,5 +120,5 @@ class AppWrapper extends React.Component {
   }
 };
 
-export default AppWrapper;
-  
+export { AppWrapper as Challenge4 };
+

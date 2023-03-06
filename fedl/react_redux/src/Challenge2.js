@@ -17,7 +17,7 @@ import React from 'react';
 // Finally, use the ul to map over the array of messages and render it to
 // the screen as a list of li elements.
 
-export class DisplayMessages extends React.Component {
+class DisplayMessages extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -56,3 +56,5 @@ export class DisplayMessages extends React.Component {
     );
   }
 }
+
+export { DisplayMessages as Challenge2 }

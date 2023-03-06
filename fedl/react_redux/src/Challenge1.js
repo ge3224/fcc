@@ -37,7 +37,7 @@ import React from "react";
 // component and initialize it with a state that has two properties:
 // input, that's set to an empty string, and messages, that's set to an
 // empty array.
-export class DisplayMessages extends React.Component {
+class DisplayMessages extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -52,3 +52,5 @@ export class DisplayMessages extends React.Component {
     );
   }
 }
+
+export { DisplayMessages as Challenge1 } 

@@ -38,7 +38,7 @@ export function Challenge5() {
       <h2>Map State to Props</h2>
       <ul>
         <li><code>const state</code> = "{state}"</li>
-        <li><code>state</code> is and array = {Array.isArray(state)}</li>
+        <li><code>state</code> is and array = {(Array.isArray(state)) ? "true" : "false"}</li>
         <li><code>typeof mapStateToProps</code> = {typeof mapStateToProps}</li>
         <li><code>typeof mapStateToProps()</code> returns "{typeof mapStateToProps()}"</li>
       </ul>
